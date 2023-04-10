@@ -35,8 +35,10 @@ const Home = () => {
           className="w-full h-full object-cover"
         />
         <div
-          className="absolute top-[50%] left-[50%] lg:left-[200px] -translate-y-[50%] -translate-x-[50%] lg:-translate-x-0
-          bg-white/[0.9] p-[24px] lg:p-[40px] flex flex-col items-center gap-[20px] cursive text-[#ffaa6b] w-[90%] lg:w-auto"
+          className="absolute top-[50%] left-[50%] lg:left-[200px]
+          -translate-y-[50%] -translate-x-[50%] lg:-translate-x-0
+          bg-white/[0.9] p-[24px] lg:p-[40px] flex flex-col items-center
+          gap-[20px] cursive text-[#ffaa6b] w-[90%] lg:w-auto text-center"
         >
           <div className="flex flex-col gap-[12px] items-center">
             <h3 className="text-[64px]">La boda de</h3>
