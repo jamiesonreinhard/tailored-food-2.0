@@ -4,7 +4,7 @@ const MobileNav = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const links = [
-    { href: '/home', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '/rsvp', label: 'RSVP' },
     { href: '/schedule', label: 'Schedule' },
     { href: '/registry', label: 'Registry' },

@@ -5,3 +5,7 @@
 .cursive {
   font-family: 'Dancing Script';
 }
+
+body {
+  background: linear-gradient(to bottom, #ffffff, #ffaa6b);
+}

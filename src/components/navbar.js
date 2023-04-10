@@ -2,11 +2,12 @@ import Link from 'next/link'
 import MobileNav from './mobile-navbar'
 
 const links = [
-    { href: '/home', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '/rsvp', label: 'RSVP' },
     { href: '/schedule', label: 'Schedule' },
     { href: '/registry', label: 'Registry' },
     { href: '/accommodations', label: 'Accommodations' },
+    { href: '/gallery', label: 'Gallery' },
 ];
 
 const Navbar = () => {
