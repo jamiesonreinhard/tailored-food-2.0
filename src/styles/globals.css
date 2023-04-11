@@ -6,6 +6,10 @@
   font-family: 'Dancing Script';
 }
 
+.input-font {
+  font-family:  'Montserrat';
+}
+
 body {
-  background: linear-gradient(to bottom, #ffffff, #ffaa6b);
+  background: linear-gradient(to bottom, #ffffff, #7baac8);
 }

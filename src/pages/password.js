@@ -50,7 +50,7 @@ export default function PasswordPage() {
             className="absolute top-[50%] left-[50%] text-[40px]
             -translate-y-[50%] -translate-x-[50%] z-[10]
             bg-white/[0.9] p-[24px] lg:p-[40px] flex flex-col items-center
-            gap-[20px] cursive text-[#ffaa6b] w-[90%] lg:w-auto text-center"
+            gap-[20px] cursive text-[#7baac8] w-[90%] lg:w-auto text-center"
         >
             <div className="text-[60px]">J & L Boda</div>
             <label htmlFor="password">Password:</label>
