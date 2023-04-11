@@ -52,7 +52,7 @@ const Gallery = () => {
                     <XIcon className="h-6 w-6 text-white" />
                 </div>
               </span>
-              <div className="inline-block max-w-full my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-lg">
+              <div className="inline-block max-w-full my-20 sm:my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-lg">
                 <Image
                   src={selectedImage}
                   alt="Gallery image"

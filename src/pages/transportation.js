@@ -30,7 +30,10 @@ const Transportation = () => {
   return (
     <Layout>
       <div className="py-[140px] max-w-[90%] mx-auto">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          className="z-[10] bg-white/[0.9] p-[24px] lg:p-[40px] flex flex-col items-center
+            gap-[20px] text-[#7baac8] text-center"
+        >
           <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl mb-[16px]">
             Transportation
           </h2>
