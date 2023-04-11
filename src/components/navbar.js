@@ -7,13 +7,11 @@ const links = [
     { href: '/schedule', label: 'Schedule' },
     { href: '/registry', label: 'Registry' },
     { href: '/accommodations', label: 'Accommodations' },
+    { href: '/transportation', label: 'Transportation' },
     { href: '/gallery', label: 'Gallery' },
 ];
 
 const Navbar = () => {
-
-    console.log(links);
-    
   return (
     <nav className="flex justify-between bg-white shadow-lg p-4 fixed top-0 left-0 w-full z-[100]">
         <Link href="/" className="font-semibold hidden lg:block cursive text-[30px]">

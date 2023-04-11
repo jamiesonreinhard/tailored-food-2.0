@@ -9,6 +9,8 @@ const MobileNav = () => {
     { href: '/schedule', label: 'Schedule' },
     { href: '/registry', label: 'Registry' },
     { href: '/accommodations', label: 'Accommodations' },
+    { href: '/transportation', label: 'Transportation' },
+    { href: '/gallery', label: 'Gallery' },
   ];
 
   const toggleDropdown = () => {
