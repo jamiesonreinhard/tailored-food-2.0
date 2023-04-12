@@ -88,7 +88,7 @@ const Rsvp = () => {
                 <div className="flex flex-col items-center gap-[16px] text-[#d56647]">
                   <span>Thanks {name}!</span>
                   <span className="text-md">
-                    You RSVP'd for {numGuests} guests.
+                    {"You RSVP'd for {numGuests} guests."}
                   </span>
                 </div>
               ) : (
