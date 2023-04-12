@@ -1,28 +1,43 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Layout from "@/components/layout";
 import Image from "next/image";
 
 const accommodations = [
   {
-    name: "Hotel A",
+    name: "Posada del Tepozteco",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis dui non nisi ullamcorper commodo vel ut mauris.",
-    image: "/images/hotel-a.jpg",
-    bookingLink: "https://example.com/hotel-a",
+      "This hotel offers a special rate for our wedding, which can be booked by calling the hotel.",
+    image: "/images/posadatepozteco.jpeg",
+    bookingLink: "https://posadadeltepozteco.com.mx/",
+  },  
+  {
+    name: "Amomoxtli",
+    description:
+      "This hotel offers a special rate for our wedding, which can be booked by calling the hotel.",
+    image: "/images/amomoxtli.jpeg",
+    bookingLink: "https://amomoxtli.com/",
   },
   {
-    name: "Hotel B",
+    name: "Casa Bugambilia",
     description:
-      "Nulla sit amet dolor velit. Curabitur sit amet consequat lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-    image: "/images/hotel-b.jpg",
-    bookingLink: "https://example.com/hotel-b",
+      "We recommend booking through booking.com",
+    image: "/images/casabug.jpeg",
+    bookingLink: "https://www.casabugambilia.com/",
   },
   {
-    name: "Hotel C",
+    name: "Casa Boutique Fernanda",
     description:
-      "Sed non ipsum non elit pharetra pulvinar. Nullam maximus volutpat ultrices. Donec euismod, lorem ac finibus dictum, justo neque porttitor purus, vel aliquam lacus nibh ut ante.",
-    image: "/images/hotel-c.jpg",
-    bookingLink: "https://example.com/hotel-c",
+      "We recommend booking through booking.com",
+    image: "/images/casafernandaFT.jpeg",
+    bookingLink: "https://casafernanda.com/",
+  },
+  {
+    name: "La Buena Vibra Retreat and Spa",
+    description:
+      "We recommend booking through booking.com",
+    image: "/images/buenavibra.jpeg",
+    bookingLink: "https://casafernanda.com/",
   },
 ];
 
@@ -37,9 +52,11 @@ const Accommodations = () => {
           <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl mb-[16px]">
             Accommodations
           </h2>
-          <p className="font-semibold text-darkGray text-xl mb-[60px]">
+          <p className="font-semibold text-darkGray text-xl mb-[60px] max-w-full lg:max-w-[70%]">
             Tepoztlan offers a wealth of exquisite accommodations, perfect for
-            indulging in the ultimate retreat experience.
+            indulging in the ultimate retreat experience. We recommend using&nbsp;
+            <a href="booking.com" target="_blank" className="underline text-[#d56647]">booking.com</a>!&nbsp;
+            If you want to stay with a group, <a href="airbnb.com" target="_blank" className="underline text-[#d56647]">AirBnB</a> is also a great option!
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
             {accommodations.map((accommodation) => (
@@ -47,12 +64,11 @@ const Accommodations = () => {
                 className="bg-white rounded-lg shadow-lg"
                 key={accommodation.name}
               >
-                <div className="relative overflow-hidden">
-                  <Image
+                <div className="relative overflow-hidden w-full h-[260px] rounded-t-lg">
+                  <img
                     src={accommodation.image}
                     alt={accommodation.name}
-                    width={640}
-                    height={426}
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="p-6 flex flex-col justify-between h-[300px]">
@@ -67,7 +83,7 @@ const Accommodations = () => {
                     target="_blank"
                     className="mx-auto mt-4 cursor-pointer text-[32px] bg-black rounded-[8px] px-[16px] py-[8px] text-[#d56647]"
                   >
-                    Book Now
+                    Website
                   </a>
                 </div>
               </div>
