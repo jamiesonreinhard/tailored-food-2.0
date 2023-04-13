@@ -7,6 +7,7 @@ const Rsvp = () => {
   const [submitted, setSubmitted] = React.useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
   const [numGuests, setNumGuests] = useState("");
   const [songRequest, setSongRequest] = useState("");
   const [foodPrefs, setFoodPrefs] = useState("");
@@ -21,6 +22,7 @@ const Rsvp = () => {
       const data = {
         email: email,
         name: name,
+        address: address,
         numGuests: numGuests,
         songRequest: songRequest,
         foodPrefs: foodPrefs,
@@ -51,6 +53,9 @@ const Rsvp = () => {
     const validationErrors = {};
     if (name.trim() === "") {
       validationErrors.name = "Name is required";
+    }
+    if (address.trim() === "") {
+      validationErrors.address = "Address is required";
     }
     if (email.trim() === "") {
       validationErrors.email = "Email is required";
@@ -88,7 +93,7 @@ const Rsvp = () => {
                 <div className="flex flex-col items-center gap-[16px] text-[#d56647]">
                   <span>Thanks {name}!</span>
                   <span className="text-md">
-                    {"You RSVP'd for {numGuests} guests."}
+                    {`You RSVP'd for ${numGuests} guests.`}
                   </span>
                 </div>
               ) : (
@@ -114,7 +119,7 @@ const Rsvp = () => {
                   }`}
                       />
                       {errors.name && (
-                        <p className="mt-1 text-[20px] input-font text-[#7baac8]">
+                        <p className="mt-1 text-[20px] input-font text-[#d56647]">
                           {errors.name}
                         </p>
                       )}
@@ -139,8 +144,33 @@ const Rsvp = () => {
                   }`}
                       />
                       {errors.email && (
-                        <p className="mt-1 text-[20px] input-font text-[#7baac8]">
+                        <p className="mt-1 text-[20px] input-font text-[#d56647]">
                           {errors.email}
+                        </p>
+                      )}
+                    </div>
+                    <div className="mb-2 w-full">
+                      <label
+                        htmlFor="email"
+                        className="block mb-2 font-medium text-gray-700 text-[36px] lg:text-[40px]"
+                      >
+                        Mailing Address
+                      </label>
+                      <input
+                        type="address"
+                        placeholder="address"
+                        id="address"
+                        name="address"
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
+                        className={`w-full px-4 bg-[#d56647] text-white font-semibold
+                  indent-2 input-font text-[20px] py-1 border rounded-md focus:outline-none ${
+                    errors.address ? "border-[#a61e51]" : ""
+                  }`}
+                      />
+                      {errors.address && (
+                        <p className="mt-1 text-[20px] input-font text-[#d56647]">
+                          {errors.address}
                         </p>
                       )}
                     </div>
@@ -164,7 +194,7 @@ const Rsvp = () => {
                   }`}
                       />
                       {errors.numGuests && (
-                        <p className="mt-1 text-[20px] input-font text-[#7baac8]">
+                        <p className="mt-1 text-[20px] input-font text-[#d56647]">
                           {errors.numGuests}
                         </p>
                       )}

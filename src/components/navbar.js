@@ -6,9 +6,10 @@ const links = [
     { href: '/rsvp', label: 'RSVP' },
     { href: '/schedule', label: 'Schedule' },
     { href: '/registry', label: 'Registry' },
-    { href: '/accommodations', label: 'Accommodations' },
     { href: '/transportation', label: 'Transportation' },
-    { href: '/gallery', label: 'Gallery' },
+    { href: '/accommodations', label: 'Accommodations' },
+    { href: '/tepoztlan', label: 'Tepoztlan Tips' },
+    { href: '/gallery', label: 'Gallery' }
 ];
 
 const Navbar = () => {
