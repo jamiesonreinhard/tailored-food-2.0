@@ -9,7 +9,7 @@ const Transportation = () => {
     {
       title: "Bajo la Montaña Preferred Shuttles",
       description:
-        "Our wedding venue frequently works with this shuttle service, and their prices are great, especially if you ride with a group. We highly recommend this option, which includes insurance. If you'd like to book with this company, please contact blah@blah.com. If you'd like to share a shuttle with some of the other wedding guests, let us know and we can help coordinate!",
+        "Our wedding venue frequently works with this shuttle service, and their prices are great, especially if you ride with a group. We highly recommend this option, which includes insurance. If you'd like to use this option, please let us know and we will help to coordinate based on your flight info.",
       details: [
         "20 passenger van, one way - 11500 MXN (about 640 USD)",
         "14 passenger van, one way - 10200 MXN (about 570 USD)",
