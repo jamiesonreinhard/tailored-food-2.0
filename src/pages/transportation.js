@@ -38,7 +38,7 @@ const Transportation = () => {
             Transportation
           </h2>
           <p className="font-semibold text-darkGray text-xl mb-[60px] text-[#7baac8]">
-            You have a few options for getting from Benito Juarez International
+            The best airport to fly into in order to get to Tepoztlan is in Mexico City. You have a few options for getting from Benito Juarez International
             Airport (Mexico City) to Tepoztlan. Please let us know if you have any questions or concerns about
             transportation and we will definitely help you out!
           </p>
