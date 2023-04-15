@@ -15,7 +15,6 @@ const images = [
   "images/gallery/902FC283-C591-492A-A745-EF8079791BD5.JPG",
   "images/gallery/B51E4224-A7B3-45DB-9A97-D232AC0B8178.JPG",
   "images/gallery/bc54d6e1-8d6e-4f46-a708-26afa03cf22c.JPG",
-
   "images/gallery/d6143f10-b2b3-4b03-863a-e3e538047ea2.JPG",
   "images/gallery/D7758042-1832-4BB8-BB02-5EBFDDEFF6D9.JPG",
   "images/gallery/E677B23B-0F15-4BAC-94A9-2F5CB596A90E.JPG",

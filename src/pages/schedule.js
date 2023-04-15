@@ -5,7 +5,7 @@ import Image from "next/image";
 const Schedule = () => {
   const events = [
     {
-      title: "Welcome Drinks and Salsa Class",
+      title: "Welcome Drinks",
       date: "Friday, January 26th, 2024",
       image: "/images/salsa.jpeg",
     },
@@ -51,7 +51,7 @@ const Schedule = () => {
                   width={200}
                   height={200}
                 />
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start text-left">
                   <h3 className="text-lg font-bold">{"Recommended Arrival"}</h3>
                   <p className="text-gray-500">{"Thursday, January 25th or Friday, January 26th"}</p>
                 </div>
@@ -65,7 +65,7 @@ const Schedule = () => {
                     width={200}
                     height={200}
                   />
-                  <div className="flex flex-col items-start">
+                  <div className="flex flex-col items-start text-left">
                     <h3 className="text-lg font-bold">{event.title}</h3>
                     <p className="text-gray-500">{event.date}</p>
                   </div>
@@ -79,7 +79,7 @@ const Schedule = () => {
                   width={200}
                   height={200}
                 />
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start text-left">
                   <h3 className="text-lg font-bold">{"Recommended Departure"}</h3>
                   <p className="text-gray-500">{"Sunday Afternoon, January 28th or Monday, January 29th"}</p>
                 </div>
