@@ -5,40 +5,40 @@ import Image from "next/image";
 
 const accommodations = [
   {
-    name: "Posada del Tepozteco",
+    name: "Posada del Tepozteco ($$$)",
     description:
       "This hotel offers a special rate for our wedding, which can be booked by calling the hotel.",
     image: "/images/posadatepozteco.jpeg",
     bookingLink: "https://posadadeltepozteco.com.mx/",
   },  
   {
-    name: "Amomoxtli",
+    name: "Amomoxtli ($$$)",
     description:
       "This hotel offers a special rate for our wedding, which can be booked by calling the hotel.",
     image: "/images/amomoxtli.jpeg",
     bookingLink: "https://amomoxtli.com/",
   },
   {
-    name: "Casa Bugambilia",
+    name: "Casa Bugambilia ($$$)",
     description:
       "We recommend booking through booking.com",
     image: "/images/casabug.jpeg",
     bookingLink: "https://www.casabugambilia.com/",
   },
   {
-    name: "Casa Boutique Fernanda",
-    description:
-      "We recommend booking through booking.com",
-    image: "/images/casafernandaFT.jpeg",
-    bookingLink: "https://casafernanda.com/",
-  },
-  {
-    name: "La Buena Vibra Retreat and Spa",
+    name: "La Buena Vibra Retreat and Spa ($$$)",
     description:
       "We recommend booking through booking.com",
     image: "/images/buenavibra.jpeg",
     bookingLink: "https://casafernanda.com/",
   },
+  {
+    name: "Casa Boutique Fernanda ($$)",
+    description:
+      "We recommend booking through booking.com",
+    image: "/images/casafernandaFT.jpeg",
+    bookingLink: "https://casafernanda.com/",
+  }
 ];
 
 const Accommodations = () => {
