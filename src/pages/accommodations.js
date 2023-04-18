@@ -55,8 +55,9 @@ const Accommodations = () => {
           <p className="font-semibold text-darkGray text-xl mb-[60px] max-w-full lg:max-w-[70%]">
             Tepoztlan offers a wealth of exquisite accommodations, perfect for
             indulging in the ultimate retreat experience. We recommend using&nbsp;
-            <a href="booking.com" target="_blank" className="underline text-[#d56647]">booking.com</a>!&nbsp;
-            If you want to stay with a group, <a href="airbnb.com" target="_blank" className="underline text-[#d56647]">AirBnB</a> is also a great option.
+            <a href="https://booking.com" target="_blank" className="underline text-[#d56647]">booking.com</a>!&nbsp;
+            If you want to stay with a group, <a href="https://airbnb.com" target="_blank" className="underline text-[#d56647]">AirBnB</a> is also a great option.&nbsp;
+            We listed some of our top hotels below, and a comprehensive list of recommendations from our wedding venue can be seen <a target="_blank" className="underline text-[#d56647]" href="https://drive.google.com/file/d/1fALjAkSoT8D4uOxDhwPsRyZw700YmbUf/view?usp=share_link">here</a>.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
             {accommodations.map((accommodation) => (
