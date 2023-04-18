@@ -79,14 +79,14 @@ const Rsvp = () => {
         >
           RSVP
         </h1>
-        <div
+        {/* <div
           className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[48%] w-[90%] lg:w-[500px]
           bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[75%]
           gap-[28px] cursive text-[#7baac8] w-[90%] lg:w-[500px] text-center text-[60px] sm:text-[84px] z-[20]`}
         >
           Coming Soon
-        </div>
-        {/* <form
+        </div> */}
+        <form
           onSubmit={handleSubmit}
           className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[48%] w-[90%] lg:w-[500px]
           bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[75%]
@@ -251,7 +251,7 @@ const Rsvp = () => {
               )}
             </>
           )}
-        </form> */}
+        </form>
       </Layout>
     </div>
   );
