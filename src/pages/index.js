@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Layout from '@/components/layout'
 import { useRouter } from "next/router";
-import Head from "next/head";
 
 const Home = () => {
 
@@ -35,10 +34,6 @@ const Home = () => {
 
   return (
     <>
-      <Head>
-        <title>JL Boda</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Layout>
         <div className="w-screen h-screen relative">
           <Image
