@@ -23,7 +23,7 @@ const Registry = () => {
             Honeyfund
           </Link>
           <Link
-            href={'https://www.amazon.com/wedding/jamieson-reinhard-leslie-castro-sanchez--january-2024/registry/ALUBLKD7QB74'}
+            href={'https://www.amazon.com.mx/wedding/leslie-castro-sanchez-jamieson-reinhard-tepoztlan-january-2024/registry/2YHYJY1VM1R05'}
             target="_blank"
             className="cursor-pointer text-[40px] bg-black rounded-[8px] px-[16px] py-[8px] text-[#d56647]"
           >
