@@ -84,7 +84,7 @@ const Rsvp = () => {
           onSubmit={handleSubmit}
           className={`absolute top-[100px] sm:top-[50%] left-[50%] -translate-x-[50%] sm:-translate-y-[48%] w-[90%]
           bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[60%] sm:max-h-[75%]
-          gap-[18px] sm:gap-[28px] cursive text-[#7baac8] text-center text-[36px] z-[20]`}
+          sm:gap-[28px] cursive text-[#7baac8] text-center text-[36px] z-[20]`}
         >
           {loading ? (
             <LoadingIndicator />
@@ -99,7 +99,7 @@ const Rsvp = () => {
                 </div>
               ) : (
                 <>
-                  <div className="max-h-[450px] overflow-y-scroll w-full px-[20px] flex gap-[32px] shadow-lg pb-4 flex-wrap items-start justify-center">
+                  <div className="max-h-[450px] overflow-y-scroll w-full px-[20px] flex gap-[18px] sm:gap-[32px] shadow-lg pb-4 flex-wrap items-start justify-center">
                     <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="name"
