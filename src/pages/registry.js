@@ -13,7 +13,7 @@ const Registry = () => {
             Registry
           </h2>
           <p className="font-semibold text-darkGray text-xl mb-[40px]">
-            {`Thank you for helping us with our honeymoon!!!`}
+            {`Thank you for helping us with our honeymoon and a few things for around the house!!!`}
           </p>
           <Link
             href={'https://www.honeyfund.com/wedding/reinhard-castro-sanchez-01-27-2024'}
