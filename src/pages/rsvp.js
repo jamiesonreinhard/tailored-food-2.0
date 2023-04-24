@@ -46,6 +46,7 @@ const Rsvp = () => {
         });
     } else {
       setErrors(validationErrors);
+      alert("Missing fields!")
     }
   };
 
@@ -88,9 +89,9 @@ const Rsvp = () => {
         </div> */}
         <form
           onSubmit={handleSubmit}
-          className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[48%] w-[90%] lg:w-[500px]
+          className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[48%] w-[90%]
           bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[75%]
-          gap-[28px] cursive text-[#7baac8] w-[90%] lg:w-[500px] text-center text-[36px] z-[20]`}
+          gap-[28px] cursive text-[#7baac8] text-center text-[36px] z-[20]`}
         >
           {loading ? (
             <LoadingIndicator />
@@ -105,11 +106,11 @@ const Rsvp = () => {
                 </div>
               ) : (
                 <>
-                  <div className="max-h-[450px] overflow-y-scroll w-full px-[20px] flex flex-col gap-[20px] shadow-lg pb-4">
-                    <div className="mb-2 w-full">
+                  <div className="max-h-[450px] overflow-y-scroll w-full px-[20px] flex gap-[32px] shadow-lg pb-4 flex-wrap items-start justify-center">
+                    <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="name"
-                        className="block mb-2 font-medium text-gray-700 text-[36px] lg:text-[36px]"
+                        className="block mb-2 font-medium text-gray-700 text-[30px] lg:text-[36px]"
                       >
                         Name
                       </label>
@@ -121,9 +122,9 @@ const Rsvp = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className={`w-full px-4 bg-[#d56647] text-white font-semibold
-                  indent-2 input-font text-[20px] py-1 border rounded-md focus:outline-none ${
-                    errors.name ? "border-[#a61e51]" : ""
-                  }`}
+                        indent-2 input-font text-[20px] py-1 border rounded-md focus:outline-none ${
+                          errors.name ? "border-[#a61e51]" : ""
+                        }`}
                       />
                       {errors.name && (
                         <p className="mt-1 text-[20px] input-font text-[#d56647]">
@@ -131,10 +132,10 @@ const Rsvp = () => {
                         </p>
                       )}
                     </div>
-                    <div className="mb-2 w-full">
+                    <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="email"
-                        className="block mb-2 font-medium text-gray-700 text-[36px] lg:text-[40px]"
+                        className="block mb-2 font-medium text-gray-700 text-[30px] lg:text-[36px]"
                       >
                         Email
                       </label>
@@ -156,10 +157,10 @@ const Rsvp = () => {
                         </p>
                       )}
                     </div>
-                    <div className="mb-2 w-full">
+                    <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="email"
-                        className="block mb-2 font-medium text-gray-700 text-[36px] lg:text-[40px]"
+                        className="block mb-2 font-medium text-gray-700 text-[30px] lg:text-[36px]"
                       >
                         Mailing Address
                       </label>
@@ -181,10 +182,10 @@ const Rsvp = () => {
                         </p>
                       )}
                     </div>
-                    <div className="mb-2 w-full">
+                    <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="numGuests"
-                        className="block mb-2 font-medium text-gray-700 text-[36px] lg:text-[40px]"
+                        className="block mb-2 font-medium text-gray-700 text-[30px] lg:text-[36px]"
                       >
                         # of guests
                       </label>
@@ -206,10 +207,10 @@ const Rsvp = () => {
                         </p>
                       )}
                     </div>
-                    <div className="mb-2 w-full">
+                    <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="songRequest"
-                        className="block mb-2 font-medium text-gray-700 text-[36px] lg:text-[40px]"
+                        className="block mb-2 font-medium text-gray-700 text-[30px] lg:text-[36px]"
                       >
                         Song request?
                       </label>
@@ -224,7 +225,7 @@ const Rsvp = () => {
                   indent-2 input-font text-[20px] py-1 border rounded-md focus:outline-none`}
                       />
                     </div>
-                    <div className="mb-2 w-full">
+                    <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="foodPrefs"
                         className="block mb-2 font-medium text-gray-700 text-[20px] lg:text-[32px]"
@@ -243,6 +244,7 @@ const Rsvp = () => {
                       />
                     </div>
                   </div>
+                  <h5 className="input-font text-[24px]">Scroll to fill all fields!</h5>
                   <input
                     type="submit"
                     className="cursor-pointer text-[40px] bg-black rounded-[8px] px-[16px] py-[8px] text-[#d56647]"
