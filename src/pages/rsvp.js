@@ -82,7 +82,7 @@ const Rsvp = () => {
         </h1>
         <form
           onSubmit={handleSubmit}
-          className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[48%] w-[90%]
+          className={`absolute top-[100px] sm:top-[50%] left-[50%] -translate-x-[50%] sm:-translate-y-[48%] w-[90%]
           bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[60%] sm:max-h-[75%]
           gap-[28px] cursive text-[#7baac8] text-center text-[36px] z-[20]`}
         >
