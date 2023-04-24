@@ -80,17 +80,10 @@ const Rsvp = () => {
         >
           RSVP
         </h1>
-        {/* <div
-          className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[48%] w-[90%] lg:w-[500px]
-          bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[75%]
-          gap-[28px] cursive text-[#7baac8] w-[90%] lg:w-[500px] text-center text-[60px] sm:text-[84px] z-[20]`}
-        >
-          Coming Soon
-        </div> */}
         <form
           onSubmit={handleSubmit}
           className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[48%] w-[90%]
-          bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[75%]
+          bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[60%] sm:max-h-[75%]
           gap-[28px] cursive text-[#7baac8] text-center text-[36px] z-[20]`}
         >
           {loading ? (
@@ -244,7 +237,7 @@ const Rsvp = () => {
                       />
                     </div>
                   </div>
-                  <h5 className="input-font text-[24px]">Scroll to fill all fields!</h5>
+                  <h5 className="input-font text-[18px] sm:text-[24px]">Scroll to fill all fields!</h5>
                   <input
                     type="submit"
                     className="cursor-pointer text-[40px] bg-black rounded-[8px] px-[16px] py-[8px] text-[#d56647]"
