@@ -72,18 +72,18 @@ const Rsvp = () => {
   };
 
   return (
-    <div className="max-w-screen overflow-hidden">
+    <div className="max-w-screen overflow-x-hidden overflow-y-auto pb-[140px] min-h-screen">
       <Layout>
         <h1
           className="absolute top-[45%] -translate-x-[50%] -translate-y-[50%] left-[50%]
-        text-[750px] cursive text-[#7baac8]/[0.8] mb-0 pb-0 leading-none overflow-hidden"
+        text-[750px] cursive text-[#7baac8]/[0.8] mb-0 pb-0 leading-none overflow-hidden z-[-1]"
         >
           RSVP
         </h1>
         <form
           onSubmit={handleSubmit}
-          className={`absolute top-[100px] sm:top-[50%] left-[50%] -translate-x-[50%] sm:-translate-y-[48%] w-[90%] sm:max-w-[75%]
-          bg-white/[0.9] bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center max-h-[60%] sm:max-h-[75%]
+          className={`mt-[140px] mx-auto w-[90%] sm:max-w-[75%]
+          bg-white/[0.9] p-[24px] lg:p-[32px] flex flex-col items-center
           sm:gap-[28px] cursive text-[#7baac8] text-center text-[36px] z-[20]`}
         >
           {loading ? (
@@ -99,7 +99,7 @@ const Rsvp = () => {
                 </div>
               ) : (
                 <>
-                  <div className="max-h-[450px] overflow-y-scroll w-full px-[20px] flex gap-[18px] sm:gap-[32px] shadow-lg pb-4 flex-wrap items-start justify-center">
+                  <div className="w-full px-[20px] flex gap-[18px] sm:gap-[32px] pb-4 flex-wrap items-start justify-center">
                     <div className="mb-2 w-[400px] pb-[20px]">
                       <label
                         htmlFor="name"
@@ -237,7 +237,6 @@ const Rsvp = () => {
                       />
                     </div>
                   </div>
-                  <h5 className="input-font text-[18px] sm:text-[24px]">Scroll to fill all fields!</h5>
                   <input
                     type="submit"
                     className="cursor-pointer text-[40px] bg-black rounded-[8px] px-[16px] py-[8px] text-[#d56647]"
