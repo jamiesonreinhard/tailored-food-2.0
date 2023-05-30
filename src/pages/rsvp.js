@@ -194,6 +194,7 @@ const Rsvp = () => {
                     errors.numGuests ? "border-[#a61e51]" : ""
                   }`}
                       />
+                      <p className="input-font text-[18px] font-bold">Please RSVP for one person only unless your invite explicitly mentioned family members, a significant other or a +1</p>
                       {errors.numGuests && (
                         <p className="mt-1 text-[20px] input-font text-[#d56647]">
                           {errors.numGuests}
