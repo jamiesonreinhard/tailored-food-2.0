@@ -6,22 +6,22 @@ const Schedule = () => {
   const events = [
     {
       title: "Welcome Drinks",
-      date: "Friday, January 26th, 2024",
+      date: "Friday, January 26th, 2024 - 7:00pm to 10:00pm",
       image: "/images/salsa.jpeg",
     },
     {
       title: "Wedding Ceremony",
-      date: "Saturday, January 27th, 2024",
+      date: "Saturday, January 27th, 2024 - 3:00pm",
       image: "/images/ceremony.png",
     },
     {
       title: "Reception",
-      date: "Saturday, January 27th, 2024",
+      date: "Saturday, January 27th, 2024 - 3:30pm to 2:00am",
       image: "/images/dance.png",
     },
     {
       title: "Tepoztlan Style Brunch",
-      date: "Sunday, January 28th, 2024",
+      date: "Sunday, January 28th, 2024 - 10:00am to 1:00pm",
       image: "/images/brunch.jpeg",
     }
   ];

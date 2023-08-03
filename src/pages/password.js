@@ -59,7 +59,7 @@ export default function PasswordPage() {
                 id="password"
                 value={password}
                 onChange={handlePasswordChange}
-                className="bg-black text-white indent-[30px] rounded-[8px] focus:outline-none"
+                className="bg-black text-white indent-[30px] rounded-[8px] focus:outline-none max-w-[90%]"
             />
             <button type="submit" className='px-[20px] py-[10px] rounded-[10px] bg-black'>Enter</button>
         </form>
