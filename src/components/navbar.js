@@ -8,7 +8,8 @@ const links = [
     { href: '/registry', label: 'Registry' },
     { href: '/transportation', label: 'Transportation' },
     { href: '/accommodations', label: 'Accommodations' },
-    { href: '/tepoztlan', label: 'Tepoztlan Tips' },
+    { href: '/story', label: 'Story' },
+    { href: '/tepoztlan', label: 'Tepoztlan' },
     { href: '/gallery', label: 'Gallery' }
 ];
 
