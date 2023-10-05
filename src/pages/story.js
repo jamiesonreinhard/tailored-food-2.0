@@ -11,7 +11,7 @@ const OurStory = () => {
                     className="z-[10] bg-white/[0.9] p-[24px] lg:p-[40px] flex flex-col items-start
             gap-[20px] text-left z-[200]"
                 >
-                    <h1 className="text-4xl font-bold mb-8 mx-auto">Our Story</h1>
+                    <h1 className="text-4xl font-bold mb-8 mx-auto">{`Our Story`}</h1>
 
                     <p className="mb-6">
                         {`In the midst of the unpredictable whirlwind that was 2021, amidst a global pandemic, fate had a special story to weave for Leslie and Jamieson. Their paths crossed unexpectedly, when destiny had a change of plans for Jamieson. While he had his heart set on Bali to embark on a coding adventure at Le Wagon, the universe had other plans. The closing of the border took him on a detour to the vibrant heart of Mexico City.`}
