@@ -11,7 +11,7 @@ const EntrepreneurPartners = () => {
                 Collaborations with small and medium-scale entrepreneurs in the countries most impacted by malnutrition, where we design, launch, and scale nutritious, delicious low-cost food products.
             </p>
             <div className="w-full flex flex-col md:flex-row gap-[32px] md:gap-[96px] justify-center items-start">
-                <div className="flex w-full md:w-[300px] md:flex-col gap-[32px] overflow-x-auto pb-[16px] md:pb-0">
+                <div className="flex w-full md:w-auto md:flex-col gap-[32px] overflow-x-auto md:overflow-visible pb-[16px] md:pb-0">
                     {entrepreneurProjects.map((project, index) => (
                         <button key={index} className={`flex flex-col`} onClick={() => setSelectedProject(project)}>
                             <p className={`subtitle-medium text-[16px] md:text-[24px] whitespace-nowrap ${project.id === selectedProject.id ? "text-primary-300" : ""}`}>{project.name}</p>
