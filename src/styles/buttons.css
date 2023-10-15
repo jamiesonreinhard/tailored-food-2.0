@@ -1,0 +1,20 @@
+.btn {
+    padding: 10px 24px;
+    font-size: 20px;
+    font-weight: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-outline-primary {
+    border: 1px solid #30B5E0;
+    border-radius: 100px;
+    color: #30B5E0;
+}
+
+.contact-button {
+    background-color: #30B5E0;
+    border-radius: 100px;
+    color: #FFFFFF;
+}
+

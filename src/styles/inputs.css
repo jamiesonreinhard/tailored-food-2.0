@@ -1,0 +1,18 @@
+.input {
+    height: 64px;
+    text-indent: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #A9B0AF;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.text-area {
+    resize: none;
+    padding: 16px;
+}

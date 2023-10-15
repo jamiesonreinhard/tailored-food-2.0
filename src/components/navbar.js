@@ -1,43 +1,56 @@
 import Link from 'next/link'
 import MobileNav from './mobile-navbar'
+import Image from 'next/image';
+import tfLogoPlain from '../../public/images/tf-logo-plain.png';
+import tfLogo from '../../public/images/tf-logo.svg';
+import { useRouter } from 'next/router';
 
 const links = [
-    { href: '/', label: 'Home' },
-    { href: '/rsvp', label: 'RSVP' },
-    { href: '/schedule', label: 'Schedule' },
-    { href: '/registry', label: 'Registry' },
-    { href: '/transportation', label: 'Transportation' },
-    { href: '/accommodations', label: 'Accommodations' },
-    { href: '/story', label: 'Story' },
-    { href: '/tepoztlan', label: 'Tepoztlan' },
-    { href: '/gallery', label: 'Gallery' }
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/content', label: 'Content' }
 ];
 
 const Navbar = () => {
+  const router = useRouter();
+  const currentPath = router.pathname;
+
+  const getNavStyle = () => {
+    if(["/", "/about"].includes(currentPath)){
+      return 'nav-transparent'
+    } else {
+      return 'nav-white'
+    }
+  }
+
   return (
-    <nav className="flex justify-between bg-white shadow-lg p-4 fixed top-0 left-0 w-full z-[100]">
-        <Link href="/" className="font-semibold hidden xl:block cursive text-[30px]">
-          Boda de Leslie y Jamieson
-        </Link>
-        <Link href="/" className="font-semibold block xl:hidden cursive text-[30px]">
-          L & J
-        </Link>
-        <div className='block lg:hidden'>
-          <MobileNav />
-        </div>
-        <div className="hidden lg:flex space-x-4">
-            {links?.map((link) => (
-                <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-white font-bold hover:text-gray-900 transition duration-150 ease-in-out
-                    bg-[#7baac8] px-[8px] py-[4px] rounded-[8px] flex items-center"
-                >
-                    {link.label}
-                </Link>
-            ))}
-        </div>
-    </nav>
+    <div className={`nav ${getNavStyle()}`}>
+      {/* Logo/Home Link */}
+      <Link href="/">
+        <Image
+          src={tfLogo}
+          alt="My Image"
+          width={246} // Set the width of the image
+          height={68} // Set the height of the image
+        />
+      </Link>
+
+      {/* Page Links */}
+      <div className="flex items-center gap-[22px]">
+        {links.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            className={`text-[20px] hover:text-yellow ${link.href === currentPath ? "text-primary-300" : ""}`}
+            disabled={link.href === currentPath}
+          >
+            {link.label}
+          </Link>
+        ))}
+        <Link href="/contact" className="btn contact-button mx-auto">Contact Us</Link>
+      </div>
+
+    </div>
   )
 }
 

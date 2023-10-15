@@ -1,0 +1,62 @@
+.display-1 {
+    font-size: 72px;
+    font-weight: 900;
+    color: #02241A;
+}
+
+.h2-bold {
+    font-size: 40px;
+    font-weight: 700;
+    color: #02241A;
+}
+
+.h3-bold {
+    font-size: 32px;
+    font-weight: 700;
+    color: #02241A;
+}
+
+.h3-light {
+    font-size: 32px;
+    font-weight: 300;
+    color: #02241A;
+}
+
+.h4-bold {
+    font-size: 24px;
+    font-weight: 700;
+    color: #02241A;
+}
+
+.h6-bold {
+    font-size: 16px;
+    font-weight: 700;
+    color: #02241A;
+}
+
+.p-body-md {
+    font-size: 16px;
+}
+
+.p-body-lg {
+    font-size: 20px;
+    font-weight: 400;
+    color: #02241A;
+}
+
+.p-body-xl {
+    font-size: 24px;
+    font-weight: 400;
+    color: #02241A;
+}
+
+.subtitle-medium {
+    font-size: 24px;
+    font-weight: 500;
+    color: #02241A;
+}
+
+.caption {
+    font-size: 12px;
+    font-weight: 600;
+}

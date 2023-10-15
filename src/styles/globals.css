@@ -1,15 +1,26 @@
+/* TAILWIND IMPORTS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.cursive {
-  font-family: 'Dancing Script';
-}
+/* CSS IMPORTS */
+@import './nav.css';
+@import './typography.css';
+@import './buttons.css';
+@import './shadows.css';
+@import './inputs.css';
 
-.input-font {
-  font-family:  'Montserrat';
+/* FONTS */
+@font-face {
+  font-family: 'QuincyCF-BoldItalic';
+  src: local('QuincyCF-BoldItalic'), url(../../public/fonts/QuincyCF-BoldItalic.woff) format('woff')
+}
+@font-face {
+  font-family: 'HergonGrotesk-Regular';
+  src: local('HergonGrotesk-Regular'), url(../../public/fonts/HergonGrotesk-Regular.ttf)
+  format('ttf')
 }
 
 body {
-  background: linear-gradient(to bottom, #ffffff, #7baac8);
+  font-family: 'HergonGrotesk-Regular', Arial, Helvetica, sans-serif;
 }

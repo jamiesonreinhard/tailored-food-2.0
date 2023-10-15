@@ -1,0 +1,56 @@
+/* eslint-disable @next/next/no-img-element */
+import { galleryImages } from "@/data/galleryImages";
+import { galleryVideos } from "@/data/galleryVideos";
+
+const Gallery = () => {
+    return (
+        <div className="flex flex-col w-full mx-auto justify-start">
+
+            {/* VIDEOS AND PHOTOS */}
+            <div className="flex flex-col w-full max-w-[1140px] mx-auto pb-[120px]">
+                {/* VIDEOS */}
+                <div className="flex flex-col w-full gap-[36px] mb-[100px]">
+                    <h2 className="h2-bold">Videos</h2>
+                    <div className="flex w-full flex-wrap justify-center lg:justify-start gap-[36px]">
+                        {galleryVideos.map((video, index) => (
+                            <div key={index} className="flex flex-col items-start gap-[32px] w-[540px]">
+                                <div className="w-full media-card-shadow rounded-[26px] flex items-center justify-center h-[400px]">
+                                    <div className="w-[90%] h-[90%] bg-lightGrey rounded-[26px] flex items-center justify-center">Placeholder</div>
+                                </div>
+                                <div className="flex flex-col gap-[24px] px-[32px] w-full">
+                                    <h4 className="h4-bold">{video.title}</h4>
+                                    <p className="p-body xl">{video.caption}</p>
+                                </div>
+                            </div>
+                             
+                        ))}
+                    </div>
+                    <button className="btn btn-outline-primary gap-[8px] mr-auto">
+                        View More
+                        <img src="/images/icons/down-blue.svg" alt="down" />
+                    </button>
+                </div>
+                {/* PHOTOS */}
+                <div className="flex flex-col gap-[36px] mb-[100px]">
+                    <h2 className="h2-bold">Photos</h2>
+                    <div className="flex w-full flex-wrap justify-center lg:justify-start gap-[24px]">
+                        {galleryImages.map((image, index) => (
+                            <div key={index} className="flex flex-col gap-[8px] w-[360px]">
+                                <img src={`images/gallery/${image.image}`} alt={image.caption} className="w-full h-[300px] object-cover rounded-[24px]"  />
+                                <p className="caption text-grey">{image.caption}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <button className="btn btn-outline-primary gap-[8px] mr-auto">
+                        View More
+                        <img src="/images/icons/down-blue.svg" alt="down" />
+                    </button>
+                </div>
+            </div>
+
+            
+        </div>
+    )
+}
+
+export default Gallery;
