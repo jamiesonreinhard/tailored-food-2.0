@@ -72,7 +72,7 @@ const Navbar = () => {
             <Link
               key={link.label}
               href={link.href}
-              className={`text-[20px] hover:text-yellow ${link.href === currentPath ? "text-primary-300" : ""}`}
+              className={`text-[20px] ${link.href === currentPath ? "text-primary-300" : "hover:text-yellow"}`}
               disabled={link.href === currentPath}
             >
               {link.label}

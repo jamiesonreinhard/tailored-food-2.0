@@ -9,7 +9,7 @@ const SubNavigation = ({ navItems, activePage, setActivePage }) => {
                         key={item.name}
                         onClick={() => setActivePage(item.name)}
                         disabled={activePage === item.name}
-                        className={`hidden md:block subtitle-medium p-[10px] border-primary-300 ${activePage === item.name ? "border-b-[5px] text-primary-300" : "text-lightGrey"}`}
+                        className={`hidden md:block subtitle-medium p-[10px] border-primary-300 ${activePage === item.name ? "border-b-[5px] text-primary-300 hover:text-primary-300" : "text-lightGrey hover:text-yellow"}`}
                     >
                         {item.display}
                     </button>
