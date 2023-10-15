@@ -5,8 +5,12 @@ import MeetTheTeam from '../components/about/meet-the-team';
 import Gallery from '../components/about/gallery';
 import SubNavigation from "@/components/sub-navigation";
 import { motion, AnimatePresence } from 'framer-motion';
+import fs from 'fs';
+import path from 'path';
 
-const About = () => {
+const About = ({images}) => {
+
+  console.log(images);
 
   const [activePage, setActivePage] = useState("whoWeAre");
   const navItems = [
@@ -56,7 +60,7 @@ const About = () => {
           )}
           {/* Gallery */}
           {activePage === "gallery" && (
-            <Gallery />
+            <Gallery images={images} />
           )}
 
 
@@ -64,6 +68,17 @@ const About = () => {
       </Layout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const imagesDirectory = path.join(process.cwd(), 'public/images/gallery');
+  const filenames = fs.readdirSync(imagesDirectory);
+
+  return {
+    props: {
+      images: filenames
+    }
+  };
 }
 
 export default About;

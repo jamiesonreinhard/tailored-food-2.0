@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
-import { galleryImages } from "@/data/galleryImages";
 import { galleryVideos } from "@/data/galleryVideos";
 
-const Gallery = () => {
+const Gallery = ({ images }) => {
     const [lastVideoIndex, setLastVideoIndex] = useState(3);
-    const [lastImageIndex, setLastImageIndex] = useState(5);
+    const [lastImageIndex, setLastImageIndex] = useState(6);
 
     const showMoreVideos = () => {
         if (lastVideoIndex < galleryVideos.length) {
@@ -14,8 +13,8 @@ const Gallery = () => {
     }
 
     const showMorePhotos = () => {
-        if (lastImageIndex < galleryImages.length) {
-            setLastImageIndex(lastImageIndex + 10);
+        if (lastImageIndex < images.length) {
+            setLastImageIndex(lastImageIndex + 6);
         }
     }
 
@@ -56,14 +55,15 @@ const Gallery = () => {
                 <div className="flex flex-col gap-[36px] mb-[100px]">
                     <h2 className="h2-bold text-[24px] md:text-[40px]">Photos</h2>
                     <div className="flex w-full flex-wrap justify-center gap-[24px]">
-                        {galleryImages.map((image, index) => (
+                        {images.slice(0, lastImageIndex).map((imageName, index) => (
                             <div key={index} className="flex flex-col gap-[8px] w-[360px]">
-                                <img src={`images/gallery/${image.image}`} alt={image.caption} className="w-full h-[300px] object-cover rounded-[24px]" />
-                                <p className="caption text-grey">{image.caption}</p>
+                                <img src={`/images/gallery/${imageName}`} alt={imageName} className="w-full h-[300px] object-cover rounded-[24px]" />
+                                {/* You don't have captions here based on your logic. If you want captions, you'll need a more complex data structure. */}
+                                {/* <p className="caption text-grey">{image.caption}</p> */}
                             </div>
                         ))}
                     </div>
-                    {lastImageIndex < galleryImages.length && (
+                    {lastImageIndex < images.length && (
                         <button
                             className="btn btn-outline-primary gap-[8px] mr-auto"
                             onClick={showMorePhotos}
