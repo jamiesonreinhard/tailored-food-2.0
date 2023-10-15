@@ -18,7 +18,7 @@ module.exports = {
       'greyStroke': '#E3E3E3',
       'focusedStroke': '#6C7375',
       'primary-50': '#EAF8FC',
-      'primary-100': 'E0F4FA',
+      'primary-100': '#E0F4FA',
       'primary-200': '#BFE8F5',
       'primary-300': '#30B5E0',
       'primary-400': '#2BA3CA',

@@ -1,6 +1,6 @@
 .btn {
-    padding: 10px 24px;
-    font-size: 20px;
+    padding: 6px 10px;
+    font-size: 12px;
     font-weight: 500px;
     display: flex;
     align-items: center;
@@ -18,3 +18,10 @@
     color: #FFFFFF;
 }
 
+@media (min-width: 641px) {
+    /* Your styles for screens larger than the 'sm' breakpoint go here */
+    .btn {
+        padding: 10px 24px;
+        font-size: 20px;
+    }
+}
