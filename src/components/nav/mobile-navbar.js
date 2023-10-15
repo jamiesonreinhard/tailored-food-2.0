@@ -3,6 +3,7 @@ import React from "react";
 
 const MobileNav = ({ setIsMobileOpen }) => {
   const links = [
+    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
     { href: '/content', label: 'Content' },

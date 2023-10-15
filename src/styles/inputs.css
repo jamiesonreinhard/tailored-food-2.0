@@ -1,7 +1,7 @@
 .input {
-    height: 64px;
+    height: 48px;
     text-indent: 16px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     color: #A9B0AF;
     width: 100%;
@@ -15,4 +15,13 @@
 .text-area {
     resize: none;
     padding: 16px;
+    text-indent: 0px;
+}
+
+@media (min-width: 641px) {
+    /* Your styles for screens larger than the 'sm' breakpoint go here */
+    .input {
+        height: 64px;
+        font-size: 18px;
+    }
 }

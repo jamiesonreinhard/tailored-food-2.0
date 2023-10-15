@@ -75,7 +75,7 @@ const Home = () => {
         {/* Theory of Change Section */}
 
         {/* Desktop */}
-        <section className="hidden sm:block pt-[70px] pb-[40px] bg-gray-100 w-full max-w-[1000px] mx-auto">
+        <section className="hidden lg:block pt-[70px] pb-[40px] bg-gray-100 w-full max-w-[1000px] mx-auto">
           <h1 className="text-center h1-semibold mb-[60px]">Theory of Change</h1>
           <div className="flex flex-col w-full gap-[100px]">
             {/* Anthropological Deep Dives */}
@@ -125,6 +125,71 @@ const Home = () => {
                 <div
                   className="absolute bg-green flex items-center justify-center text-white text-[40px]
                   rounded-full w-[108px] h-[108px] top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                >
+                  03
+                </div>
+                <img src='/images/social-enterprises.png' alt="Sustainable Social Enterprises" className="w-full h-full rounded-[10px]" />
+              </div>
+              {/* Text */}
+              <div className="flex flex-col gap-[16px]">
+                <h3 className="h3-bold">Sustainable Social Enterprises</h3>
+                <p className="p-body-lg max-w-[468px]">Identifying and investing the skills and resources in local entrepreneurs, building businesses throughout the value chain that are financially sustainable for years to come.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tablet */}
+        <section className="hidden md:block lg:hidden pt-[70px] pb-[40px] bg-gray-100 w-[90%] mx-auto">
+          <h1 className="text-center h1-semibold mb-[60px]">Theory of Change</h1>
+          <div className="flex flex-col w-full gap-[100px]">
+            {/* Anthropological Deep Dives */}
+            <div className="flex w-full gap-[60px] justify-center">
+              {/* Image */}
+              <div className="w-[372px] h-[260px] rounded-[10px] relative">
+                <div
+                  className="absolute bg-primary-300 flex items-center justify-center text-white text-[40px]
+                  rounded-full w-[80px] h-[80px] top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                >
+                  01
+                </div>
+                <img src='/images/deep-dives.png' alt="anthropological deep dives" className="w-full h-full rounded-[10px]" />
+              </div>
+              {/* Text */}
+              <div className="flex flex-col gap-[16px]">
+                <h3 className="h3-bold">Anthropological Deep Dives</h3>
+                <p className="p-body-lg max-w-[468px]">Quality time immersed in rural agricultural communities, weaving through crowded urban markets, and sitting with families to fully understand the malnutrition landscape.</p>
+              </div>
+            </div>
+
+            {/* Holistic Food Systems */}
+            <div className="flex w-full gap-[60px] justify-center">
+              {/* Text */}
+              <div className="flex flex-col gap-[16px]">
+                <h3 className="h3-bold">Holistic Food Systems</h3>
+                <p className="p-body-lg max-w-[468px]">Designing and building climate-sensitive agriculture value chains, production facilities, and distribution channels for healthy, delicious, local food.</p>
+              </div>
+              {/* Image */}
+              <div className="w-[372px] h-[260px] rounded-[10px] relative">
+                <div
+                  className="absolute bg-yellow flex items-center justify-center text-white text-[40px]
+                  rounded-full w-[80px] h-[80px] top-0 left-0 -translate-x-1/2 -translate-y-1/2"
+                >
+                  02
+                </div>
+                <img src='/images/food-systems.png' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
+              </div>
+            </div>
+
+
+
+            {/* Sustainable Social Enterprises */}
+            <div className="flex w-full gap-[60px] justify-center">
+              {/* Image */}
+              <div className="w-[372px] h-[260px] rounded-[10px] relative">
+                <div
+                  className="absolute bg-green flex items-center justify-center text-white text-[40px]
+                  rounded-full w-[80px] h-[80px] top-0 left-0 -translate-x-1/2 -translate-y-1/2"
                 >
                   03
                 </div>
@@ -215,7 +280,7 @@ const Home = () => {
         {/* Fat footer */}
         <section className="py-[70px] pb-[100px] w-full max-w-[1000px] mx-auto bg-[#A9B0AF]/[0.2] md:bg-white">
           <div
-            className="w-[90%] mx-auto md:w-full gap-[24px] md:gap-[100px] flex flex-col
+            className="w-[90%] mx-auto gap-[24px] md:gap-[100px] flex flex-col
             md:flex-row md:flex-row-reverse items-center md:items-start justify-center"
           >
             <div className="flex flex-col items-center">

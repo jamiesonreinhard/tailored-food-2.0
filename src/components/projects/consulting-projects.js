@@ -25,14 +25,14 @@ const ConsultingProjects = () => {
                             <img src={`/images/partnerImages/${selectedProject.partnerImage}`} alt={selectedProject.name} className="h-[60px] md:h-[120px]" />
                             <div className="flex items-center gap-[8px]">
                                 {selectedProject.status === "active" && (
-                                    <div className="items-center gap-[8px] hidden md:flex">
+                                    <div className="items-center gap-[8px] hidden lg:flex">
                                         <img src="/images/icons/active-toggle.svg" alt="active toggle icon" />
                                         <p className="text-green">Active</p>
                                     </div>
 
                                 )}
                                 {selectedProject.status === "past" && (
-                                    <div className="flex items-center gap-[8px] hidden md:flex">
+                                    <div className="flex items-center gap-[8px] hidden lg:flex">
                                         <img src="/images/icons/past-toggle.svg" alt="past toggle icon" />
                                         <p className="text-yellow">Past</p>
                                     </div>
@@ -44,13 +44,13 @@ const ConsultingProjects = () => {
                             <img src="/images/icons/map-pin-light-gray.svg" alt="map pin" />
                             <p className="p-body-lg text-lightGrey">{selectedProject.longLocation}</p>
                             {selectedProject.status === "active" && (
-                                <div className="items-center gap-[8px] flex md:hidden">
+                                <div className="items-center gap-[8px] flex lg:hidden ml-[16px]">
                                     <img src="/images/icons/active-toggle.svg" alt="active toggle icon" />
                                     <p className="text-green text-[12px]">Active</p>
                                 </div>
                             )}
                             {selectedProject.status === "past" && (
-                                    <div className="flex items-center gap-[8px] flex md:hidden">
+                                    <div className="flex items-center gap-[8px] flex lg:hidden ml-[16px]">
                                         <img src="/images/icons/past-toggle.svg" alt="past toggle icon" />
                                         <p className="text-yellow text-[12px]">Past</p>
                                     </div>

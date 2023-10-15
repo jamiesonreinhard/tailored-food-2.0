@@ -10,8 +10,8 @@ const Podcasts = () => {
                 {podcasts.map((podcast, index) => (
                     <div
                         key={index}
-                        className="w-full flex items-center justify-between md:media-card-shadow md:rounded-[38px] py-[16px] border-b-[1px] border-greyStroke
-                        md:border-0 md:px-[50px] md:py-[28px]"
+                        className="w-full flex items-center justify-between md:rounded-[38px] py-[16px] border-b-[1px] border-greyStroke
+                        md:border-0 md:px-[50px] md:py-[28px] podcast-shadow"
                     >
                         <div className="flex flex-col items-center gap-[8px]">
                             <img
