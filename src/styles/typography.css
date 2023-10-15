@@ -4,6 +4,18 @@
     color: #02241A;
 }
 
+.display-2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #02241A;
+}
+
+.h1-semibold {
+    font-size: 48px;
+    font-weight: 600;
+    color: #02241A;
+}
+
 .h2-bold {
     font-size: 40px;
     font-weight: 700;
@@ -24,6 +36,12 @@
 
 .h4-bold {
     font-size: 24px;
+    font-weight: 700;
+    color: #02241A;
+}
+
+.h5-bold {
+    font-size: 20px;
     font-weight: 700;
     color: #02241A;
 }

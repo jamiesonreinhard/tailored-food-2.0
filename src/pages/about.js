@@ -3,11 +3,26 @@ import Layout from '@/components/layout'
 import WhoWeAre from '../components/about/who-we-are';
 import MeetTheTeam from '../components/about/meet-the-team';
 import Gallery from '../components/about/gallery';
+import SubNavigation from "@/components/sub-navigation";
 import { motion, AnimatePresence } from 'framer-motion';
 
 const About = () => {
 
   const [activePage, setActivePage] = useState("whoWeAre");
+  const navItems = [
+    {
+      "name": "whoWeAre",
+      "display": "Who We Are"
+    },
+    {
+      "name": "meetTheTeam",
+      "display": "Meet The Team"
+    },
+    {
+      "name": "gallery",
+      "display": "Gallery"
+    },
+  ]
 
   return (
     <>
@@ -27,30 +42,9 @@ const About = () => {
           <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'rgba(1, 1, 1, 0.30)' }} />
         </div>
 
-        <div className="w-full flex flex-col pt-[76px]">
+        <div className="w-full flex flex-col pt-[32px] md:pt-[76px]">
           {/* About Sub Navigation */}
-          <div className="flex gap-[32px] mb-[66px] w-full max-w-[1140px] mx-auto justify-start">
-            <button
-              onClick={() => setActivePage("whoWeAre")}
-              disabled={activePage === "whoWeAre"}
-              className={`subtitle-medium p-[10px] border-primary-300 ${activePage === "whoWeAre" ? "border-b-[5px] text-primary-300" : "text-lightGrey"}`}
-            >
-              Who We Are
-            </button>
-            <button
-              onClick={() => setActivePage("meetTheTeam")}
-              disabled={activePage === "meetTheTeam"}
-              className={`subtitle-medium p-[10px] border-primary-300 ${activePage === "meetTheTeam" ? "border-b-[5px] text-primary-300" : "text-lightGrey"}`}>
-              Meet The Team
-            </button>
-            <button
-              onClick={() => setActivePage("gallery")}
-              disabled={activePage === "gallery"}
-              className={`subtitle-medium p-[10px] border-primary-300 ${activePage === "gallery" ? "border-b-[5px] text-primary-300" : "text-lightGrey"}`}
-            >
-              Gallery
-            </button>
-          </div>
+          <SubNavigation navItems={navItems} activePage={activePage} setActivePage={setActivePage} />
 
           {/* Who We Are */}
           {activePage === "whoWeAre" && (
