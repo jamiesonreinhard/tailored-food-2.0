@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>JL Boda</title>
+        <title>Tailored Food</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
