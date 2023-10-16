@@ -10,8 +10,6 @@ import path from 'path';
 
 const About = ({images}) => {
 
-  console.log(images);
-
   const [activePage, setActivePage] = useState("whoWeAre");
   const navItems = [
     {
@@ -22,10 +20,10 @@ const About = ({images}) => {
       "name": "meetTheTeam",
       "display": "Meet The Team"
     },
-    {
-      "name": "gallery",
-      "display": "Gallery"
-    },
+    // {
+    //   "name": "gallery",
+    //   "display": "Gallery"
+    // },
   ]
 
   return (
@@ -59,10 +57,9 @@ const About = ({images}) => {
             <MeetTheTeam />
           )}
           {/* Gallery */}
-          {activePage === "gallery" && (
+          {/* {activePage === "gallery" && (
             <Gallery images={images} />
-          )}
-
+          )} */}
 
         </div>
       </Layout>

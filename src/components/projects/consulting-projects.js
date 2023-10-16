@@ -56,7 +56,9 @@ const ConsultingProjects = () => {
                                     </div>
                                 )}
                         </div>
-                        <p className="p-body-lg text-[14px] md:text-[20px]">{selectedProject.description}</p>
+                        {selectedProject.paragraphs.map((paragraph, index) => (
+                             <p key={index} className="p-body-lg text-[14px] md:text-[20px] mb-[12px]">{paragraph}</p>
+                        ))}
                     </div>
                 </div>
             </div>

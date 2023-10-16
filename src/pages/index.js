@@ -72,11 +72,14 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Theory of Change Section */}
+        {/* Our Approach Section */}
 
         {/* Desktop */}
         <section className="hidden lg:block pt-[70px] pb-[40px] bg-gray-100 w-full max-w-[1000px] mx-auto">
-          <h1 className="text-center h1-semibold mb-[60px]">Theory of Change</h1>
+          <h1 className="text-center h1-semibold mb-[60px]">Our Approach</h1>
+          <p className="text-center p-body-xl mb-[80px]">
+            Tailored Food is a lean social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
+          </p>
           <div className="flex flex-col w-full gap-[100px]">
             {/* Anthropological Deep Dives */}
             <div className="flex w-full gap-[60px] justify-center">
@@ -93,7 +96,7 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h3-bold">Anthropological Deep Dives</h3>
-                <p className="p-body-lg max-w-[468px]">Quality time immersed in rural agricultural communities, weaving through crowded urban markets, and sitting with families to fully understand the malnutrition landscape.</p>
+                <p className="p-body-lg max-w-[468px]">Quality time immersed in rural agricultural communities, weaving through crowded urban markets, and sitting with families to fully understand the malnutrition landscape in different countries. Meeting with food system stakeholders at all levels to fully grasp the political economy shaping the food system environment.</p>
               </div>
             </div>
 
@@ -102,7 +105,8 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h3-bold">Holistic Food Systems</h3>
-                <p className="p-body-lg max-w-[468px]">Designing and building climate-sensitive agriculture value chains, production facilities, and distribution channels for healthy, delicious, local food.</p>
+                <p className="p-body-lg max-w-[468px]">Alongside local experts we design and build climate-sensitive agriculture value chains, food production facilities, and distribution channels to enable the availability of healthy, delicious, local foods.
+                </p>
               </div>
               {/* Image */}
               <div className="w-[372px] h-[260px] rounded-[10px] relative">
@@ -115,8 +119,6 @@ const Home = () => {
                 <img src='/images/food-systems.png' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
               </div>
             </div>
-
-
 
             {/* Sustainable Social Enterprises */}
             <div className="flex w-full gap-[60px] justify-center">
@@ -133,15 +135,18 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h3-bold">Sustainable Social Enterprises</h3>
-                <p className="p-body-lg max-w-[468px]">Identifying and investing the skills and resources in local entrepreneurs, building businesses throughout the value chain that are financially sustainable for years to come.</p>
+                <p className="p-body-lg max-w-[468px]">Identify resource gaps and invest in skill development for local entrepreneurs. Ensuring businesses throughout the value chain are financially sustainable and have the infrastructure needed to thrive independently for years to come.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Tablet */}
-        <section className="hidden md:block lg:hidden pt-[70px] pb-[40px] bg-gray-100 w-[90%] mx-auto">
-          <h1 className="text-center h1-semibold mb-[60px]">Theory of Change</h1>
+        <section className="hidden sm:block lg:hidden pt-[70px] pb-[40px] bg-gray-100 w-[90%] mx-auto">
+          <h1 className="text-center h1-semibold mb-[60px]">Our Approach</h1>
+          <p className="text-center p-body-lg mb-[80px] max-w-[90%] mx-auto">
+            Tailored Food is a lean social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
+          </p>
           <div className="flex flex-col w-full gap-[100px]">
             {/* Anthropological Deep Dives */}
             <div className="flex w-full gap-[60px] justify-center">
@@ -158,7 +163,7 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h3-bold">Anthropological Deep Dives</h3>
-                <p className="p-body-lg max-w-[468px]">Quality time immersed in rural agricultural communities, weaving through crowded urban markets, and sitting with families to fully understand the malnutrition landscape.</p>
+                <p className="p-body-lg max-w-[468px]">Quality time immersed in rural agricultural communities, weaving through crowded urban markets, and sitting with families to fully understand the malnutrition landscape in different countries. Meeting with food system stakeholders at all levels to fully grasp the political economy shaping the food system environment.</p>
               </div>
             </div>
 
@@ -167,7 +172,8 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h3-bold">Holistic Food Systems</h3>
-                <p className="p-body-lg max-w-[468px]">Designing and building climate-sensitive agriculture value chains, production facilities, and distribution channels for healthy, delicious, local food.</p>
+                <p className="p-body-lg max-w-[468px]">Alongside local experts we design and build climate-sensitive agriculture value chains, food production facilities, and distribution channels to enable the availability of healthy, delicious, local foods.
+                </p>
               </div>
               {/* Image */}
               <div className="w-[372px] h-[260px] rounded-[10px] relative">
@@ -180,8 +186,6 @@ const Home = () => {
                 <img src='/images/food-systems.png' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
               </div>
             </div>
-
-
 
             {/* Sustainable Social Enterprises */}
             <div className="flex w-full gap-[60px] justify-center">
@@ -198,7 +202,7 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h3-bold">Sustainable Social Enterprises</h3>
-                <p className="p-body-lg max-w-[468px]">Identifying and investing the skills and resources in local entrepreneurs, building businesses throughout the value chain that are financially sustainable for years to come.</p>
+                <p className="p-body-lg max-w-[468px]">Identify resource gaps and invest in skill development for local entrepreneurs. Ensuring businesses throughout the value chain are financially sustainable and have the infrastructure needed to thrive independently for years to come.</p>
               </div>
             </div>
           </div>
@@ -206,7 +210,10 @@ const Home = () => {
 
         {/* Mobile */}
         <section className="sm:hidden pt-[70px] pb-[40px] bg-gray-100 w-full max-w-[1000px] mx-auto">
-          <h1 className="text-center h4-bold mb-[60px]">Theory of Change</h1>
+          <h1 className="text-center h4-bold mb-[40px]">Our Approach</h1>
+          <p className="text-center p-body-md mb-[80px] max-w-[90%] mx-auto">
+            Tailored Food is a lean social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
+          </p>
           <div className="flex flex-col w-full gap-[100px]">
             {/* Anthropological Deep Dives */}
             <div className="flex flex-col w-[270px] gap-[20px] items-center mx-auto">
@@ -242,7 +249,8 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h5-bold">Holistic Food Systems</h3>
-                <p className="p-body-md w-full">Designing and building climate-sensitive agriculture value chains, production facilities, and distribution channels for healthy, delicious, local food.</p>
+                <p className="p-body-md w-full">Alongside local experts we design and build climate-sensitive agriculture value chains, food production facilities, and distribution channels to enable the availability of healthy, delicious, local foods.
+                </p>
               </div>
             </div>
 
@@ -261,14 +269,14 @@ const Home = () => {
               {/* Text */}
               <div className="flex flex-col gap-[16px]">
                 <h3 className="h5-bold">Sustainable Social Enterprises</h3>
-                <p className="p-body-md w-full">Identifying and investing the skills and resources in local entrepreneurs, building businesses throughout the value chain that are financially sustainable for years to come.</p>
+                <p className="p-body-md w-full">Identify resource gaps and invest in skill development for local entrepreneurs. Ensuring businesses throughout the value chain are financially sustainable and have the infrastructure needed to thrive independently for years to come.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Our partners section */}
-        <section className="py-[70px] bg-gray-100 w-[90%] md:w-full mx-auto">
+        <section className="pt-[20px] pb-[70px] md:py-[70px] bg-gray-100 w-[90%] md:w-full mx-auto">
           <h1 className="text-center text-[48px] font-semibold mb-[60px]">Our Partners</h1>
           <div className="flex items-center gap-[32px] w-full flex-wrap justify-center">
             {partners.map((partner) => (
@@ -278,7 +286,7 @@ const Home = () => {
         </section>
 
         {/* Fat footer */}
-        <section className="py-[70px] pb-[100px] w-full max-w-[1000px] mx-auto bg-[#A9B0AF]/[0.2] md:bg-white">
+        {/* <section className="py-[70px] pb-[100px] w-full max-w-[1000px] mx-auto bg-[#A9B0AF]/[0.2] md:bg-white">
           <div
             className="w-[90%] mx-auto gap-[24px] md:gap-[100px] flex flex-col
             md:flex-row md:flex-row-reverse items-center md:items-start justify-center"
@@ -299,7 +307,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
       </Layout>
     </>
   )
