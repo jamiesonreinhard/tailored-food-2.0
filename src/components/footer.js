@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
     return (
@@ -13,8 +14,8 @@ const Footer = () => {
                 <p className="md:hidden text-[12px] text-white">© {new Date().getFullYear()} Tailored Food, All Rights Reserved</p>
                 <p className="hidden md:block p-body-lg text-white">© {new Date().getFullYear()} Tailored Food, All Rights Reserved</p>
             </div>
-            <img src="/images/icons/linkedin.svg" alt="linkedin" className="w-[24px] h-[24px] md:hidden" />
-            <img src="/images/icons/linkedin.svg" alt="linkedin" className="w-[56px] h-[56px] hidden md:block" />
+            <Link href="https://linkedin.com/company/tailored-food" target="_blank"><img src="/images/icons/linkedin.svg" alt="linkedin" className="w-[24px] h-[24px] md:hidden" /></Link>
+            <Link href="https://linkedin.com/company/tailored-food" target="_blank"><img src="/images/icons/linkedin.svg" alt="linkedin" className="w-[56px] h-[56px] hidden md:block" /></Link>
         </footer>
     )
 }

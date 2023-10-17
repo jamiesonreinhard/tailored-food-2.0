@@ -112,6 +112,7 @@ const Contact = () => {
                   <h5 className="h5-bold">Follow Us on LinkedIn</h5>
                   <Link
                     href="https://www.linkedin.com/company/tailored-food"
+                    target="_blank"
                     className="p-body-lg text-primary-300"
                   >
                     linkedin.com/company/tailored-food
