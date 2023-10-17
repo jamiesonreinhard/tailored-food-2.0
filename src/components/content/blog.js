@@ -5,10 +5,10 @@ const Blog = () => {
     return (
         <div className="flex flex-col w-full max-w-[1140px] mx-auto">
             {/* BLOG POSTS */}
-            <div className="flex flex-col w-full gap-[20px] md:gap-[36px]">
-                <div className="flex w-full flex-wrap justify-center lg:justify-start gap-[36px]">
+            <div className="flex flex-col w-full gap-[20px] xl:gap-[36px]">
+                <div className="flex w-full flex-wrap justify-center xl:justify-start gap-[36px]">
                     {blogPosts.map((post, index) => (
-                        <div key={index} className="max-w-[540px] media-card-shadow rounded-[26px] flex flex-col items-center p-[12px]">
+                        <div key={index} className="max-w-[400px] xl:max-w-[540px] media-card-shadow rounded-[26px] flex flex-col items-center p-[12px]">
                             <img src={`/images/blog/${post.image}`} alt={post.title} className="mb-[16px] rounded-[26px] h-[310px] object-cover w-full" />
                             <div className="flex flex-col gap-[4px] md:gap-[24px] w-full px-[16px] mb-[18px] md:mb-[32px]">
                                 <h4 className="h4-bold text-[16px] md:text-[24px]">{post.title}</h4>

@@ -78,7 +78,7 @@ const Home = () => {
         <section className="hidden lg:block pt-[70px] pb-[40px] bg-gray-100 w-full max-w-[1000px] mx-auto">
           <h1 className="text-center h1-semibold mb-[60px]">Our Approach</h1>
           <p className="text-center p-body-xl mb-[80px]">
-            Tailored Food is a lean social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
+            Tailored Food is a non-profit social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
           </p>
           <div className="flex flex-col w-full gap-[100px]">
             {/* Anthropological Deep Dives */}
@@ -145,7 +145,7 @@ const Home = () => {
         <section className="hidden sm:block lg:hidden pt-[70px] pb-[40px] bg-gray-100 w-[90%] mx-auto">
           <h1 className="text-center h1-semibold mb-[60px]">Our Approach</h1>
           <p className="text-center p-body-lg mb-[80px] max-w-[90%] mx-auto">
-            Tailored Food is a lean social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
+            Tailored Food is a non-profit social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
           </p>
           <div className="flex flex-col w-full gap-[100px]">
             {/* Anthropological Deep Dives */}
@@ -212,7 +212,7 @@ const Home = () => {
         <section className="sm:hidden pt-[70px] pb-[40px] bg-gray-100 w-full max-w-[1000px] mx-auto">
           <h1 className="text-center h4-bold mb-[40px]">Our Approach</h1>
           <p className="text-center p-body-md mb-[80px] max-w-[90%] mx-auto">
-            Tailored Food is a lean social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
+            Tailored Food is a non-profit social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition. We are building a grassroots movement to <span className="text-green">end hunger by 2030.</span>
           </p>
           <div className="flex flex-col w-full gap-[100px]">
             {/* Anthropological Deep Dives */}
@@ -300,7 +300,7 @@ const Home = () => {
             <div className="flex flex-col gap-[24px]">
               <img src='/images/tf-logo.svg' alt="Tailored Food logo" className="hidden md:block max-w-[400px]" />
               <p className="p-body-lg max-w-[690px]">
-                Tailored Food is a lean social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition.
+                Tailored Food is a non-profit social enterprise consultancy that partners with food entrepreneurs, farmers, and market vendors to ensure nutritious delicious low-cost food is available to families suffering from malnutrition.
                 <br />
                 <br />
                 We are building a grassroots movement to <span className="text-primary-300">end hunger by 2030.</span>
