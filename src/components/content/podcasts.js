@@ -15,7 +15,7 @@ const Podcasts = () => {
                     >
                         <div className="flex flex-col items-center gap-[8px]">
                             <img
-                                src={`/images/media/${podcast.image}`}
+                                src={`/images/podcasts/${podcast.image}`}
                                 alt={podcast.title}
                                 className="w-[64px] md:w-[170px] h-[64px] md:h-[170px] object-cover rounded-[16px] md:mr-[48px]"
                             />
@@ -38,7 +38,7 @@ const Podcasts = () => {
                                 </div>
                             </div>
                         </div>
-                        <Link href={podcast.link} className="btn btn-outline-primary gap-[8px] w-[260px] hidden md:flex">
+                        <Link href={podcast.link} target="_blank" className="btn btn-outline-primary gap-[8px] w-[260px] hidden md:flex">
                             <span className="whitespace-nowrap">Listen Now</span>
                             <img src="/images/icons/headphones.svg" alt="external link" />
                         </Link>

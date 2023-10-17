@@ -52,19 +52,19 @@ const WhoWeAre = () => {
                     <h2 className="h2-bold text-[20px] md:text-[40px]">How We Do It</h2>
                     <h4 className="h4-bold text-[16px] md:text-[24px]">Our approach to food systems transformation includes the following:</h4>
                     <div className="flex flex-col gap-[8px]">
-                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>Solutions mapping:</em></p>
+                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>1. Solutions mapping:</em></p>
                         <p className="p-body-lg text-[16px] md:text-[20px]">Conducting qualitative ethnographic field research to learn from stakeholders throughout food systems.</p>
                     </div>
                     <div className="flex flex-col gap-[8px]">
-                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>Nutritious food product development and launch</em></p>
+                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>2. Nutritious food product development and launch</em></p>
                         <p className="p-body-lg text-[16px] md:text-[20px]">We find the most ambitious entrepreneurs and provide them with a team of top food industry experts to design, launch and grow nutritious low-cost food products in their home markets. We provide end-to-end capacity support for their businesses and facilitate access to capital in order to scale impact.</p>
                     </div>
                     <div className="flex flex-col gap-[8px]">
-                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>Long-term food systems transformation:</em></p>
+                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>3. Long-term food systems transformation:</em></p>
                         <p className="p-body-lg text-[16px] md:text-[20px]">Provide end-to-end capacity support to businesses and access to capital to scale impact.</p>
                     </div>
                     <div className="flex flex-col gap-[8px]">
-                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>Knowledge sharing and thought leadership:</em></p>
+                        <p className='p-body-lg text-[16px] md:text-[20px]'><em className='font-bold'>4. Knowledge sharing and thought leadership:</em></p>
                         <p className="p-body-lg text-[16px] md:text-[20px]">Share learnings and case studies with food system organization decision makers. . Showcasing the Tailored Food model to policy makers and organization partners through events and forums.</p>
                     </div>
 

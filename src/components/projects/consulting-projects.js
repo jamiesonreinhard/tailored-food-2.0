@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { consultingProjects } from "@/data/projects";
 import { useState } from "react";
+import Link from "next/link";
 
 const ConsultingProjects = () => {
     const [selectedProject, setSelectedProject] = useState(consultingProjects[0]);
@@ -59,6 +60,12 @@ const ConsultingProjects = () => {
                         {selectedProject.paragraphs.map((paragraph, index) => (
                              <p key={index} className="p-body-lg text-[14px] md:text-[20px] mb-[12px]">{paragraph}</p>
                         ))}
+                        {selectedProject.link && (
+                            <Link href={selectedProject.link || ""} target="_blank" className="ml-auto gap-[8px] mt-[24px] btn btn-outline-primary">
+                                Partner Website
+                                <img src="/images/icons/external-link.svg" alt="external link" />
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { entrepreneurProjects } from "@/data/projects";
 import { useState } from "react";
+import Link from "next/link";
 
 const EntrepreneurPartners = () => {
     const [selectedProject, setSelectedProject] = useState(entrepreneurProjects[0]);
@@ -50,15 +51,21 @@ const EntrepreneurPartners = () => {
                                 </div>
                             )}
                             {selectedProject.status === "past" && (
-                                    <div className="flex items-center gap-[8px] flex lg:hidden ml-[16px]">
-                                        <img src="/images/icons/past-toggle.svg" alt="past toggle icon" />
-                                        <p className="text-yellow text-[12px]">Past</p>
-                                    </div>
-                                )}
+                                <div className="flex items-center gap-[8px] flex lg:hidden ml-[16px]">
+                                    <img src="/images/icons/past-toggle.svg" alt="past toggle icon" />
+                                    <p className="text-yellow text-[12px]">Past</p>
+                                </div>
+                            )}
                         </div>
                         {selectedProject.paragraphs.map((paragraph, index) => (
-                             <p key={index} className="p-body-lg text-[14px] md:text-[20px] mb-[12px]">{paragraph}</p>
+                            <p key={index} className="p-body-lg text-[14px] md:text-[20px] mb-[12px]">{paragraph}</p>
                         ))}
+                        {selectedProject.link && (
+                            <Link href={selectedProject.link || ""} target="_blank" className="ml-auto gap-[8px] mt-[24px] btn btn-outline-primary">
+                                Partner Website
+                                <img src="/images/icons/external-link.svg" alt="external link" />
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>
