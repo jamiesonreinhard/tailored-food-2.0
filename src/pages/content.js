@@ -26,10 +26,11 @@ const Content = () => {
   return (
     <>
       <Layout>
-        <div className="flex flex-col w-[90%] max-w-[1200px] mx-auto pt-[110px] pb-[140px] md:py-[130px]">
+        <div className="mt-[110px] md:mt-[130px]">
           {/* Content Sub Navigation */}
           <SubNavigation navItems={navItems} activePage={activePage} setActivePage={setActivePage} />
-
+        </div>
+        <div className="flex flex-col w-[90%] max-w-[1200px] mx-auto pb-[140px]">
           {activePage === "blog" && (
             <Blog />
           )}

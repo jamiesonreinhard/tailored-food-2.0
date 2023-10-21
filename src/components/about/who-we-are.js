@@ -7,7 +7,7 @@ const WhoWeAre = () => {
         <div className="flex flex-col w-full mx-auto justify-start">
 
             {/* OUR MISSION */}
-            <div className="flex flex-col w-[90%] max-w-[1140px] mx-auto pb-[60px] md:pb-[60px]">
+            <div className="flex flex-col w-[90%] max-w-[1920px] mx-auto pb-[60px] md:pb-[60px]">
                 <div className="flex flex-col gap-[20px] md:gap-[36px]">
                     <h2 className="h2-bold text-[20px] md:text-[40px]">Our Mission</h2>
                     <p className="p-body-lg text-[16px] md:text-[20px]">Tailored Food works to eliminate hunger for people living in poverty by developing, launching and scaling delicious, low-cost, nutritious, locally sourced food products in partnership with grassroots entrepreneurs to ensure healthy food is affordable and available to families struggling with malnutrition.</p>
@@ -16,7 +16,7 @@ const WhoWeAre = () => {
 
             {/* OUR STORY */}
             <div className="w-full pt-[72px] pb-[34px] bg-primary-50">
-                <div className="flex flex-col w-[90%] max-w-[1140px] mx-auto">
+                <div className="flex flex-col w-[90%] max-w-[1920px] mx-auto">
                     <h2 className="h2-bold text-[20px] md:text-[40px] mb-[20px] md:mb-[36px]">Our Story</h2>
                     <div className="flex flex-col gap-[32px]">
                         <p className="p-body-lg text-[16px] md:text-[20px]">March 23, 2016: At a hospital hit hard by Ebola on the outskirts of Monrovia, Liberia, I met with the Head Pediatrician, Dr. Jude. Over a long conversation Dr. Jude shared: </p>
@@ -36,7 +36,7 @@ const WhoWeAre = () => {
             </div>
 
             {/* WHAT / HOW */}
-            <div className="flex flex-col w-[90%] max-w-[1140px] mx-auto pt-[60px] pb-[120px]">
+            <div className="flex flex-col w-[90%] max-w-[1920px] mx-auto pt-[60px] pb-[160px]">
                 <div className="flex flex-col gap-[20px] md:gap-[36px] mb-[36px]">
                     <h2 className="h2-bold text-[20px] md:text-[40px]">What We Do</h2>
                     <div className="flex flex-col gap-[8px] mb-[24px]">

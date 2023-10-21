@@ -9,7 +9,7 @@ const MeetTheTeam = () => {
         <>
             <div className="flex flex-col w-full mx-auto justify-start">
                 {/* TEAM MEMBERS */}
-                <div className="flex w-[96%] max-w-[1140px] mx-auto pb-[120px] flex-wrap gap-[16px] md:gap-[72px] justify-center lg:justify-start">
+                <div className="flex w-[90%] max-w-[1920px] mx-auto pb-[120px] flex-wrap gap-[16px] md:gap-[72px] justify-center">
                     {team.map((member) => (
                         <div
                             key={member.name}
