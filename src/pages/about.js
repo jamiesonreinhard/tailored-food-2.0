@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout'
 import WhoWeAre from '../components/about/who-we-are';
 import MeetTheTeam from '../components/about/meet-the-team';
-import Gallery from '../components/about/gallery';
 import SubNavigation from "@/components/sub-navigation";
 import { motion, AnimatePresence } from 'framer-motion';
 import fs from 'fs';
@@ -19,11 +18,7 @@ const About = ({images}) => {
     {
       "name": "meetTheTeam",
       "display": "Meet The Team"
-    },
-    // {
-    //   "name": "gallery",
-    //   "display": "Gallery"
-    // },
+    }
   ]
 
   return (
@@ -56,11 +51,7 @@ const About = ({images}) => {
           {activePage === "meetTheTeam" && (
             <MeetTheTeam />
           )}
-          {/* Gallery */}
-          {/* {activePage === "gallery" && (
-            <Gallery images={images} />
-          )} */}
-
+          {/* Gallery GOES BELOW */}
         </div>
       </Layout>
     </>
