@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Home = () => {
 
   const sliderImages = [
-    '/images/home-slider-1.jpeg',
-    '/images/home-slider-2.jpeg',
-    '/images/home-slider-3.jpeg'
+    '/images/home-slider-1.webp',
+    '/images/home-slider-2.webp',
+    '/images/home-slider-3.webp'
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -92,7 +92,7 @@ const Home = () => {
                   >
                     01
                   </div>
-                  <img src='/images/deep-dives.png' alt="anthropological deep dives" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/deep-dives.webp' alt="anthropological deep dives" className="w-full h-full rounded-[10px]" />
                 </div>
                 {/* Text */}
                 <div className="flex flex-col gap-[16px]">
@@ -117,7 +117,7 @@ const Home = () => {
                   >
                     02
                   </div>
-                  <img src='/images/food-systems.png' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/food-systems.webp' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
                 </div>
               </div>
 
@@ -131,7 +131,7 @@ const Home = () => {
                   >
                     03
                   </div>
-                  <img src='/images/social-enterprises.png' alt="Sustainable Social Enterprises" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/social-enterprises.webp' alt="Sustainable Social Enterprises" className="w-full h-full rounded-[10px]" />
                 </div>
                 {/* Text */}
                 <div className="flex flex-col gap-[16px]">
@@ -159,7 +159,7 @@ const Home = () => {
                   >
                     01
                   </div>
-                  <img src='/images/deep-dives.png' alt="anthropological deep dives" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/deep-dives.webp' alt="anthropological deep dives" className="w-full h-full rounded-[10px]" />
                 </div>
                 {/* Text */}
                 <div className="flex flex-col gap-[16px]">
@@ -184,7 +184,7 @@ const Home = () => {
                   >
                     02
                   </div>
-                  <img src='/images/food-systems.png' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/food-systems.webp' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
                 </div>
               </div>
 
@@ -198,7 +198,7 @@ const Home = () => {
                   >
                     03
                   </div>
-                  <img src='/images/social-enterprises.png' alt="Sustainable Social Enterprises" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/social-enterprises.webp' alt="Sustainable Social Enterprises" className="w-full h-full rounded-[10px]" />
                 </div>
                 {/* Text */}
                 <div className="flex flex-col gap-[16px]">
@@ -226,7 +226,7 @@ const Home = () => {
                   >
                     01
                   </div>
-                  <img src='/images/deep-dives.png' alt="anthropological deep dives" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/deep-dives.webp' alt="anthropological deep dives" className="w-full h-full rounded-[10px]" />
                 </div>
                 {/* Text */}
                 <div className="flex flex-col gap-[16px]">
@@ -245,7 +245,7 @@ const Home = () => {
                   >
                     02
                   </div>
-                  <img src='/images/food-systems.png' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/food-systems.webp' alt="Holistic Food Systems" className="w-full h-full rounded-[10px]" />
                 </div>
                 {/* Text */}
                 <div className="flex flex-col gap-[16px]">
@@ -265,7 +265,7 @@ const Home = () => {
                   >
                     03
                   </div>
-                  <img src='/images/social-enterprises.png' alt="Sustainable Social Enterprises" className="w-full h-full rounded-[10px]" />
+                  <img src='/images/social-enterprises.webp' alt="Sustainable Social Enterprises" className="w-full h-full rounded-[10px]" />
                 </div>
                 {/* Text */}
                 <div className="flex flex-col gap-[16px]">
