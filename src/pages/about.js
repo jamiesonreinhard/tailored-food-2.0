@@ -32,7 +32,7 @@ const About = ({images}) => {
         {/* Header and Image Slider */}
         <div className="relative w-full h-[400px]">
           <motion.img
-            src={'/images/about-header.png'}
+            src={'/images/about-header.webp'}
             alt="Background"
             className="absolute top-0 left-0 w-full h-full object-cover"
             initial={{ opacity: 0 }} // Initial opacity

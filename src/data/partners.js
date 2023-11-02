@@ -1,38 +1,38 @@
 export const partners = [
   {
     "name": "benu",
-    "image": "benu.png"
+    "image": "benu.webp"
   },
   {
     "name": "Bill & Melinda Gates Foundation",
-    "image": "billGates.png"
+    "image": "billGates.webp"
   },
   {
     "name": "Kayvey",
-    "image": "kayvey.png"
+    "image": "kayvey.webp"
   },
   {
     "name": "Mercy Corps",
-    "image": "mercyCorps.png"
+    "image": "mercyCorps.webp"
   },
   {
     "name": "Mozambique School Lunch Initiative",
-    "image": "mozambiqueSchoolLunch.png"
+    "image": "mozambiqueSchoolLunch.webp"
   },
   {
     "name": "Save the Children",
-    "image": "saveTheChildren.png"
+    "image": "saveTheChildren.webp"
   },
   {
     "name": "Unicef",
-    "image": "unicef.png"
+    "image": "unicef.webp"
   },
   {
     "name": "The World Bank",
-    "image": "worldBank.png"
+    "image": "worldBank.webp"
   },
   {
     "name": "World Food Programme",
-    "image": "worldFoodProgramme.png"
+    "image": "worldFoodProgramme.webp"
   },
 ]
