@@ -10,6 +10,27 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Montserrat:wght@400;700&family=Noto+Serif&display=swap"
           rel="stylesheet"
         />
+        {/* <!-- Google Tag Manager --> */}
+        <script>
+          {/* Paste your Google Tag Manager code snippet here */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-MCPQ21FQH2`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-MCPQ21FQH2', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+          />
+        </script>
+        {/* <!-- End Google Tag Manager --> */}
       </Head>
       <body>
         <Main />
