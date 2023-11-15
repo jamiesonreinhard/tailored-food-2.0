@@ -46,5 +46,11 @@ export const team = [
     "title": "Project Director",
     "image": "tanyaMayoBruinsma.webp",
     "bio": "With an MSc in Environmental Technology and International Affairs, food system sustainability has been Tanya's focus for a decade. Moving from food waste & recovery efforts, to running a zero-waste food service business, before taking on the challenge of building nutritious low-cost food systems. Tanya has a diverse background of inter-cultural experience, speaks 5 languages and outside of work she explores the mountains around her French alpine home by paraglider, skis or on foot."
+  },
+  {
+    "name": "Nicole Riker",
+    "title": "Research",
+    "image": "nicoleRiker.webp",
+    "bio": " Nicole Riker has collected a broad array of research experience across multiple sectors. She has led research in neurosurgery and neurosurgical simulation to launch innovative residency programs across Europe, developed and launched assessment tools while building disaster relief programs in Central America and the Caribbean and worked to identify innovative solutions and entrepreneurs in the global food sector, connecting them with resources to create successful partnerships. Nicole has a BA in International Relations and holds an MSc in Sustainable Development from the School of Oriental and African Studies (SOAS). In her time off she still loves to learn about food through cooking new recipes and reading as much as possible about global food systems."
   }
 ]
