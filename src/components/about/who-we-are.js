@@ -156,7 +156,7 @@ const WhoWeAre = () => {
             </p>
             <p className="p-body-lg text-[16px] md:text-[20px]">
               Share learnings and case studies with food system organization
-              decision makers. . Showcasing the Tailored Food model to policy
+              decision makers, showcasing the Tailored Food model to policy
               makers and organization partners through events and forums.
             </p>
           </div>
