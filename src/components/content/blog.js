@@ -1,13 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import { blogPosts } from "@/data/blogPosts";
-import moment from 'moment';
+import { fetchBlogPosts } from "@/pages/api/contentful";
+import moment from "moment";
 
-const Blog = () => {
+const Blog = ({ fetchedPosts }) => {
   const sortedBlogPosts = blogPosts.sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB - dateA;
   });
+
+  console.log(fetchedPosts);
 
   return (
     <div className="flex flex-col w-full max-w-[1140px] mx-auto">
@@ -67,5 +70,14 @@ const Blog = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const blogPosts = await fetchBlogPosts();
+  return {
+    props: {
+      blogPosts,
+    },
+  };
+}
 
 export default Blog;
