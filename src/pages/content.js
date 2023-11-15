@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout';
-import Blog from "@/components/content/blog";
-import Media from "@/components/content/media";
-import Podcasts from "@/components/content/podcasts";
+import Blog from "@/components/content/blog/blog";
+import Media from "@/components/content/media/media";
+import Podcasts from "@/components/content/podcasts/podcasts";
 import SubNavigation from "@/components/sub-navigation";
 
 const Content = () => {
