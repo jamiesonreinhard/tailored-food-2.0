@@ -7,7 +7,7 @@ export const mediaPosts = [
     },
     {
         "title": "Finding fresh ways to feed the world",
-        "subtitle": "An interview featuring Tailored Foods Executive Director Taylor Quinn",
+        "subtitle": "An interview featuring Tailored Food Executive Director Taylor Quinn",
         "image": "canadianNationalObserver.webp",
         "link": "https://www.nationalobserver.com/2023/07/10/finding-fresh-ways-feed-world"
     },
