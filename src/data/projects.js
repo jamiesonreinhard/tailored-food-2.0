@@ -161,7 +161,7 @@ export const consultingProjects = [
         "location": "Eastern and Southern Africa",
         "status": "active",
         "paragraphs": [
-            "Regional project to research, develop, and scale projects for UNICEF that “Improve Children’s Foods”. Tailored Food is conducting a research study across 12 countries in the Eastern and Southern Africa (ESARO) region to understand existing food system dynamics and the role of current stakeholders (UN World Food Programme, UN Food and Agriculture Organization, national governments, non-profit organizations, and private sector entities), identifying where UNICEF can add the most value in bringing nutritious food to pregnant and lactating women and kids in their first 1000 days."
+            "Regional project to research, develop, and scale projects for UNICEF that “Improve Children’s Foods”. Tailored Food is conducting a research study across 14 countries in the Eastern and Southern Africa (ESARO) region to understand existing food system dynamics and the role of current stakeholders (UN World Food Programme, UN Food and Agriculture Organization, national governments, non-profit organizations, and private sector entities), identifying where UNICEF can add the most value in bringing nutritious food to pregnant and lactating women and kids in their first 1000 days."
         ],
         "link": "https://www.unicef.org/esa/",
         "latitude": -17.638462140244048,

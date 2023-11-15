@@ -54,14 +54,14 @@ const Home = () => {
           <div className="hidden lg:block w-3/4 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-white z-10">
             <h3 className="h3-bold text-white">WE BUILD FOOD SYSTEMS THAT ARE</h3>
             <h2 className="display-1 text-white mt-4" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
-            <h3 className="h3-light mt-4 text-white">We aim to end hunger by 2030 through indigenous nutrition entrepreneurship.</h3>
+            <h3 className="h3-light mt-4 text-white">We aim to end hunger by 2030 through grassroots nutrition entrepreneurship.</h3>
           </div>
 
           {/* Mobile Header */}
           <div className="lg:hidden w-[80%] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-white z-10">
             <h3 className="h6-bold text-white">WE BUILD FOOD SYSTEMS THAT ARE</h3>
             <h2 className="display-2 text-white mt-4" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
-            <h3 className="p-body-lg mt-4 text-white">We aim to end hunger by 2030 through indigenous nutrition entrepreneurship.</h3>
+            <h3 className="p-body-lg mt-4 text-white">We aim to end hunger by 2030 through grassroots nutrition entrepreneurship.</h3>
           </div>
 
           <button onClick={prevImage} className="hidden sm:block absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white bg-opacity-50">

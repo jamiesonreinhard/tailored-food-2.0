@@ -58,7 +58,7 @@ export const team = [
   {
     "firstName": "Nicole",
     "lastName": "Riker",
-    "title": "Research",
+    "title": "Research Director",
     "image": "nicoleRiker.webp",
     "bio": " Nicole Riker has collected a broad array of research experience across multiple sectors. She has led research in neurosurgery and neurosurgical simulation to launch innovative residency programs across Europe, developed and launched assessment tools while building disaster relief programs in Central America and the Caribbean and worked to identify innovative solutions and entrepreneurs in the global food sector, connecting them with resources to create successful partnerships. Nicole has a BA in International Relations and holds an MSc in Sustainable Development from the School of Oriental and African Studies (SOAS). In her time off she still loves to learn about food through cooking new recipes and reading as much as possible about global food systems."
   }
