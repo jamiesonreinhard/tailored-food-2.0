@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout';
-import Blog from "@/components/content/blog";
+import Blog from "@/components/content/blog/blog";
 import Media from "@/components/content/media";
 import Podcasts from "@/components/content/podcasts";
 import SubNavigation from "@/components/sub-navigation";
