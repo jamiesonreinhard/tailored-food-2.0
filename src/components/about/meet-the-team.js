@@ -1,25 +1,60 @@
 /* eslint-disable @next/next/no-img-element */
-import { team } from "@/data/team";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { fetchTeamMembers } from "@/api/contentful";
+import Spinner from "../loading";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
 
 const MeetTheTeam = () => {
   const [selectedMember, setSelectedMember] = useState(null);
+  const [teamMembers, setTeamMembers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const sortedTeam = team.sort((a, b) => a.lastName.localeCompare(b.lastName));
+  const sortedTeam = teamMembers?.sort((a, b) => a.lastName.localeCompare(b.lastName));
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const posts = await fetchTeamMembers();
+        setTeamMembers(posts);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+        setIsLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  function renderRichText(content) {
+    const options = {
+      renderNode: {
+        [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+      },
+      renderText: text => text,
+    };
+  
+    return documentToReactComponents(content, options);
+  }
+  
 
   return (
     <>
       <div className="flex flex-col w-full mx-auto justify-start">
         {/* TEAM MEMBERS */}
         <div className="flex w-[90%] max-w-[1920px] mx-auto pb-[120px] flex-wrap gap-[16px] md:gap-[72px] justify-center">
-          {team.map((member, index) => (
+          {sortedTeam?.map((member, index) => (
             <div
               key={`${index}-${member.firstName}`}
               className="flex flex-col cursor-pointer items-center gap-[8px] md:gap-[16px] pb-[32px] md:pb-[60px] group"
               onClick={() => setSelectedMember(member)}
             >
               <img
-                src={`/images/team/${member.image}`}
+                src={member.image}
                 alt={member.firstName}
                 className="w-[156px] md:w-[320px] h-[156px] md:h-[320px] object-cover rounded-[24px]"
               />
@@ -44,20 +79,20 @@ const MeetTheTeam = () => {
             </button>
             <div className="flex flex-col items-start md:items-center">
               <img
-                src={`/images/team/${selectedMember.image}`}
-                alt={selectedMember.firstName}
+                src={selectedMember?.image}
+                alt={selectedMember?.firstName}
                 className="min-w-[200px] h-[200px] mb-[12px] rounded-[24px] object-cover"
               />
               <p className="h6-bold">
-                {selectedMember.firstName} {selectedMember.lastName}
+                {selectedMember?.firstName} {selectedMember?.lastName}
               </p>
               <p className="p-body-md text-primary-300 text-center">
-                {selectedMember.title}
+                {selectedMember?.title}
               </p>
             </div>
-            <p className="p-body-lg text-[16px] md:text-[20px]">
-              {selectedMember.bio}
-            </p>
+            <div className="p-body-lg text-[16px] md:text-[20px]">
+              {renderRichText(selectedMember?.bio)}
+            </div>
           </div>
         </div>
       )}

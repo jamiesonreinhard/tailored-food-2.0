@@ -62,8 +62,6 @@ export const fetchPodcasts = async () => {
       content_type: "podcastPreview",
     });
 
-    console.log(response.items);
-
     const formattedPodcasts = response.items.map((item) => {
       return {
         title: item.fields.title,
@@ -78,6 +76,30 @@ export const fetchPodcasts = async () => {
     return formattedPodcasts;
   } catch (error) {
     console.error("Error fetching podcasts from Contentful:", error);
+    throw error;
+  }
+};
+
+// FETCH TEAM MEMBERS
+export const fetchTeamMembers = async () => {
+  try {
+    const response = await client.getEntries({
+      content_type: "teamMember",
+    });
+
+    const formattedTeamMembers = response.items.map((item) => {
+      return {
+        firstName: item.fields.firstName,
+        lastName: item.fields.lastName,
+        title: item.fields.title,
+        bio: item.fields.bio,
+        image: item.fields.image.fields.file.url,
+      };
+    });
+
+    return formattedTeamMembers;
+  } catch (error) {
+    console.error("Error fetching team members from Contentful:", error);
     throw error;
   }
 };
