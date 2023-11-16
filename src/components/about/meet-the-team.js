@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { fetchTeamMembers } from "@/api/contentful";
 import Spinner from "../loading";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { BLOCKS } from '@contentful/rich-text-types';
 
 const MeetTheTeam = () => {
   const [selectedMember, setSelectedMember] = useState(null);
