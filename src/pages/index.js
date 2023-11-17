@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout'
 import { partners } from "@/data/partners";
 import { motion, AnimatePresence } from 'framer-motion';
+import PartnersSection from "@/components/home/partnersSection";
 
 const Home = () => {
 
@@ -277,14 +278,7 @@ const Home = () => {
           </section>
 
           {/* Our partners section */}
-          <section className="pt-[20px] md:pt-[70px] bg-gray-100 w-[90%] md:w-full mx-auto">
-            <h1 className="text-center text-[48px] font-semibold mb-[60px]">Our Partners</h1>
-            <div className="flex items-center gap-[32px] w-full flex-wrap justify-center">
-              {partners.map((partner) => (
-                <img key={partner.name} src={`/images/partnerImages/${partner.image}`} alt={partner.name} />
-              ))}
-            </div>
-          </section>
+          <PartnersSection />
         </div>
       </Layout>
     </>

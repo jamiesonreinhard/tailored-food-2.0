@@ -104,46 +104,23 @@ export const fetchTeamMembers = async () => {
   }
 };
 
-// FETCH GALLERY IMAGES
-export const fetchGalleryImages = async () => {
+// FETCH PARTNERS
+export const fetchPartners = async () => {
   try {
     const response = await client.getEntries({
-      content_type: "galleryImage",
+      content_type: "partner",
     });
-
-    const formattedGalleryImages = response.items.map((item) => {
+    const formattedPartners = response.items.map((item) => {
       return {
-        date: item.fields.date,
-        caption: item.fields.caption,
-        image: item.fields.image.fields.file.url,
+        name: item.fields.name,
+        logo: item.fields.logo.fields.file.url,
+        link: item.fields.websiteLink,
       };
     });
 
-    return formattedGalleryImages;
+    return formattedPartners;
   } catch (error) {
-    console.error("Error fetching gallery images from Contentful:", error);
-    throw error;
-  }
-};
-
-// FETCH GALLERY VIDEOS
-export const fetchGalleryVideos = async () => {
-  try {
-    const response = await client.getEntries({
-      content_type: "galleryVideo",
-    });
-
-    const formattedGalleryVideos = response.items.map((item) => {
-      return {
-        date: item.fields.date,
-        caption: item.fields.caption,
-        url: item.fields.image.fields.file.url,
-      };
-    });
-
-    return formattedGalleryVideos;
-  } catch (error) {
-    console.error("Error fetching gallery videos from Contentful:", error);
+    console.error("Error fetching partners from Contentful:", error);
     throw error;
   }
 };
@@ -171,6 +148,50 @@ export const fetchGalleryVideos = async () => {
 //     return formattedProjects;
 //   } catch (error) {
 //     console.error('Error fetching projects from Contentful:', error);
+//     throw error;
+//   }
+// };
+
+// // FETCH GALLERY IMAGES
+// export const fetchGalleryImages = async () => {
+//   try {
+//     const response = await client.getEntries({
+//       content_type: "galleryImage",
+//     });
+
+//     const formattedGalleryImages = response.items.map((item) => {
+//       return {
+//         date: item.fields.date,
+//         caption: item.fields.caption,
+//         image: item.fields.image.fields.file.url,
+//       };
+//     });
+
+//     return formattedGalleryImages;
+//   } catch (error) {
+//     console.error("Error fetching gallery images from Contentful:", error);
+//     throw error;
+//   }
+// };
+
+// // FETCH GALLERY VIDEOS
+// export const fetchGalleryVideos = async () => {
+//   try {
+//     const response = await client.getEntries({
+//       content_type: "galleryVideo",
+//     });
+
+//     const formattedGalleryVideos = response.items.map((item) => {
+//       return {
+//         date: item.fields.date,
+//         caption: item.fields.caption,
+//         url: item.fields.image.fields.file.url,
+//       };
+//     });
+
+//     return formattedGalleryVideos;
+//   } catch (error) {
+//     console.error("Error fetching gallery videos from Contentful:", error);
 //     throw error;
 //   }
 // };
