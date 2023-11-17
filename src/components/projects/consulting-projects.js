@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import Link from "next/link";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 
 const ConsultingProjects = ({ projects }) => {
+  const sortedProjects = projects.sort((a, b) => {
+    return a.status.localeCompare(b.status);
+  });
   const [selectedProject, setSelectedProject] = useState(projects[0] || null);
 
   function renderRichText(content) {
@@ -40,7 +43,7 @@ const ConsultingProjects = ({ projects }) => {
       </p>
       <div className="w-full flex flex-col md:flex-row gap-[32px] md:gap-[96px] justify-start items-start">
         <div className="flex w-full md:w-auto md:flex-col gap-[32px] overflow-x-auto md:overflow-visible pb-[16px] md:pb-0">
-          {projects?.map((project, index) => (
+          {sortedProjects?.map((project, index) => (
             <button
               key={index}
               className={`flex flex-col ${
@@ -52,7 +55,9 @@ const ConsultingProjects = ({ projects }) => {
             >
               <p
                 className={`subtitle-medium text-[16px] md:text-[24px] whitespace-nowrap ${
-                  project.name === selectedProject?.name ? "text-primary-300" : ""
+                  project.name === selectedProject?.name
+                    ? "text-primary-300"
+                    : ""
                 }`}
               >
                 {project.name}

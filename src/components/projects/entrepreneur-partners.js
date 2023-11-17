@@ -6,6 +6,9 @@ import { BLOCKS } from "@contentful/rich-text-types";
 
 const EntrepreneurPartners = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState(projects[0] || null);
+  const sortedProjects = projects.sort((a, b) => {
+    return a.status.localeCompare(b.status);
+  });
 
   function renderRichText(content) {
     const options = {
@@ -33,7 +36,7 @@ const EntrepreneurPartners = ({ projects }) => {
       </p>
       <div className="w-full flex flex-col md:flex-row gap-[32px] md:gap-[96px] justify-start items-start">
         <div className="flex w-full md:w-auto md:flex-col gap-[32px] overflow-x-auto md:overflow-visible pb-[16px] md:pb-0">
-          {projects?.map((project, index) => (
+          {sortedProjects?.map((project, index) => (
             <button
               key={index}
               className={`flex flex-col ${
