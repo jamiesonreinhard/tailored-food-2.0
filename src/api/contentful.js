@@ -115,6 +115,7 @@ export const fetchPartners = async () => {
         name: item.fields.name,
         logo: item.fields.logo.fields.file.url,
         link: item.fields.websiteLink,
+        displayOnHomepage: item.fields.displayOnHomepage
       };
     });
 
@@ -125,32 +126,34 @@ export const fetchPartners = async () => {
   }
 };
 
-// export const fetchProjects = async () => {
-//   try {
-//     const response = await client.getEntries({
-//       content_type: 'project',
-//     });
-//     const formattedProjects = response.items.map((item) => {
-//       return {
-//         type: item.fields.type,
-//         name: item.fields.name,
-//         partnerImage: item.fields.partnerImage.fields.file.url,
-//         location: item.fields.location,
-//         longLocation: item.fields.longLocation,
-//         status: item.fields.status,
-//         paragraphs: item.fields.paragraphs,
-//         partnerWebsite: item.fields.partnerWebsite,
-//         latitude: item.fields.latitude,
-//         latitude: item.fields.longitude
-//       };
-//     });
+export const fetchProjects = async () => {
+  try {
+    const response = await client.getEntries({
+      content_type: 'project',
+    });
+    console.log(response.items);
+    const formattedProjects = response.items.map((item) => {
+      return {
+        id: response.sys.id,
+        type: item.fields.type,
+        name: item.fields.name,
+        location: item.fields.location,
+        longLocation: item.fields.longLocation,
+        status: item.fields.status,
+        paragraphs: item.fields.paragraphs,
+        partnerWebsite: item.fields.partner.fields.partnerWebsite,
+        partnerImage: item.fields.partner.fields.logo.fields.file.url,
+        latitude: item.fields.latitude,
+        latitude: item.fields.longitude
+      };
+    });
 
-//     return formattedProjects;
-//   } catch (error) {
-//     console.error('Error fetching projects from Contentful:', error);
-//     throw error;
-//   }
-// };
+    return formattedProjects;
+  } catch (error) {
+    console.error('Error fetching projects from Contentful:', error);
+    throw error;
+  }
+};
 
 // // FETCH GALLERY IMAGES
 // export const fetchGalleryImages = async () => {
