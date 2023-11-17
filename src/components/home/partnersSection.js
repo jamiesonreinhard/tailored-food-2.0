@@ -11,13 +11,12 @@ const PartnersSection = () => {
     return a.name - b.name;
   });
 
-  console.log(sortedPartners);
-
   useEffect(() => {
     async function fetchData() {
       try {
         const partners = await fetchPartners();
-        setPartners(partners);
+        const filtered = partners.filter((partner) => partner.displayOnHomepage);
+        setPartners(filtered);
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching partners:", error);
