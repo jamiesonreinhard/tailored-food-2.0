@@ -13,7 +13,7 @@
     "@contentful/rich-text-types": "^16.3.0",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "v1",
-    "@react-google-maps/api": "^2.18.1",
+    "@react-google-maps/api": "^2.19.2",
     "autoprefixer": "10.4.14",
     "axios": "^1.6.2",
     "contentful": "^10.6.10",

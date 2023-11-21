@@ -1,7 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import Spinner from "../loading";
+import { fetchProjects } from "@/api/contentful";
+import Map from "./map";
 
 const WhoWeAre = () => {
+  const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const projects = await fetchProjects();
+        setProjects(projects);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+        setIsLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
     <div className="flex flex-col w-full mx-auto justify-start">
       {/* OUR MISSION */}
@@ -15,6 +40,9 @@ const WhoWeAre = () => {
             grassroots entrepreneurs to ensure healthy food is affordable and
             available to families struggling with malnutrition.
           </p>
+          <div className="w-full mt-[24px]">
+            <Map projects={projects} />
+          </div>
         </div>
       </div>
 

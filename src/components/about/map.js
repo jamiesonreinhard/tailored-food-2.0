@@ -1,59 +1,88 @@
-// components/MapComponent.js
-import { useEffect, useRef } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';  // Required for Mapbox to work correctly
-import { entrepreneurProjects, consultingProjects } from '@/data/projects';
+import React, { useState } from "react";
+import {
+  GoogleMap,
+  Marker,
+  useLoadScript,
+  InfoWindow,
+} from "@react-google-maps/api";
+import mapStyles from "./mapStyles";
+import { useRouter } from "next/router";
 
+const Map = ({ projects }) => {
+  const router = useRouter();
+  const [selectedProject, setSelectedProject] = useState(null);
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  });
 
-const MapComponent = () => {
+  const navigateToProject = (selectedProject) => {
+    router.push({
+      pathname: "/projects",
+      query: { project: selectedProject.name, type: selectedProject.type },
+    });
+  };
 
-    const mapContainerRef = useRef(null);
-    const map = useRef(null);
-    const combinedProjects = [...entrepreneurProjects, ...consultingProjects];
+  const outerContainerStyle = {
+    width: "100%", // Ensure the container is full width
+    maxWidth: "720px", // Set the maximum width
+    margin: "auto", // Center the map horizontally
+    position: "relative", // For absolute positioning of the inner div
+  };
 
+  const innerContainerStyle = {
+    paddingBottom: "100%", // Maintain 1:1 aspect ratio
+    height: "0", // Height starts at 0
+  };
 
-    useEffect(() => {
-
-        if (map.current) return;  // If map is already initialized, return early
-
-        mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-
-        // Initialize the map
-        map.current = new mapboxgl.Map({
-            container: mapContainerRef.current,
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [0, 0],  // Adjust to your desired initial location
-            zoom: 3
-        });
-
-        // Create the pins based on the provided data
-        map.current.on('load', () => {
-            combinedProjects.forEach(project => {
-                const el = document.createElement('div');
-                el.className = 'marker';
-                new mapboxgl.Marker(el)
-                    .setLngLat([project.longitude, project.latitude])
-                    .setPopup(new mapboxgl.Popup({ offset: 25 }).setText(project.location))
-                    .addTo(map.current);
-            });
-        })
-    }, []);
-
-    return (
-        <div className="w-full h-full relative">
-            <div className="map-container w-full h-full" ref={mapContainerRef}></div>
-            <style jsx>{`
-                .marker {
-                    background-color: black;
-                    width: 60px;
-                    height: 60px; // <-- Adjusted height here
-                    border-radius: 50%;
-                    cursor: pointer;
-                }
-                `}
-            </style>
-        </div>
-    );
+  return isLoaded && projects ? (
+    <div style={outerContainerStyle}>
+      <div style={innerContainerStyle}>
+        <GoogleMap
+          mapContainerStyle={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+          center={{ lat: projects[0]?.latitude, lng: projects[0]?.longitude }}
+          zoom={2}
+          options={{
+            styles: mapStyles,
+            disableDefaultUI: true,
+          }}
+        >
+          {projects.map((project, index) => (
+            <Marker
+              key={index}
+              icon={"/images/icons/greenMarker.svg"}
+              position={{ lat: project.latitude, lng: project.longitude }}
+              onClick={() => setSelectedProject(project)}
+            />
+          ))}
+          {selectedProject && (
+            <InfoWindow
+              position={{
+                lat: selectedProject.latitude,
+                lng: selectedProject.longitude,
+              }}
+              onCloseClick={() => setSelectedProject(null)}
+            >
+              <div className="flex flex-col items-center gap-[4px]">
+                <h2 className="font-bold">{selectedProject.name}</h2>
+                <button
+                  onClick={() => navigateToProject(selectedProject)}
+                  className="text-green font-bold"
+                >{`Project Details`}</button>
+              </div>
+            </InfoWindow>
+          )}
+        </GoogleMap>
+      </div>
+    </div>
+  ) : (
+    <></>
+  );
 };
 
-export default MapComponent;
+export default React.memo(Map);
