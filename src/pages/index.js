@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
-import Layout from '@/components/layout'
-import { partners } from "@/data/partners";
+import Layout from '@/components/layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import PartnersSection from "@/components/home/partnersSection";
 
