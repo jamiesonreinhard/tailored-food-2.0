@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 
-const EntrepreneurPartners = ({ projects }) => {
-  const [selectedProject, setSelectedProject] = useState(projects[0] || null);
+const EntrepreneurPartners = ({ projects, selectedProject, setSelectedProject }) => {
   const sortedProjects = projects.sort((a, b) => {
     return a.status.localeCompare(b.status);
   });
@@ -26,6 +25,12 @@ const EntrepreneurPartners = ({ projects }) => {
 
     return documentToReactComponents(content, options);
   }
+
+  useEffect(() => {
+    if(!selectedProject || selectedProject.type !== 'entrepreneur'){
+      setSelectedProject(projects[0] || null);
+    }
+  }, [])
 
   return (
     <div className="w-[90%] max-w-[1920px] flex flex-col mx-auto">
@@ -48,14 +53,14 @@ const EntrepreneurPartners = ({ projects }) => {
             >
               <p
                 className={`subtitle-medium text-[16px] md:text-[24px] whitespace-nowrap ${
-                  project.name === selectedProject.name ? "text-primary-300" : ""
+                  project.name === selectedProject?.name ? "text-primary-300" : ""
                 }`}
               >
                 {project.name}
               </p>
               <p
                 className={`p-body-lg text-[12px] md:text-[20px] whitespace-nowrap ${
-                  project.name === selectedProject.name
+                  project.name === selectedProject?.name
                     ? "text-primary-300"
                     : "text-lightGrey"
                 }`}

@@ -1,14 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 
-const ConsultingProjects = ({ projects }) => {
+const ConsultingProjects = ({
+  projects,
+  selectedProject,
+  setSelectedProject,
+}) => {
   const sortedProjects = projects.sort((a, b) => {
     return a.status.localeCompare(b.status);
   });
-  const [selectedProject, setSelectedProject] = useState(projects[0] || null);
 
   function renderRichText(content) {
     const options = {
@@ -26,6 +29,12 @@ const ConsultingProjects = ({ projects }) => {
 
     return documentToReactComponents(content, options);
   }
+
+  useEffect(() => {
+    if (!selectedProject || selectedProject.type !== 'consulting') {
+      setSelectedProject(projects[0] || null);
+    }
+  }, []);
 
   return (
     <div className="w-[90%] flex flex-col mx-auto">
