@@ -10,15 +10,15 @@ const EntrepreneurPartners = ({ projects }) => {
 
         <div className="flex flex-col gap-4">
           <p className="p-body-md text-[14px] md:text-[16px]">
-            In order to bring affordable, nutritious food to people suffering from malnutrition, Tailored Food works with small-scale entrepreneurs to bring locally-produced food products to market. We focus on products that are both delicious and culturally relevant, such as porridges, high protein biscuits, and peanut butter.
+            {`In order to bring affordable, nutritious food to people suffering from malnutrition, Tailored Food works with small-scale entrepreneurs to bring locally-produced food products to market. We focus on products that are both delicious and culturally relevant, such as porridges, high protein biscuits, and peanut butter.`}
           </p>
           <p className="p-body-md text-[14px] md:text-[16px]">
-            Our partnerships begin with intensive anthropological research, as we believe it’s vital to first understand local food system dynamics, as well as the social and economic factors behind what foods are purchased and why.
+            {`Our partnerships begin with intensive anthropological research, as we believe it’s vital to first understand local food system dynamics, as well as the social and economic factors behind what foods are purchased and why.`}
           </p>
         </div>
 
         <p className="p-body-md text-[14px] md:text-[16px] mb-8">
-          We offer comprehensive support to start-ups as well as growing companies to address their specific needs and scale their businesses, working on:
+          {`We offer comprehensive support to start-ups as well as growing companies to address their specific needs and scale their businesses, working on:`}
         </p>
 
         <ul className="list-disc list-inside p-body-lg text-[14px] md:text-[16px] mb-4 sm:hidden">

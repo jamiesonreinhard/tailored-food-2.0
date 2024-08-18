@@ -91,7 +91,7 @@ const Home = () => {
 
                 {/* Consulting */}
                 <div className="flex flex-col gap-[16px] items-start">
-                  <h3 className="h5-bold sm:h3-bold lg:h4-bold">Consulting with the World's Largest Food-Focused Organizations</h3>
+                  <h3 className="h5-bold sm:h3-bold lg:h4-bold">{`Consulting with the World's Largest Food-Focused Organizations`}</h3>
                   <p className="p-body-md sm:p-body-lg lg:p-body-lg">
                     Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <a href="/consulting" className="text-green">Learn about our consulting work</a>
                   </p>
