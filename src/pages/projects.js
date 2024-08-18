@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout';
 import ConsultingProjects from "@/components/projects/consulting-projects";
-import { fetchProjects } from "@/api/contentful";
+import { fetchProjects } from '@/api/contentful';
 import Spinner from "@/components/loading";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
-  const consultingProjects = projects.filter((project) => project.type === "consulting");
 
   useEffect(() => {
     async function fetchData() {
@@ -28,6 +26,15 @@ const Projects = () => {
     return <Spinner />;
   }
 
+  // Filter and sort consulting projects: active ones first, then past ones
+  const consultingProjects = projects
+    .filter((project) => project.type === "consulting")
+    .sort((a, b) => {
+      if (a.status === "active" && b.status !== "active") return -1;
+      if (a.status !== "active" && b.status === "active") return 1;
+      return 0;
+    });
+
   return (
     <>
       <Layout>
@@ -36,7 +43,7 @@ const Projects = () => {
         </div>
       </Layout>
     </>
-  )
-}
+  );
+};
 
 export default Projects;

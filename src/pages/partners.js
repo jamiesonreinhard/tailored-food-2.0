@@ -3,14 +3,10 @@ import Layout from '@/components/layout';
 import EntrepreneurPartners from "@/components/projects/entrepreneur-partners";
 import { fetchProjects } from "@/api/contentful";
 import Spinner from "@/components/loading";
-import { useRouter } from "next/router";
 
 const Partners = () => {
-    const router = useRouter();
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
-    const entrepreneurProjects = projects.filter((project) => project.type === "entrepreneur");
 
     useEffect(() => {
         async function fetchData() {
@@ -29,6 +25,15 @@ const Partners = () => {
     if (isLoading) {
         return <Spinner />;
     }
+
+    // Filter and sort entrepreneur projects: active ones first, then past ones
+    const entrepreneurProjects = projects
+        .filter((project) => project.type === "entrepreneur")
+        .sort((a, b) => {
+            if (a.status === "active" && b.status !== "active") return -1;
+            if (a.status !== "active" && b.status === "active") return 1;
+            return 0;
+        });
 
     return (
         <>
