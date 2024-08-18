@@ -1,26 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 import ProjectCard from "./project-card";
 
 const ConsultingProjects = ({ projects }) => {
-  function renderRichText(content) {
-    const options = {
-      renderNode: {
-        [BLOCKS.PARAGRAPH]: (node, children) => {
-          return (
-            <p className="p-body-lg text-[14px] md:text-[20px] mb-[12px]">
-              {children}
-            </p>
-          );
-        },
-      },
-      renderText: (text) => text,
-    };
-
-    return documentToReactComponents(content, options);
-  }
 
   return (
     <div className="w-[90%] max-w-[1920px] flex flex-col mx-auto">
