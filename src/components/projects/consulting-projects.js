@@ -1,18 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect } from "react";
 import Link from "next/link";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import ProjectCard from "./project-card";
 
-const ConsultingProjects = ({
-  projects,
-  selectedProject,
-  setSelectedProject,
-}) => {
-  const sortedProjects = projects.sort((a, b) => {
-    return a.status.localeCompare(b.status);
-  });
-
+const ConsultingProjects = ({ projects }) => {
   function renderRichText(content) {
     const options = {
       renderNode: {
@@ -30,129 +22,34 @@ const ConsultingProjects = ({
     return documentToReactComponents(content, options);
   }
 
-  useEffect(() => {
-    if (!selectedProject || selectedProject.type !== 'consulting') {
-      setSelectedProject(projects[0] || null);
-    }
-  }, []);
-
   return (
-    <div className="w-[90%] flex flex-col mx-auto">
-      <p className="p-body-xl text-[14px] md:text-[24px] mb-[24px] md:mb-[80px]">
-        Tailored Food works alongside some of the world’s most influential
-        organizations in the world of food  to conduct food systems mapping
-        research projects, to build investment cases and strategic partnerships
-        across food system stakeholders, and to research, develop, and launch
-        nutritious food products. Tailored Food also focuses on building
-        consistent demand for nutritious low-cost food, researching and
-        designing community-run home grown school feeding programs, creating
-        guerrilla marketing campaigns for healthy food, and working with local
-        entrepreneurs to sell local food products into the humanitarian aid
-        sector.
-      </p>
-      <div className="w-full flex flex-col md:flex-row gap-[32px] md:gap-[96px] justify-start items-start">
-        <div className="flex w-full md:w-auto md:flex-col gap-[32px] overflow-x-auto md:overflow-visible pb-[16px] md:pb-0">
-          {sortedProjects?.map((project, index) => (
-            <button
-              key={index}
-              className={`flex flex-col ${
-                project.name === selectedProject?.name
-                  ? "border-b-[4px] border-primary-300 md:border-0"
-                  : ""
-              }`}
-              onClick={() => setSelectedProject(project)}
-            >
-              <p
-                className={`subtitle-medium text-[16px] md:text-[24px] whitespace-nowrap ${
-                  project.name === selectedProject?.name
-                    ? "text-primary-300"
-                    : ""
-                }`}
-              >
-                {project.name}
-              </p>
-              <p
-                className={`p-body-lg text-[12px] md:text-[20px] whitespace-nowrap ${
-                  project.name === selectedProject?.name
-                    ? "text-primary-300"
-                    : "text-lightGrey"
-                }`}
-              >
-                {project.location}
-              </p>
-            </button>
-          ))}
-        </div>
-        <div className="w-full max-w-[800px] py-[28px] md:py-[46px] px-[20px] md:px-[62px] project-card-shadow rounded-[16px] md:rounded-[32px]">
-          <div className="flex flex-col w-full max-w-[800px]">
-            <div className="flex w-full justify-between items-start mb-[12px]">
-              <img
-                src={selectedProject?.partnerImage}
-                alt={selectedProject?.name}
-                className="h-[60px] md:h-[120px]"
-              />
-              <div className="flex items-center gap-[8px]">
-                {selectedProject?.status === "active" && (
-                  <div className="items-center gap-[8px] hidden lg:flex">
-                    <img
-                      src="/images/icons/active-toggle.svg"
-                      alt="active toggle icon"
-                    />
-                    <p className="text-green">Active</p>
-                  </div>
-                )}
-                {selectedProject?.status === "past" && (
-                  <div className="flex items-center gap-[8px] hidden lg:flex">
-                    <img
-                      src="/images/icons/past-toggle.svg"
-                      alt="past toggle icon"
-                    />
-                    <p className="text-yellow">Past</p>
-                  </div>
-                )}
-              </div>
-            </div>
-            <h3 className="h3-bold mb-[30px]">{selectedProject?.name}</h3>
-            <div className="flex items-center gap-[8px] mb-[30px]">
-              <img src="/images/icons/map-pin-light-gray.svg" alt="map pin" />
-              <p className="p-body-lg text-lightGrey">
-                {selectedProject?.longLocation}
-              </p>
-              {selectedProject?.status === "active" && (
-                <div className="items-center gap-[8px] flex lg:hidden ml-[16px]">
-                  <img
-                    src="/images/icons/active-toggle.svg"
-                    alt="active toggle icon"
-                  />
-                  <p className="text-green text-[12px]">Active</p>
-                </div>
-              )}
-              {selectedProject?.status === "past" && (
-                <div className="flex items-center gap-[8px] flex lg:hidden ml-[16px]">
-                  <img
-                    src="/images/icons/past-toggle.svg"
-                    alt="past toggle icon"
-                  />
-                  <p className="text-yellow text-[12px]">Past</p>
-                </div>
-              )}
-            </div>
-            {renderRichText(selectedProject?.paragraphs)}
-            {selectedProject?.partnerWebsite && (
-              <Link
-                href={selectedProject?.link || ""}
-                target="_blank"
-                className="ml-auto gap-[8px] mt-[24px] btn btn-outline-primary"
-              >
-                Partner Website
-                <img
-                  src="/images/icons/external-link.svg"
-                  alt="external link"
-                />
-              </Link>
-            )}
-          </div>
-        </div>
+    <div className="w-[90%] max-w-[1920px] flex flex-col mx-auto">
+      <div className="w-full mb-[80px]">
+        <h2 className="h3-bold mb-6">Consulting Projects</h2>
+        <p className="p-body-md text-[14px] md:text-[16px] mb-4">
+          Tailored Food works with some of the most influential organizations in the world of food to:
+        </p>
+
+        <ul className="list-disc list-inside p-body-md text-[14px] md:text-[16px] mb-4">
+          <li className="mb-[12px]">Conduct food systems mapping research projects</li>
+          <li className="mb-[12px]">Build investment cases for nutritious low-cost food interventions</li>
+          <li className="mb-[12px]">Design, implement, and scale strategic partnerships with food system stakeholders</li>
+        </ul>
+
+        <p className="p-body-md text-[14px] md:text-[16px] mb-4">
+          Our consulting work involves a range of initiatives with different outcomes, including improving the nutrition and local sourcing for school feeding programs.
+        </p>
+
+        <p className="p-body-md text-[14px] md:text-[16px] mb-4">
+          We partner with national governments, UN agencies, leading private sector food companies, the nonprofit sector, and local food system stakeholders to support food system transformation. Tailored Food has a depth of experience working in complex environments and a broad advisory network ranging from food technology experts and Michelin-star chefs to non-profit funders and diplomacy experts.
+        </p>
+      </div>
+
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} />
+        ))}
       </div>
     </div>
   );

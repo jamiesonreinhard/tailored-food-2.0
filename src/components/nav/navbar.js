@@ -7,7 +7,9 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const links = [
+  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
+  { href: '/partners', label: 'Partners' },
   { href: '/projects', label: 'Projects' },
   { href: '/content', label: 'Content' }
 ];
@@ -79,7 +81,6 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" className="btn contact-button mx-auto">Contact Us</Link>
           </div>
         </div>
       </div>
