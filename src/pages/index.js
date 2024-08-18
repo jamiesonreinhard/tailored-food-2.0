@@ -76,7 +76,7 @@ const Home = () => {
         <div className="flex flex-col w-full pb-[180px]">
           {/* Our Approach Section */}
           <div className="w-full py-16">
-            <section className="w-[90%] max-w-[1000px] mx-auto">
+            <section className="w-[90%] max-w-[1200px] mx-auto">
               <h3 className="text-center h4-bold lg:h3-bold mb-[80px]">
                 Tailored Food works to eliminate hunger and malnutrition for people living in poverty. We do this by:
               </h3>
@@ -102,7 +102,7 @@ const Home = () => {
 
           {/* Flow Chart Section */}
           <div className="w-full py-16 bg-primary-50">
-            <div className="max-w-[1000px] w-[90%] flex flex-col items-center mx-auto">
+            <div className="max-w-[1200px] w-[90%] flex flex-col items-center mx-auto">
               <h3 className="h3-bold text-center mb-8">Tailored Food Model</h3>
               <FlowChart />
             </div>
