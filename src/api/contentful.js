@@ -126,6 +126,26 @@ export const fetchPartners = async () => {
   }
 };
 
+// FETCH FUNDING PARTNERS
+export const fetchFundingPartners = async () => {
+  try {
+    const response = await client.getEntries({
+      content_type: "fundingPartner",
+    });
+    const formattedPartners = response.items.map((item) => {
+      return {
+        name: item.fields.name,
+        logo: item.fields.logo.fields.file.url,
+      };
+    });
+
+    return formattedPartners;
+  } catch (error) {
+    console.error("Error fetching partners from Contentful:", error);
+    throw error;
+  }
+};
+
 export const fetchProjects = async () => {
   try {
     const response = await client.getEntries({
