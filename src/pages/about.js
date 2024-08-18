@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout'
-import WhoWeAre from '../components/about/who-we-are';
+import AboutTf from '../components/about/about';
 import MeetTheTeam from '../components/about/meet-the-team';
 import SubNavigation from "@/components/sub-navigation";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,11 +9,11 @@ import path from 'path';
 
 const About = ({images}) => {
 
-  const [activePage, setActivePage] = useState("whoWeAre");
+  const [activePage, setActivePage] = useState("about");
   const navItems = [
     {
-      "name": "whoWeAre",
-      "display": "Who We Are"
+      "name": "about",
+      "display": "About"
     },
     {
       "name": "meetTheTeam",
@@ -44,8 +44,8 @@ const About = ({images}) => {
           <SubNavigation navItems={navItems} activePage={activePage} setActivePage={setActivePage} />
 
           {/* Who We Are */}
-          {activePage === "whoWeAre" && (
-            <WhoWeAre />
+          {activePage === "about" && (
+            <AboutTf />
           )}
           {/* Meet the Team */}
           {activePage === "meetTheTeam" && (
