@@ -1,7 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 
 const MediaPost = ({ post }) => {
-  const { title, subtitle, link, image } = post;
+  const { title, subtitle, link, image, contentType } = post;
+  console.log(post);
+
+  const getButtonText = (contentType) => {
+    switch (contentType) {
+      case "media":
+        return "Read More";
+      case "podcast":
+        return "Listen to Podcast";
+      default:
+        return "Read More";
+    }
+  }
+
   return (
     <div
       className="max-w-[400px] xl:max-w-[540px] media-card-shadow rounded-[26px] flex flex-col items-center p-[12px]"
@@ -22,7 +35,7 @@ const MediaPost = ({ post }) => {
         target="_blank"
         className="btn btn-outline-primary gap-[8px] mr-auto mt-auto"
       >
-        Read More
+        {getButtonText(contentType)}
         <img src="/images/icons/external-link.svg" alt="external link" />
       </a>
     </div>

@@ -5,6 +5,7 @@ const MobileNav = ({ setIsMobileOpen }) => {
   const links = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
+    { href: '/partners', label: 'Partners' },
     { href: '/projects', label: 'Projects' },
     { href: '/content', label: 'Content' },
     { href: '/contact', label: 'Contact Us' },

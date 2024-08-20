@@ -12,7 +12,6 @@ const Home = () => {
     '/images/home-slider-1.webp',
     '/images/home-slider-2.webp',
     '/images/home-slider-3.webp',
-    '/images/home-slider-4.webp',
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -85,7 +84,7 @@ const Home = () => {
                 <div className="flex flex-col gap-[16px] items-start">
                   <h3 className="h5-bold sm:h3-bold lg:h4-bold">Partnering with Grassroots Food Entrepreneurs</h3>
                   <p className="p-body-md sm:p-body-lg lg:p-body-lg">
-                    Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-green">Learn about our partnerships</Link>
+                    Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-[#30B5E0] font-bold">Learn about our partnerships.</Link>
                   </p>
                 </div>
 
@@ -93,7 +92,7 @@ const Home = () => {
                 <div className="flex flex-col gap-[16px] items-start">
                   <h3 className="h5-bold sm:h3-bold lg:h4-bold">{`Consulting with the World's Largest Food-Focused Organizations`}</h3>
                   <p className="p-body-md sm:p-body-lg lg:p-body-lg">
-                    Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-green">Learn about our consulting work</Link>
+                    Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-[#30B5E0] font-bold">Learn about our consulting work.</Link>
                   </p>
                 </div>
               </div>

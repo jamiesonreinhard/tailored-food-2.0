@@ -1,25 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout';
-import Blog from "@/components/content/blog/blog";
 import Media from "@/components/content/media/media";
-import Podcasts from "@/components/content/podcasts/podcasts";
+import Resources from "@/components/content/resources/resources";
 import SubNavigation from "@/components/sub-navigation";
 
 const Content = () => {
 
-  const [activePage, setActivePage] = useState("blog");
+  const [activePage, setActivePage] = useState("media");
   const navItems = [
-    {
-      "name": "blog",
-      "display": "Blog"
-    },
     {
       "name": "media",
       "display": "Media"
     },
     {
-      "name": "podcasts",
-      "display": "Podcasts"
+      "name": "resources",
+      "display": "Resources"
     },
   ]
 
@@ -30,15 +25,12 @@ const Content = () => {
           {/* Content Sub Navigation */}
           <SubNavigation navItems={navItems} activePage={activePage} setActivePage={setActivePage} />
         </div>
-        <div className="flex flex-col w-[90%] max-w-[1200px] mx-auto pb-[140px]">
-          {activePage === "blog" && (
-            <Blog />
-          )}
+        <div className="flex flex-col w-[90%] mx-auto pb-[140px]">
           {activePage === "media" && (
             <Media />
           )}
-          {activePage === "podcasts" && (
-            <Podcasts />
+          {activePage === "resources" && (
+            <Resources />
           )}
         </div>
 

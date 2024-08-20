@@ -45,12 +45,39 @@ export const fetchMediaPosts = async () => {
         date: item.fields.date,
         link: item.fields.link,
         image: item.fields.image.fields.file.url,
+        contentType: item.fields.contentType,
       };
     });
 
     return formattedMediaPosts;
   } catch (error) {
     console.error("Error fetching media posts from Contentful:", error);
+    throw error;
+  }
+};
+
+// FETCH RESOURCES
+export const fetchResources = async () => {
+  try {
+    const response = await client.getEntries({
+      content_type: "resource",
+    });
+
+    const formattedResources = response.items.map((item) => {
+      const documentAsset = item.fields.document;
+
+      // Construct the full URL for the PDF document
+      const documentUrl = documentAsset ? `https:${documentAsset.fields.file.url}` : null;
+
+      return {
+        name: item.fields.name,
+        document: documentUrl,
+      };
+    });
+
+    return formattedResources;
+  } catch (error) {
+    console.error("Error fetching resources from Contentful:", error);
     throw error;
   }
 };
