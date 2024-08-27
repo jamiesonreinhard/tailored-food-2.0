@@ -79,7 +79,8 @@ const About = () => {
           <h2 className="h2-bold text-[20px] md:text-[40px] mb-[20px] md:mb-[36px]">
             Where We Work
           </h2>
-          <p className="p-body-lg text-[16px] md:text-[20px]">Our work spans the globe, including countries in Africa, the Caribbean, and South America - </p>
+          <p className="p-body-lg text-[16px] md:text-[20px]">Our work spans the globe, including countries in Africa, the Caribbean, and South America.</p>
+          <img src="/images/tfmap-1.png" alt="map" className="w-full mt-8" />
         </div>
       </div>
     </div>
