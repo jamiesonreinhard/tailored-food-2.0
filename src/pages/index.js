@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import FundingSupportSection from "@/components/home/fundingSupportSection";
 import FlowChart from "@/components/home/flowChart";
 import Link from "next/link";
+import { HandshakeOutlined, BusinessCenterOutlined } from "@mui/icons-material";
 
 const Home = () => {
 
@@ -81,16 +82,16 @@ const Home = () => {
               </h3>
               <div className="flex flex-col w-full gap-8">
                 {/* Partnership */}
-                <div className="flex flex-col gap-[16px] items-start">
-                  <h3 className="h5-bold sm:h3-bold lg:h4-bold">Partnering with Grassroots Food Entrepreneurs</h3>
+                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50">
+                  <h3 className="h5-bold sm:h3-bold lg:h4-bold flex items-center gap-2"><HandshakeOutlined /> Partnering with Grassroots Food Entrepreneurs</h3>
                   <p className="p-body-md sm:p-body-lg lg:p-body-lg">
                     Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-[#30B5E0] font-bold">Learn about our partnerships.</Link>
                   </p>
                 </div>
 
                 {/* Consulting */}
-                <div className="flex flex-col gap-[16px] items-start">
-                  <h3 className="h5-bold sm:h3-bold lg:h4-bold">{`Consulting with the World's Largest Food-Focused Organizations`}</h3>
+                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50">
+                  <h3 className="h5-bold sm:h3-bold lg:h4-bold flex items-center gap-2"><BusinessCenterOutlined /> {`Consulting with the World's Largest Food-Focused Organizations`}</h3>
                   <p className="p-body-md sm:p-body-lg lg:p-body-lg">
                     Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-[#30B5E0] font-bold">Learn about our consulting work.</Link>
                   </p>

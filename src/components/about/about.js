@@ -80,7 +80,7 @@ const About = () => {
             Where We Work
           </h2>
           <p className="p-body-lg text-[16px] md:text-[20px]">Our work spans the globe, including countries in Africa, the Caribbean, and South America.</p>
-          <div className="w-full p-4 rounded-lg bg-primary-200 mt-8">
+          <div className="w-full p-4 rounded-lg bg-[#fff] border border-primary-300 border-4 mt-8">
             <img src="/images/tfmap-1.png" alt="map" className="w-full" />
           </div>
         </div>
