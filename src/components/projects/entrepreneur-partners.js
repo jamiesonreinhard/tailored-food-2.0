@@ -21,7 +21,7 @@ const EntrepreneurPartners = ({ projects }) => {
           {`We offer comprehensive support to start-ups as well as growing companies to address their specific needs and scale their businesses, working on:`}
         </p>
 
-        <ul className="list-disc list-inside p-body-lg text-[14px] md:text-[16px] mb-4 sm:hidden">
+        <ul className="list-disc list-inside p-body-lg text-[16px] md:text-[20px] mb-4 sm:hidden">
           <li className="mb-[12px]">Business strategy development</li>
           <li className="mb-[12px]">Food Market qualitative and quantitative research</li>
           <li className="mb-[12px]">Agricultural value chain development</li>
