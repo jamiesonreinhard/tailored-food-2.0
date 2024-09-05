@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout';
-import Media from "@/components/content/media/media";
-import Resources from "@/components/content/resources/resources";
+import Media from "@/components/media/media";
+import Resources from "@/components/media/resources/resources";
 import SubNavigation from "@/components/sub-navigation";
 
 const Content = () => {
