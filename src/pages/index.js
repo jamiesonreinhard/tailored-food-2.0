@@ -37,17 +37,17 @@ const Home = () => {
     <>
       <Layout>
         {/* Header and Image Slider */}
-        <div className="relative w-full h-screen">
-          <AnimatePresence initial={false}>
+        <div className="relative w-full h-screen bg-black">
+          <AnimatePresence initial={false} mode="wait">
             <motion.img
-              key={currentImageIndex} // Use a unique key for each image change
+              key={currentImageIndex}
               src={sliderImages[currentImageIndex]}
               alt="Background"
               className="absolute top-0 left-0 w-full h-full object-cover"
-              initial={{ opacity: 0 }} // Initial opacity
-              animate={{ opacity: 1 }} // Target opacity
-              exit={{ opacity: 0 }} // Exit animation (if needed)
-              transition={{ duration: 0.5 }} // Transition duration
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
             />
           </AnimatePresence>
 
@@ -65,11 +65,19 @@ const Home = () => {
             <h2 className="display-2 text-white mt-4" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
           </div>
 
-          <button onClick={prevImage} className="hidden sm:block absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white bg-opacity-50">
-            <img src="/images/icons/left.svg" alt="" />
+          <button 
+            onClick={prevImage} 
+            className="hidden sm:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
+            aria-label="Previous image"
+          >
+            <img src="/images/icons/left.svg" alt="" className="w-6 h-6" />
           </button>
-          <button onClick={nextImage} className="hidden sm:block absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white bg-opacity-50">
-            <img src="/images/icons/right.svg" alt="" />
+          <button 
+            onClick={nextImage} 
+            className="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
+            aria-label="Next image"
+          >
+            <img src="/images/icons/right.svg" alt="" className="w-6 h-6" />
           </button>
         </div>
 

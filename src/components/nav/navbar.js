@@ -11,7 +11,8 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/partners', label: 'Partners' },
   { href: '/projects', label: 'Projects' },
-  { href: '/content', label: 'Content' }
+  { href: '/media', label: 'Media' },
+  { href: '/contact', label: 'Contact' }
 ];
 
 const Navbar = () => {
