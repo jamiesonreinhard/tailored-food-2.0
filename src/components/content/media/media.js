@@ -7,8 +7,9 @@ import { useState, useEffect } from "react";
 const Media = () => {
   const [mediaPosts, setMediaPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
   const sortedMediaPosts = mediaPosts?.sort((a, b) => {
+    if (!a.date) return 1;
+    if (!b.date) return -1;
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB - dateA;

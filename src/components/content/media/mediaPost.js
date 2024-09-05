@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 const MediaPost = ({ post }) => {
-  const { title, subtitle, link, image, contentType } = post;
+  const { title, subtitle, link, image, contentType, date } = post;
   console.log(post);
 
   const getButtonText = (contentType) => {
@@ -9,31 +9,39 @@ const MediaPost = ({ post }) => {
       case "media":
         return "Read More";
       case "podcast":
-        return "Listen to Podcast";
+        return "Listen Now";
       default:
         return "Read More";
     }
   }
 
+  const formatDate = (dateString) => {
+    if (!dateString) return null;
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('en-US', options);
+  }
+
   return (
-    <div
-      className="max-w-[400px] xl:max-w-[540px] media-card-shadow rounded-[26px] flex flex-col items-center p-[12px]"
-    >
+    <div className="max-w-[400px] xl:max-w-[540px] media-card-shadow rounded-[26px] flex flex-col items-stretch p-[24px]">
       <img
         src={image}
         alt={title}
-        className="mb-[16px] h-[310px] w-full object-cover rounded-[26px]"
+        className="mb-[24px] h-[310px] w-full object-cover rounded-[26px]"
       />
-      <div className="flex flex-col gap-[24px] w-full px-[16px] mb-[32px]">
-        <h4 className="h4-bold text-[16px] md:text-[24px]">{title}</h4>
-        <p className="p-body text-[14px] md:text-[20px] text-grey">
+      <div className="flex flex-col gap-[16px] w-full mb-[24px] flex-grow">
+        {date && (
+          <p className="text-[14px] md:text-[16px] text-grey-600">{formatDate(date)}</p>
+        )}
+        <h4 className="h4-bold text-[18px] md:text-[24px]">{title}</h4>
+        <p className="p-body text-[14px] md:text-[18px] text-grey-800">
           {subtitle}
         </p>
       </div>
       <a
         href={link}
         target="_blank"
-        className="btn btn-outline-primary gap-[8px] mr-auto mt-auto"
+        rel="noopener noreferrer"
+        className="btn btn-outline-primary gap-[8px] self-start mt-auto"
       >
         {getButtonText(contentType)}
         <img src="/images/icons/external-link.svg" alt="external link" />
