@@ -13,7 +13,7 @@ const EntrepreneurPartners = ({ projects }) => {
               We collaborate with <a href="#entrepreneurs" className="text-primary-300">small-scale entrepreneurs</a> to bring locally-produced, affordable, and nutritious food to those suffering from malnutrition. Our focus is on creating delicious and culturally relevant products like porridges, high protein biscuits, and peanut butter.
             </p>
             <p className="text-lg text-gray-700 mb-4">
-              Our partnerships are built on a foundation of intensive anthropological research. We believe it's crucial to first understand local food system dynamics and the socio-economic factors influencing food choices.
+              {`Our partnerships are built on a foundation of intensive anthropological research. We believe it's crucial to first understand local food system dynamics and the socio-economic factors influencing food choices.`}
             </p>
             <div className="bg-primary-50 p-8 rounded-lg shadow-md mb-12">
               <h3 className="text-2xl font-bold mb-4 text-primary-500">Our Comprehensive Support</h3>

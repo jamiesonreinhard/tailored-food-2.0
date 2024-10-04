@@ -86,7 +86,7 @@ const Home = () => {
           <div className="w-full py-16 sm:py-24 bg-gradient-to-b from-white to-primary-50">
             <section className="w-[90%] max-w-[1200px] mx-auto">
               <h2 className="text-center font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-10 sm:mb-14 text-primary-500 leading-tight">
-                Tailored Food's Mission:
+                Tailored Food&apos;s Mission:
                 <br />
                 <span className="text-primary-700">Eradicating Hunger and Malnutrition</span>
               </h2>
