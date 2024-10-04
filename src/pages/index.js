@@ -60,58 +60,60 @@ const Home = () => {
           </div>
 
           {/* Mobile Header */}
-          <div className="lg:hidden w-[80%] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-white z-10">
-            <h3 className="h5-bold text-white">WE BUILD FOOD SYSTEMS THAT ARE</h3>
-            <h2 className="display-2 text-white mt-4" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
+          <div className="lg:hidden w-[90%] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-white z-10">
+            <h3 className="text-lg font-bold text-white">WE BUILD FOOD SYSTEMS THAT ARE</h3>
+            <h2 className="text-3xl font-bold mt-3" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
           </div>
 
           <button
             onClick={prevImage}
-            className="hidden sm:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
+            className="hidden sm:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
             aria-label="Previous image"
           >
-            <img src="/images/icons/left.svg" alt="" className="w-6 h-6" />
+            <img src="/images/icons/left.svg" alt="" className="w-4 h-4" />
           </button>
           <button
             onClick={nextImage}
-            className="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
+            className="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
             aria-label="Next image"
           >
-            <img src="/images/icons/right.svg" alt="" className="w-6 h-6" />
+            <img src="/images/icons/right.svg" alt="" className="w-4 h-4" />
           </button>
         </div>
 
-        <div className="flex flex-col w-full pb-[180px]">
+        <div className="flex flex-col w-full pb-[100px] sm:pb-[120px]">
           {/* Our Approach Section */}
-          <div className="w-full py-16">
+          <div className="w-full py-16 sm:py-24 bg-gradient-to-b from-white to-primary-50">
             <section className="w-[90%] max-w-[1200px] mx-auto">
-              <h3 className="text-center font-bold text-xl sm:text-2xl lg:text-3xl mb-8 sm:mb-[80px]">
-                Tailored Food works to eliminate hunger and malnutrition for people living in poverty. We do this by:
-              </h3>
-              <div className="flex flex-col lg:flex-row w-full gap-8">
+              <h2 className="text-center font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-10 sm:mb-14 text-primary-500 leading-tight">
+                Tailored Food's Mission:
+                <br />
+                <span className="text-primary-700">Eradicating Hunger and Malnutrition</span>
+              </h2>
+              <div className="flex flex-col lg:flex-row w-full gap-8 sm:gap-12">
                 {/* Partnership */}
-                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50 flex-1">
-                  <h3 className="lg:w-2/3 text-center mx-auto items-center gap-2 flex flex-col">
-                    <HandshakeOutlined className="w-10 h-10" />
-                    <span className="text-lg sm:text-xl font-bold">
-                      Partnering with Grassroots Food Entrepreneurs
+                <div className="flex flex-col gap-[16px] sm:gap-[24px] items-start p-6 sm:p-8 rounded-2xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex-1 border-l-4 sm:border-l-8 border-primary-300 transform hover:scale-[1.02]">
+                  <h3 className="w-full text-center items-center gap-3 sm:gap-4 flex flex-col">
+                    <HandshakeOutlined className="w-12 h-12 sm:w-16 sm:h-16 text-primary-300" />
+                    <span className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-300">
+                      Empowering Grassroots Food Entrepreneurs
                     </span>
                   </h3>
-                  <p className="p-body-md sm:p-body-lg lg:p-body-lg">
-                    Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-[#30B5E0] font-bold">Our partnerships.</Link>
+                  <p className="text-sm sm:text-base lg:text-lg text-center">
+                    Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-primary-300 font-bold hover:underline">Our partnerships.</Link>
                   </p>
                 </div>
 
                 {/* Consulting */}
-                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50 flex-1">
-                  <h3 className="lg:w-2/3 text-center mx-auto items-center gap-2 flex flex-col">
-                    <BusinessCenterOutlined className="w-10 h-10" />
-                    <span className="text-lg sm:text-xl font-bold">
-                      {`Consulting with the World's Largest Food-Focused Organizations`}
+                <div className="flex flex-col gap-[16px] sm:gap-[24px] items-start p-6 sm:p-8 rounded-2xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex-1 border-r-4 sm:border-r-8 border-primary-300 transform hover:scale-[1.02]">
+                  <h3 className="w-full text-center items-center gap-3 sm:gap-4 flex flex-col">
+                    <BusinessCenterOutlined className="w-12 h-12 sm:w-16 sm:h-16 text-primary-300" />
+                    <span className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-300">
+                      {`Revolutionizing Global Food Systems`}
                     </span>
                   </h3>
-                  <p className="p-body-md sm:p-body-lg lg:p-body-lg">
-                    Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-[#30B5E0] font-bold">Our consulting work.</Link>
+                  <p className="text-sm sm:text-base lg:text-lg text-center">
+                    Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-primary-300 font-bold hover:underline">Our consulting work.</Link>
                   </p>
                 </div>
               </div>
@@ -119,55 +121,57 @@ const Home = () => {
           </div>
 
           {/* TF Model Section */}
-          <div className="w-full py-16 bg-primary-50">
-            <div className="max-w-[1000px] w-[90%] flex flex-col items-center mx-auto">
-              <h3 className="h3-bold text-center mb-16">Tailored Food Model</h3>
-              <div className="flex flex-col w-2/3 sm:w-full gap-16">
+          <div className="w-full py-16 sm:py-24 bg-primary-100">
+            <div className="max-w-[1200px] w-[90%] flex flex-col items-center mx-auto">
+              <h2 className="text-center font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-10 sm:mb-14 text-primary-700 leading-tight">
+                The Tailored Food Model
+              </h2>
+              <div className="flex flex-col w-full sm:w-full gap-12 sm:gap-20">
                 {/* Step 1 */}
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="relative w-full md:w-1/2">
-                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">01</div>
-                    <img src="/images/deep-dives.webp" alt="Step 1" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 hover:transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="relative w-full md:w-2/5">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold z-10 shadow-lg">01</div>
+                    <img src="/images/we-ask.webp" alt="Step 1" className="w-full h-auto rounded-2xl shadow-md" />
                   </div>
-                  <div className="w-full md:w-1/2">
-                    <h4 className="h4-bold mb-4">We Ask</h4>
-                    <p className="p-body-lg">Description of Step 1. Brief explanation of what this step entails and how it contributes to the process.</p>
+                  <div className="w-full md:w-3/5">
+                    <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">We Ask</h4>
+                    <p className="text-base sm:text-lg lg:text-xl">What foods are available locally and what is affordable?</p>
                   </div>
                 </div>
 
                 {/* Step 2 */}
-                <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-                  <div className="relative w-full md:w-1/2">
-                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">02</div>
-                    <img src="/images/deep-dives.webp" alt="Step 2" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                <div className="flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 hover:transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="relative w-full md:w-2/5">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold z-10 shadow-lg">02</div>
+                    <img src="/images/deep-dives.webp" alt="Step 2" className="w-full h-auto rounded-2xl shadow-md" />
                   </div>
-                  <div className="w-full md:w-1/2">
-                    <h4 className="h4-bold mb-4">We Dive Deep</h4>
-                    <p className="p-body-lg">Description of Step 2. Explanation on how this step works and its importance in the overall flow.</p>
+                  <div className="w-full md:w-3/5">
+                    <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">We Dive Deep</h4>
+                    <p className="text-base sm:text-lg lg:text-xl">Immersing ourselves in the rural agricultural communities, urban markets, and with local families - we gain an understanding of the full malnutrition landscape in a region.</p>
                   </div>
                 </div>
 
                 {/* Step 3 */}
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="relative w-full md:w-1/2">
-                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">03</div>
-                    <img src="/images/deep-dives.webp" alt="Step 3" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 hover:transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="relative w-full md:w-2/5">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold z-10 shadow-lg">03</div>
+                    <img src="/images/food-systems.webp" alt="Step 3" className="w-full h-auto rounded-2xl shadow-md" />
                   </div>
-                  <div className="w-full md:w-1/2">
-                    <h4 className="h4-bold mb-4">We Design</h4>
-                    <p className="p-body-lg">Description of Step 3. Explain the critical elements and actions involved in this step.</p>
+                  <div className="w-full md:w-3/5">
+                    <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">We Design</h4>
+                    <p className="text-base sm:text-lg lg:text-xl">Working with local experts, Tailored Food designs and builds HOLISTIC FOOD SYSTEMS. These encompass climate sensitive agriculture value chains, food production facilities, and distribution channels to enable the availability of healthy, delicious local foods.</p>
                   </div>
                 </div>
 
                 {/* Step 4 */}
-                <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-                  <div className="relative w-full md:w-1/2">
-                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">04</div>
-                    <img src="/images/deep-dives.webp" alt="Step 4" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                <div className="flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 hover:transform hover:scale-[1.02] transition-all duration-300">
+                  <div className="relative w-full md:w-2/5">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold z-10 shadow-lg">04</div>
+                    <img src="/images/social-enterprises.webp" alt="Step 4" className="w-full h-auto rounded-2xl shadow-md" />
                   </div>
-                  <div className="w-full md:w-1/2">
-                    <h4 className="h4-bold mb-4">We Support</h4>
-                    <p className="p-body-lg">Description of Step 4. Final step in the process, elaborating the completion of the model.</p>
+                  <div className="w-full md:w-3/5">
+                    <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">We Support</h4>
+                    <p className="text-base sm:text-lg lg:text-xl">Local entrepreneur partners throughout the food value chain are supported by Tailored Food. We work to make sure they are financially sustainable and have the infrastructure needed to thrive independently for years to come.</p>
                   </div>
                 </div>
               </div>

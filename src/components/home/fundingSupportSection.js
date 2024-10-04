@@ -8,7 +8,7 @@ const FundingSupportSection = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const sortedPartners = partners?.sort((a, b) => {
-    return a.name - b.name;
+    return a.name.localeCompare(b.name);
   });
 
   useEffect(() => {
@@ -30,24 +30,22 @@ const FundingSupportSection = () => {
   }
 
   return (
-    <div className="w-full py-16">
-      <section className="w-[90%] mx-auto">
-        <div className="flex flex-col gap-4 mb-12 max-w-[1000px] mx-auto">
-          <h1 className="text-center h3-bold font-semibold">
-            Funding Support
-          </h1>
-          <p className="text-center text-lg">
-            Funding Support for Tailored Food has come from both competitions and grants from value-aligned organizations. Our funding partners include - 
-          </p>
-        </div>
+    <div className="w-full py-16 sm:py-24 bg-white">
+      <section className="w-[90%] max-w-[1200px] mx-auto">
+        <h2 className="text-center font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-10 sm:mb-14 text-primary-500 leading-tight">
+          Funding Support
+        </h2>
+        <p className="text-center text-base sm:text-lg lg:text-xl mb-12 max-w-[1000px] mx-auto">
+          Funding Support for Tailored Food has come from both competitions and grants from value-aligned organizations. Our funding partners include:
+        </p>
 
-        <div className="flex items-center gap-[60px] w-full flex-wrap justify-center">
+        <div className="flex items-center gap-8 sm:gap-12 w-full flex-wrap justify-center">
           {sortedPartners?.map((partner) => (
             <img
               key={partner.name}
               src={partner.logo}
               alt={partner.name}
-              className="max-w-[120px] sm:max-w-[200px]"
+              className="max-w-[100px] sm:max-w-[150px] lg:max-w-[200px] h-auto transition-all duration-300 hover:transform hover:scale-110"
             />
           ))}
         </div>

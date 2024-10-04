@@ -4,19 +4,17 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="absolute bottom-0 left-0 h-[64px] md:h-[80px] w-full bg-primary-300 flex items-center justify-between">
-            <div className="flex items-center w-[95%] md:w-[90%] mx-auto justify-between">
-                <div className="flex flex-col md:flex-row md:items-center md:gap-[40px]">
-                    <div className="flex items-center gap-[8px] md:gap-[12px]">
-                        <img src="/images/icons/map-pin.svg" alt="map pin" className="w-[16px] h-[16px] md:w-[20px] md:h-[20px]" />
-                        <p className="text-[12px] md:text-[14px] text-white">Canada</p>
-                    </div>
-                    <p className="text-[10px] md:text-[14px] text-white mt-1 md:mt-0">© {new Date().getFullYear()} Tailored Food, All Rights Reserved</p>
-                </div>
-                <div className="flex items-center gap-[16px] md:gap-[24px]">
-                    <Link href="/contact" className="text-[12px] md:text-[14px] text-white hover:underline">Contact Us</Link>
+        <footer className="w-full bg-primary-300 py-4">
+            <div className="w-[90%] max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center">
+                <p className="text-sm sm:text-base text-white mb-2 sm:mb-0">
+                    © {new Date().getFullYear()} Tailored Food, All Rights Reserved
+                </p>
+                <div className="flex items-center gap-4 sm:gap-6">
+                    <Link href="/contact" className="text-sm sm:text-base text-white hover:underline">
+                        Contact Us
+                    </Link>
                     <Link href="https://linkedin.com/company/tailored-food" target="_blank">
-                        <img src="/images/icons/linkedin.svg" alt="linkedin" className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]" />
+                        <img src="/images/icons/linkedin.svg" alt="linkedin" className="w-6 h-6" />
                     </Link>
                 </div>
             </div>
