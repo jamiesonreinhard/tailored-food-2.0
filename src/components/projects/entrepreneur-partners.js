@@ -78,7 +78,7 @@ const EntrepreneurPartners = ({ projects }) => {
                 className="w-[160px] xl:hidden xl:w-0 rounded-lg shadow-md"
               />
               <p className="text-lg text-gray-700 mb-12">
-                Our impact is measured not only by the nutritious food produced but also by the economic growth and jobs created. We strive to improve both the health and stability of the communities where we operate.
+                {`Our impact is measured not only by the nutritious food produced but also by the economic growth and jobs created. We strive to improve both the health and stability of the communities where we operate.`}
               </p>
             </div>
           </div>
