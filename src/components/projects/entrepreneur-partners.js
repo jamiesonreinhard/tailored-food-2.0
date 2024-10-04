@@ -2,72 +2,106 @@
 import ProjectCard from "./project-card";
 
 const EntrepreneurPartners = ({ projects }) => {
-
   return (
-    <div className="w-[90%] max-w-[1920px] flex flex-col mx-auto">
-      <div className="w-full mb-[80px]">
-        <h2 className="h3-bold mb-6">Entrepreneur Partners</h2>
-
-        <div className="flex flex-col gap-4">
-          <p className="p-body-md text-[14px] md:text-[16px]">
-            {`In order to bring affordable, nutritious food to people suffering from malnutrition, Tailored Food works with small-scale entrepreneurs to bring locally-produced food products to market. We focus on products that are both delicious and culturally relevant, such as porridges, high protein biscuits, and peanut butter.`}
-          </p>
-          <p className="p-body-md text-[14px] md:text-[16px]">
-            {`Our partnerships begin with intensive anthropological research, as we believe it’s vital to first understand local food system dynamics, as well as the social and economic factors behind what foods are purchased and why.`}
-          </p>
+    <div className="flex flex-col w-full mx-auto">
+      {/* Section 1 */}
+      <div className="w-full pb-16 sm:pb-24 bg-gradient-to-b from-white to-primary-50">
+        <div className="w-[90%] max-w-[1920px] flex flex-col md:flex-row gap-8 mx-auto">
+          <div className="w-full xl:w-2/3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-primary-700">Entrepreneur Partners</h2>
+            <p className="text-lg text-gray-700 mb-4">
+              We collaborate with <a href="#entrepreneurs" className="text-primary-300">small-scale entrepreneurs</a> to bring locally-produced, affordable, and nutritious food to those suffering from malnutrition. Our focus is on creating delicious and culturally relevant products like porridges, high protein biscuits, and peanut butter.
+            </p>
+            <p className="text-lg text-gray-700 mb-4">
+              Our partnerships are built on a foundation of intensive anthropological research. We believe it's crucial to first understand local food system dynamics and the socio-economic factors influencing food choices.
+            </p>
+            <div className="bg-primary-50 p-8 rounded-lg shadow-md mb-12">
+              <h3 className="text-2xl font-bold mb-4 text-primary-500">Our Comprehensive Support</h3>
+              <p className="text-lg text-gray-700 mb-4">
+                We offer extensive support to both start-ups and growing companies, addressing their specific needs and helping them scale. Our areas of expertise include:
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-gray-700">
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Business strategy development
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Food market research
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Agricultural value chain development
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Product development and iteration
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Production planning
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Culturally-relevant marketing and distribution
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Financial modeling
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Fundraising
+                </li>
+              </ul>
+            </div>
+            <div className="flex items-start sm:items-center gap-4">
+              <img
+                src="/images/roberto-pb.webp"
+                alt="Entrepreneur Partners"
+                className="w-[160px] xl:hidden xl:w-0 rounded-lg shadow-md"
+              />
+              <p className="text-lg text-gray-700 mb-12">
+                Our impact is measured not only by the nutritious food produced but also by the economic growth and jobs created. We strive to improve both the health and stability of the communities where we operate.
+              </p>
+            </div>
+          </div>
+          <div className="w-0 hidden xl:w-1/3 xl:block">
+            <img
+              src="/images/roberto-pb.webp"
+              alt="Entrepreneur Partners"
+              className="w-full mx-auto h-auto rounded-lg shadow-md"
+            />
+          </div>
         </div>
-
-        <p className="p-body-md text-[14px] md:text-[16px] mb-8">
-          {`We offer comprehensive support to start-ups as well as growing companies to address their specific needs and scale their businesses, working on:`}
-        </p>
-
-        <ul className="list-disc list-inside p-body-lg text-[16px] md:text-[20px] mb-4 sm:hidden">
-          <li className="mb-[12px]">Business strategy development</li>
-          <li className="mb-[12px]">Food Market qualitative and quantitative research</li>
-          <li className="mb-[12px]">Agricultural value chain development</li>
-          <li className="mb-[12px]">Product development and iteration</li>
-          <li className="mb-[12px]">Production planning</li>
-          <li className="mb-[12px]">Culturally-relevant marketing and distribution</li>
-          <li className="mb-[12px]">Financial modeling</li>
-          <li className="mb-[12px]">Fundraising</li>
-        </ul>
-
-        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Business strategy development</p>
-          </div>
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Food Market qualitative and quantitative research</p>
-          </div>
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Agricultural value chain development</p>
-          </div>
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Product development and iteration</p>
-          </div>
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Production planning</p>
-          </div>
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Culturally-relevant marketing and distribution</p>
-          </div>
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Financial modeling</p>
-          </div>
-          <div className="p-4 bg-primary-50 rounded-lg border border-[#30B5E0]">
-            <p className="p-body-md text-[14px] font-bold">Fundraising</p>
-          </div>
-        </div>
-
-        <p className="p-body-md text-[14px] md:text-[16px] mt-8">
-          We consider the impact of our partnerships in terms of both the nutritious food produced, but the economic growth and jobs created as well. In this way, we strive to improve the health and stability of the communities where we operate.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+      {/* Section 2 */}
+      <div className="w-full py-16 sm:py-24 bg-primary-100">
+        <div className="w-[90%] max-w-[1920px] mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-primary-500" id="entrepreneurs">Our Entrepreneur Partners</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

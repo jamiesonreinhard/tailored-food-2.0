@@ -9,8 +9,8 @@ import { useState } from 'react';
 const links = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/partners', label: 'Partners' },
-  { href: '/projects', label: 'Projects' },
+  { href: '/partners', label: 'Entrepreneur Partners' },
+  { href: '/projects', label: 'Consulting Projects' },
   { href: '/media', label: 'Media' },
   { href: '/contact', label: 'Contact' }
 ];
@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className={`nav ${getNavStyle()}`}>
         <div className="w-[90%] h-full flex items-center justify-between mx-auto max-w-[1920px]">
           {/* Logo/Home Link */}
-          <Link href="/">
+          <Link href="/" className="flex-shrink-0">
             <div className="hidden md:block">
               <Image
                 src={tfLogo}
@@ -56,27 +56,27 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <div className="block md:hidden">
+          <div className="block lg:hidden">
             <button
               type="button"
               onClick={openMobileMenu}
+              className="duration-200"
             >
               {["/", "/about"].includes(currentPath) ? (
-                <img src={'/images/icons/menu.svg'} alt="menu" className="w-[24px]" />
+                <img src={'/images/icons/menu.svg'} alt="menu" className="w-[32px] h-[32px] sm:w-[40px] sm:h-[40px]" />
               ) : (
-                <img src={'/images/icons/menuBlack.svg'} alt="menu" className="w-[24px]" />
+                <img src={'/images/icons/menuBlack.svg'} alt="menu" className="w-[32px] h-[32px] sm:w-[40px] sm:h-[40px]" />
               )}
-
             </button>
           </div>
 
           {/* Page Links */}
-          <div className="hidden md:flex items-center gap-[22px]">
+          <div className="hidden lg:flex items-center gap-[22px] flex-wrap justify-end">
             {links.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className={`text-[20px] ${link.href === currentPath ? "text-primary-300" : "hover:text-yellow"}`}
+                className={`text-[18px] xl:text-[20px] ${link.href === currentPath ? "text-primary-300" : "hover:text-yellow"}`}
                 disabled={link.href === currentPath}
               >
                 {link.label}

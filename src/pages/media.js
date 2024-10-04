@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from '@/components/layout';
 import Media from "@/components/media/media";
-import Resources from "@/components/media/resources/resources";
+import AnnualReports from "@/components/media/annual-reports/annual-reports";
 import SubNavigation from "@/components/sub-navigation";
 
 const Content = () => {
@@ -13,8 +13,8 @@ const Content = () => {
       "display": "Media"
     },
     {
-      "name": "resources",
-      "display": "Resources"
+      "name": "annual-reports",
+      "display": "Annual Reports"
     },
   ]
 
@@ -29,8 +29,8 @@ const Content = () => {
           {activePage === "media" && (
             <Media />
           )}
-          {activePage === "resources" && (
-            <Resources />
+          {activePage === "annual-reports" && (
+            <AnnualReports />
           )}
         </div>
 

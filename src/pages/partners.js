@@ -38,7 +38,7 @@ const Partners = () => {
     return (
         <>
             <Layout>
-                <div className="flex flex-col w-full mx-auto pt-40 pb-60">
+                <div className="flex flex-col w-full mx-auto pt-40">
                     <EntrepreneurPartners
                         projects={entrepreneurProjects}
                     />

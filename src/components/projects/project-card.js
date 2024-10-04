@@ -32,7 +32,7 @@ const ProjectCard = ({ project }) => {
           />
           <div className="flex items-center gap-[8px]">
             {project.status === "active" && (
-              <div className="items-center gap-[8px] hidden lg:flex">
+              <div className="items-center gap-[8px] whitespace-nowrap flex">
                 <img
                   src="/images/icons/active-toggle.svg"
                   alt="active toggle icon"
@@ -42,7 +42,7 @@ const ProjectCard = ({ project }) => {
               </div>
             )}
             {project.status === "past" && (
-              <div className="flex items-center gap-[8px] hidden lg:flex">
+              <div className="flex items-center gap-[8px] whitespace-nowrap flex">
                 <img
                   src="/images/icons/past-toggle.svg"
                   alt="past toggle icon"
