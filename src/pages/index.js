@@ -85,23 +85,33 @@ const Home = () => {
           {/* Our Approach Section */}
           <div className="w-full py-16">
             <section className="w-[90%] max-w-[1200px] mx-auto">
-              <h3 className="text-center h4-bold lg:h3-bold mb-[80px]">
+              <h3 className="text-center font-bold text-xl sm:text-2xl lg:text-3xl mb-8 sm:mb-[80px]">
                 Tailored Food works to eliminate hunger and malnutrition for people living in poverty. We do this by:
               </h3>
-              <div className="flex flex-col w-full gap-8">
+              <div className="flex flex-col lg:flex-row w-full gap-8">
                 {/* Partnership */}
-                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50">
-                  <h3 className="h5-bold sm:h3-bold lg:h4-bold flex items-center gap-2"><HandshakeOutlined /> Partnering with Grassroots Food Entrepreneurs</h3>
+                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50 flex-1">
+                  <h3 className="lg:w-2/3 text-center mx-auto items-center gap-2 flex flex-col">
+                    <HandshakeOutlined className="w-10 h-10" />
+                    <span className="text-lg sm:text-xl font-bold">
+                      Partnering with Grassroots Food Entrepreneurs
+                    </span>
+                  </h3>
                   <p className="p-body-md sm:p-body-lg lg:p-body-lg">
-                    Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-[#30B5E0] font-bold">Learn about our partnerships.</Link>
+                    Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-[#30B5E0] font-bold">Our partnerships.</Link>
                   </p>
                 </div>
 
                 {/* Consulting */}
-                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50">
-                  <h3 className="h5-bold sm:h3-bold lg:h4-bold flex items-center gap-2"><BusinessCenterOutlined /> {`Consulting with the World's Largest Food-Focused Organizations`}</h3>
+                <div className="flex flex-col gap-[16px] items-start p-4 rounded-lg bg-primary-50 flex-1">
+                  <h3 className="lg:w-2/3 text-center mx-auto items-center gap-2 flex flex-col">
+                    <BusinessCenterOutlined className="w-10 h-10" />
+                    <span className="text-lg sm:text-xl font-bold">
+                      {`Consulting with the World's Largest Food-Focused Organizations`}
+                    </span>
+                  </h3>
                   <p className="p-body-md sm:p-body-lg lg:p-body-lg">
-                    Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-[#30B5E0] font-bold">Learn about our consulting work.</Link>
+                    Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-[#30B5E0] font-bold">Our consulting work.</Link>
                   </p>
                 </div>
               </div>
