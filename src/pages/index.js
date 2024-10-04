@@ -65,15 +65,15 @@ const Home = () => {
             <h2 className="display-2 text-white mt-4" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
           </div>
 
-          <button 
-            onClick={prevImage} 
+          <button
+            onClick={prevImage}
             className="hidden sm:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
             aria-label="Previous image"
           >
             <img src="/images/icons/left.svg" alt="" className="w-6 h-6" />
           </button>
-          <button 
-            onClick={nextImage} 
+          <button
+            onClick={nextImage}
             className="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
             aria-label="Next image"
           >
@@ -118,11 +118,59 @@ const Home = () => {
             </section>
           </div>
 
-          {/* Flow Chart Section */}
+          {/* TF Model Section */}
           <div className="w-full py-16 bg-primary-50">
-            <div className="max-w-[1200px] w-[90%] flex flex-col items-center mx-auto">
-              <h3 className="h3-bold text-center mb-8">Tailored Food Model</h3>
-              <FlowChart />
+            <div className="max-w-[1000px] w-[90%] flex flex-col items-center mx-auto">
+              <h3 className="h3-bold text-center mb-16">Tailored Food Model</h3>
+              <div className="flex flex-col w-2/3 sm:w-full gap-16">
+                {/* Step 1 */}
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="relative w-full md:w-1/2">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">01</div>
+                    <img src="/images/deep-dives.webp" alt="Step 1" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <h4 className="h4-bold mb-4">We Ask</h4>
+                    <p className="p-body-lg">Description of Step 1. Brief explanation of what this step entails and how it contributes to the process.</p>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+                  <div className="relative w-full md:w-1/2">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">02</div>
+                    <img src="/images/deep-dives.webp" alt="Step 2" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <h4 className="h4-bold mb-4">We Dive Deep</h4>
+                    <p className="p-body-lg">Description of Step 2. Explanation on how this step works and its importance in the overall flow.</p>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="relative w-full md:w-1/2">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">03</div>
+                    <img src="/images/deep-dives.webp" alt="Step 3" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <h4 className="h4-bold mb-4">We Design</h4>
+                    <p className="p-body-lg">Description of Step 3. Explain the critical elements and actions involved in this step.</p>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div className="flex flex-col md:flex-row-reverse items-center gap-8">
+                  <div className="relative w-full md:w-1/2">
+                    <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 h-20 bg-primary-300 rounded-full flex items-center justify-center text-white text-3xl font-bold z-10">04</div>
+                    <img src="/images/deep-dives.webp" alt="Step 4" className="w-full h-auto rounded-lg w-[300px] md:w-[400px]" />
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <h4 className="h4-bold mb-4">We Support</h4>
+                    <p className="p-body-lg">Description of Step 4. Final step in the process, elaborating the completion of the model.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
