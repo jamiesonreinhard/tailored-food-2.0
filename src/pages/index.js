@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Layout from '@/components/layout'
 import { motion, AnimatePresence } from 'framer-motion';
 import FundingSupportSection from "@/components/home/fundingSupportSection";
@@ -17,41 +17,41 @@ const Home = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % sliderImages.length);
-  };
+  }, [sliderImages.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + sliderImages.length) % sliderImages.length);
-  };
+  }, [sliderImages.length]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextImage();
-    }, 10000);
-
-    return () => clearInterval(interval); // Clear the interval on unmount
-  }, []);
+    const interval = setInterval(nextImage, 10000);
+    return () => clearInterval(interval);
+  }, [nextImage]);
 
   return (
     <>
       <Layout>
         {/* Header and Image Slider */}
-        <div className="relative w-full h-screen bg-black">
-          <AnimatePresence initial={false} mode="wait">
-            <motion.img
-              key={currentImageIndex}
-              src={sliderImages[currentImageIndex]}
-              alt="Background"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
-            />
+        <div className="relative w-full h-screen bg-black overflow-hidden">
+          <AnimatePresence initial={false}>
+            {sliderImages.map((image, index) => (
+              <motion.img
+                key={index}
+                src={image}
+                alt={`Slider image ${index + 1}`}
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                style={{ zIndex: index === currentImageIndex ? 1 : 0 }}
+              />
+            ))}
           </AnimatePresence>
 
-          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'rgba(1, 1, 1, 0.30)' }} />
+          <div className="absolute top-0 left-0 w-full h-full" style={{ background: 'rgba(0, 0, 0, 0.30)', zIndex: 2 }} />
 
           {/* Desktop Header */}
           <div className="hidden lg:block w-3/4 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-white z-10">
@@ -67,17 +67,17 @@ const Home = () => {
 
           <button
             onClick={prevImage}
-            className="hidden sm:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
+            className="hidden sm:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
             aria-label="Previous image"
           >
-            <img src="/images/icons/left.svg" alt="" className="w-4 h-4" />
+            <img src="/images/icons/left.svg" alt="" className="w-6 h-6" />
           </button>
           <button
             onClick={nextImage}
-            className="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
+            className="hidden sm:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-3 bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 rounded-full items-center justify-center"
             aria-label="Next image"
           >
-            <img src="/images/icons/right.svg" alt="" className="w-4 h-4" />
+            <img src="/images/icons/right.svg" alt="" className="w-6 h-6" />
           </button>
         </div>
 
