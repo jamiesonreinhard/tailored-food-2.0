@@ -72,6 +72,7 @@ export const fetchResources = async () => {
       return {
         name: item.fields.name,
         document: documentUrl,
+        image: item.fields.image.fields.file.url,
       };
     });
 

@@ -22,7 +22,7 @@ const MediaPost = ({ post }) => {
   }
 
   return (
-    <div className="max-w-[400px] xl:max-w-[540px] media-card-shadow rounded-[26px] flex flex-col items-stretch p-[24px]">
+    <div className="w-full media-card-shadow rounded-[26px] flex flex-col items-stretch p-[24px]">
       <img
         src={image}
         alt={title}

@@ -33,10 +33,10 @@ const Media = () => {
     return <Spinner />;
   }
   return (
-    <div className="flex flex-col w-full max-w-[1140px] mx-auto">
+    <div className="w-full">
       {/* MEDIA POSTS */}
-      <div className="flex flex-col w-full gap-[20px] md:gap-[36px]">
-        <div className="flex w-full flex-wrap justify-center xl:justify-start gap-[36px]">
+      <div className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[36px]">
           {sortedMediaPosts?.map((post, index) => (
             <MediaPost post={post} key={index} />
           ))}
