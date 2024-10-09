@@ -99,7 +99,7 @@ const Home = () => {
                     </span>
                   </h3>
                   <p className="text-sm sm:text-base lg:text-lg text-center">
-                    We develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products in partnership with local entrepreneurs. <Link href="/partners" className="text-primary-300 font-bold hover:underline">Our partnerships.</Link>
+                    {`We develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products in partnership with local entrepreneurs.`} <Link href="/partners" className="text-primary-300 font-bold hover:underline">Our partnerships.</Link>
                   </p>
                 </div>
 
@@ -112,7 +112,7 @@ const Home = () => {
                     </span>
                   </h3>
                   <p className="text-sm sm:text-base lg:text-lg text-center">
-                  We consult with the world's largest food system organizations, furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-primary-300 font-bold hover:underline">Our projects.</Link>
+                    {`We consult with the world's largest food system organizations, furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition.`} <Link href="/projects" className="text-primary-300 font-bold hover:underline">Our projects.</Link>
                   </p>
                 </div>
               </div>
