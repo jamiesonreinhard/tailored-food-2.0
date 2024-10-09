@@ -3,7 +3,6 @@ import React, { useEffect, useState, useCallback } from "react";
 import Layout from '@/components/layout'
 import { motion, AnimatePresence } from 'framer-motion';
 import FundingSupportSection from "@/components/home/fundingSupportSection";
-import FlowChart from "@/components/home/flowChart";
 import Link from "next/link";
 import { HandshakeOutlined, BusinessCenterOutlined } from "@mui/icons-material";
 
@@ -100,7 +99,7 @@ const Home = () => {
                     </span>
                   </h3>
                   <p className="text-sm sm:text-base lg:text-lg text-center">
-                    Develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products. <Link href="/partners" className="text-primary-300 font-bold hover:underline">Our partnerships.</Link>
+                    We develop, launch, and scale delicious, low-cost, nutritious, locally sourced food products in partnership with local entrepreneurs. <Link href="/partners" className="text-primary-300 font-bold hover:underline">Our partnerships.</Link>
                   </p>
                 </div>
 
@@ -113,7 +112,7 @@ const Home = () => {
                     </span>
                   </h3>
                   <p className="text-sm sm:text-base lg:text-lg text-center">
-                    Furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-primary-300 font-bold hover:underline">Our consulting work.</Link>
+                  We consult with the world's largest food system organizations, furthering their work to ensure healthy food is affordable and available to families struggling with malnutrition. <Link href="/projects" className="text-primary-300 font-bold hover:underline">Our projects.</Link>
                   </p>
                 </div>
               </div>
@@ -135,7 +134,7 @@ const Home = () => {
                   </div>
                   <div className="w-full md:w-3/5">
                     <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">We Ask</h4>
-                    <p className="text-base sm:text-lg lg:text-xl">What foods are available locally and what is affordable?</p>
+                    <p className="text-base sm:text-lg lg:text-xl">In communities impacted by malnutrition, we study what foods are available locally and what families can afford to eat.</p>
                   </div>
                 </div>
 
