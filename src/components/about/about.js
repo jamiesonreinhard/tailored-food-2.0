@@ -10,7 +10,6 @@ const About = () => {
           <h2 className="h2-bold text-[20px] md:text-[40px] mb-[20px] md:mb-[36px] text-primary-500">
             Where We Work
           </h2>
-          <p className="p-body-lg text-[16px] md:text-[20px] text-gray-600">Our work spans the globe, including countries in Africa, the Caribbean, and South America.</p>
           <div className="w-full p-4 rounded-lg bg-[#fff] border border-primary-300 border-4 mt-8 shadow-md">
             <img src="/images/tfmap-1.webp" alt="map" className="w-full rounded-lg" />
           </div>

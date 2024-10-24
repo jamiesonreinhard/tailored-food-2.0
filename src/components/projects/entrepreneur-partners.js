@@ -16,58 +16,27 @@ const EntrepreneurPartners = ({ projects }) => {
               {`Our partnerships are built on a foundation of intensive anthropological research. We believe it's crucial to first understand local food system dynamics and the socio-economic factors influencing food choices.`}
             </p>
             <div className="bg-primary-50 p-8 rounded-lg shadow-md mb-12">
-              <h3 className="text-2xl font-bold mb-4 text-primary-500">Our Comprehensive Support</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary-500">Comprehensive Support</h3>
               <p className="text-lg text-gray-700 mb-4">
-                We offer extensive support to both start-ups and growing companies, addressing their specific needs and helping them scale. Our areas of expertise include:
-              </p>
+                We offer extensive support to both start-ups and growing companies, addressing their specific needs and helping them scale. Our areas of expertise include:              </p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg text-gray-700">
                 <li className="flex items-center">
                   <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Business strategy development
+                  Business strategy and agricultural value chain development
                 </li>
                 <li className="flex items-center">
                   <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Food market research
+                  Food market research and product development
                 </li>
                 <li className="flex items-center">
                   <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Agricultural value chain development
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Product development and iteration
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Production planning
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Culturally-relevant marketing and distribution
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Financial modeling
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-6 h-6 mr-2 text-primary-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Fundraising
+                  Fundraising, distribution, and marketing assistance
                 </li>
               </ul>
             </div>
