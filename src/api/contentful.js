@@ -179,6 +179,7 @@ export const fetchProjects = async () => {
     const response = await client.getEntries({
       content_type: 'project',
     });
+    console.log(response); 
     const formattedProjects = response.items.map((item) => {
       return {
         id: response.sys.id,
@@ -188,7 +189,7 @@ export const fetchProjects = async () => {
         longLocation: item.fields.longLocation,
         status: item.fields.status,
         paragraphs: item.fields.paragraphs,
-        partnerWebsite: item.fields.partner.fields.partnerWebsite,
+        partnerWebsite: item.fields.partner.fields.websiteLink,
         partnerImage: item.fields.partner.fields.logo.fields.file.url,
         latitude: item.fields.latitude,
         longitude: item.fields.longitude

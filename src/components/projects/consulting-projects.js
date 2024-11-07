@@ -32,23 +32,20 @@ const ConsultingProjects = ({ projects }) => {
                 Design, implement, and scale strategic partnerships with food system stakeholders
               </li>
             </ul>
-            <p className="text-lg text-gray-700 mb-12">
-              We partner with national governments, UN agencies, leading private sector food companies, the nonprofit sector, and local food system stakeholders to support food system transformation. Tailored Food has a depth of experience working in complex environments and a broad advisory network ranging from food technology experts and Michelin-star chefs to non-profit funders and diplomacy experts.
-            </p>
-            <div className="flex items-start sm:items-center gap-4">
+            <div className="flex flex-col sm:mt-8 sm:mb-0 sm:flex-row items-start gap-4">
               <img
-                src="/images/consulting-projects.webp"
+                src="/images/tanya-by-truck.jpg"
                 alt="Consulting Projects"
-                className="w-[160px] xl:hidden xl:w-0 rounded-lg shadow-md"
+                className="w-full my-4 sm:my-0 sm:w-[240px] xl:hidden xl:w-0 rounded-lg shadow-md"
               />
               <p className="text-lg text-gray-700 mb-12">
-                Our impact is measured by the successful implementation of food system strategies and the positive changes we bring to communities worldwide.
+                We partner with national governments, UN agencies, leading private sector food companies, the nonprofit sector, and local food system stakeholders to support food system transformation. Tailored Food has a depth of experience working in complex environments and a broad advisory network ranging from food technology experts and Michelin-star chefs to non-profit funders and diplomacy experts.
               </p>
             </div>
           </div>
           <div className="w-0 hidden xl:w-1/3 xl:block">
             <img
-              src="/images/consulting-projects.webp"
+              src="/images/tanya-by-truck.jpg"
               alt="Consulting Projects"
               className="w-full mx-auto h-auto rounded-lg shadow-md"
             />

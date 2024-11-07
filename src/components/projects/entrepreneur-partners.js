@@ -2,12 +2,14 @@
 import ProjectCard from "./project-card";
 
 const EntrepreneurPartners = ({ projects }) => {
+  console.log(projects);
+  
   return (
     <div className="flex flex-col w-full mx-auto">
       {/* Section 1 */}
       <div className="w-full pb-16 sm:pb-24 bg-gradient-to-b from-white to-primary-50">
         <div className="w-[90%] max-w-[1920px] flex flex-col md:flex-row gap-8 mx-auto">
-          <div className="w-full xl:w-2/3">
+          <div className="w-full xl:w-3/4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-primary-700">Entrepreneur Partners</h2>
             <p className="text-lg text-gray-700 mb-4">
               We collaborate with <a href="#entrepreneurs" className="text-primary-300">small-scale entrepreneurs</a> to bring locally-produced, affordable, and nutritious food to those suffering from malnutrition. Our focus is on creating delicious and culturally relevant products like porridges, high protein biscuits, and peanut butter.
@@ -44,18 +46,18 @@ const EntrepreneurPartners = ({ projects }) => {
               <img
                 src="/images/roberto-pb.webp"
                 alt="Entrepreneur Partners"
-                className="w-[160px] xl:hidden xl:w-0 rounded-lg shadow-md"
+                className="w-[120px] xl:hidden xl:w-0 rounded-lg shadow-md"
               />
               <p className="text-lg text-gray-700 mb-12">
                 {`Our impact is measured not only by the nutritious food produced but also by the economic growth and jobs created. We strive to improve both the health and stability of the communities where we operate.`}
               </p>
             </div>
           </div>
-          <div className="w-0 hidden xl:w-1/3 xl:block">
+          <div className="w-0 hidden xl:w-1/4 xl:block">
             <img
               src="/images/roberto-pb.webp"
               alt="Entrepreneur Partners"
-              className="w-full mx-auto h-auto rounded-lg shadow-md"
+              className="w-full max-w-[300px] mx-auto h-auto rounded-lg shadow-md"
             />
           </div>
         </div>

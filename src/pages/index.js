@@ -167,7 +167,7 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 hover:transform hover:scale-[1.02] transition-all duration-300">
                   <div className="relative w-full md:w-2/5">
                     <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold z-10 shadow-lg">01</div>
-                    <img src="/images/deep-dives.webp" alt="Step 2" className="w-full h-auto rounded-2xl shadow-md" />
+                    <img src="/images/walking-with-woman.png" alt="Step 2" className="w-full h-auto rounded-2xl shadow-md" />
                   </div>
                   <div className="w-full md:w-3/5">
                     <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">Anthropological Deep Dives</h4>
@@ -179,7 +179,7 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 hover:transform hover:scale-[1.02] transition-all duration-300">
                   <div className="relative w-full md:w-2/5">
                     <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold z-10 shadow-lg">02</div>
-                    <img src="/images/food-systems.webp" alt="Step 3" className="w-full h-auto rounded-2xl shadow-md" />
+                    <img src="/images/social-enterprises.webp" alt="Step 3" className="w-full h-auto rounded-2xl shadow-md" />
                   </div>
                   <div className="w-full md:w-3/5">
                     <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">Holistic Food System Design</h4>
@@ -191,7 +191,7 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 hover:transform hover:scale-[1.02] transition-all duration-300">
                   <div className="relative w-full md:w-2/5">
                     <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl sm:text-2xl font-bold z-10 shadow-lg">03</div>
-                    <img src="/images/social-enterprises.webp" alt="Step 4" className="w-full h-auto rounded-2xl shadow-md" />
+                    <img src="/images/peanut-butter.jpg" alt="Step 4" className="w-full h-auto rounded-2xl shadow-md" />
                   </div>
                   <div className="w-full md:w-3/5">
                     <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">Sustainable Social Enterprises</h4>
