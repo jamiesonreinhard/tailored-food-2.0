@@ -74,13 +74,13 @@ const Home = () => {
           {/* Desktop Header */}
           <div className="hidden lg:block w-3/4 absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-white z-10">
             <h3 className="h2-bold text-white">WE BUILD FOOD SYSTEMS THAT ARE</h3>
-            <h2 className="display-1 text-white mt-6" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
+            <h2 className="text-6xl font-bold text-white mt-6">Nutritious, Delicious, Affordable & Local</h2>
           </div>
 
           {/* Mobile Header */}
           <div className="lg:hidden w-[90%] absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-white z-10">
-            <h3 className="text-lg font-bold text-white">WE BUILD FOOD SYSTEMS THAT ARE</h3>
-            <h2 className="text-3xl font-bold mt-3" style={{ fontFamily: 'QuincyCF-BoldItalic' }}>Nutritious, Delicious, Affordable & Local</h2>
+            <h3 className="text-xl font-bold text-white">WE BUILD FOOD SYSTEMS THAT ARE</h3>
+            <h2 className="text-3xl font-bold mt-3">Nutritious, Delicious, Affordable & Local</h2>
           </div>
 
           <button
