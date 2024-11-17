@@ -19,8 +19,8 @@ export const fetchBlogPosts = async () => {
         subtitle: item.fields.subtitle,
         date: item.fields.date,
         link: item.fields.link,
-        author: item.fields.author.fields,
-        image: item.fields.image.fields.file.url,
+        author: item.fields.author?.fields,
+        image: item.fields.image?.fields?.file?.url,
       };
     });
 
@@ -44,7 +44,7 @@ export const fetchMediaPosts = async () => {
         subtitle: item.fields.subtitle,
         date: item.fields.date,
         link: item.fields.link,
-        image: item.fields.image.fields.file.url,
+        image: item.fields.image?.fields?.file?.url,
         contentType: item.fields.contentType,
       };
     });
@@ -67,12 +67,12 @@ export const fetchResources = async () => {
       const documentAsset = item.fields.document;
 
       // Construct the full URL for the PDF document
-      const documentUrl = documentAsset ? `https:${documentAsset.fields.file.url}` : null;
+      const documentUrl = documentAsset ? `https:${documentAsset.fields?.file?.url}` : null;
 
       return {
         name: item.fields.name,
         document: documentUrl,
-        image: item.fields.image.fields.file.url,
+        image: item.fields.image?.fields?.file?.url,
       };
     });
 
@@ -94,7 +94,7 @@ export const fetchPodcasts = async () => {
       return {
         title: item.fields.title,
         subtitle: item.fields.subtitle,
-        image: item.fields.image.fields.file.url,
+        image: item.fields.image?.fields?.file?.url,
         link: item.fields.link,
         date: item.fields.date,
         length: item.fields.length,
@@ -121,7 +121,7 @@ export const fetchTeamMembers = async () => {
         lastName: item.fields.lastName,
         title: item.fields.title,
         bio: item.fields.bio,
-        image: item.fields.image.fields.file.url,
+        image: item.fields.image?.fields?.file?.url,
       };
     });
 
@@ -141,7 +141,7 @@ export const fetchPartners = async () => {
     const formattedPartners = response.items.map((item) => {
       return {
         name: item.fields.name,
-        logo: item.fields.logo.fields.file.url,
+        logo: item.fields.logo?.fields?.file?.url,
         link: item.fields.websiteLink,
         displayOnHomepage: item.fields.displayOnHomepage
       };
@@ -163,7 +163,7 @@ export const fetchFundingPartners = async () => {
     const formattedPartners = response.items.map((item) => {
       return {
         name: item.fields.name,
-        logo: item.fields.logo.fields.file.url,
+        logo: item.fields.logo?.fields?.file?.url,
       };
     });
 
@@ -189,8 +189,8 @@ export const fetchProjects = async () => {
         longLocation: item.fields.longLocation,
         status: item.fields.status,
         paragraphs: item.fields.paragraphs,
-        partnerWebsite: item.fields.partner.fields.websiteLink,
-        partnerImage: item.fields.partner.fields.logo.fields.file.url,
+        partnerWebsite: item.fields.partner?.fields?.websiteLink,
+        partnerImage: item.fields.partner?.fields?.logo?.fields?.file?.url,
         latitude: item.fields.latitude,
         longitude: item.fields.longitude
       };
@@ -214,7 +214,7 @@ export const fetchProjects = async () => {
 //       return {
 //         date: item.fields.date,
 //         caption: item.fields.caption,
-//         image: item.fields.image.fields.file.url,
+//         image: item.fields.image?.fields?.file?.url,
 //       };
 //     });
 
@@ -236,7 +236,7 @@ export const fetchProjects = async () => {
 //       return {
 //         date: item.fields.date,
 //         caption: item.fields.caption,
-//         url: item.fields.image.fields.file.url,
+//         url: item.fields.image?.fields?.file?.url,
 //       };
 //     });
 
