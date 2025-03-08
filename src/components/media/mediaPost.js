@@ -23,11 +23,18 @@ const MediaPost = ({ post }) => {
     return new Date(dateString).toLocaleDateString('en-US', options);
   }
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    // Prevent the default action temporarily
+    e.preventDefault();
+    
+    // Track the event
     trackEvent('Media Link Clicked', {
       title,
       contentType,
       link
+    }).then(() => {
+      // After tracking, either programmatically navigate or continue with the default action
+      window.open(link, '_blank', 'noopener,noreferrer');
     });
   };
 
