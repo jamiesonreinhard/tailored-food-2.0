@@ -3,6 +3,7 @@ import Spinner from "../../loading";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { PictureAsPdf } from "@mui/icons-material";
+import { trackEvent } from '@/lib/segment';
 
 const AnnualReports = () => {
     const [resources, setResources] = useState([]);
@@ -22,6 +23,13 @@ const AnnualReports = () => {
         }
         fetchData();
     }, []);
+
+    const handleReportClick = (resource) => {
+        trackEvent('Annual Report Clicked', {
+            name: resource.name,
+            documentUrl: resource.document
+        });
+    };
 
     if (isLoading) {
         return <Spinner />;
@@ -50,6 +58,7 @@ const AnnualReports = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-outline-primary gap-[8px] self-start mt-auto"
+                            onClick={() => handleReportClick(resource)}
                         >
                             <span>Read More</span>
                             <img src="/images/icons/external-link.svg" alt="external link" />

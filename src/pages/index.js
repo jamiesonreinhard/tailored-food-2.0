@@ -7,6 +7,7 @@ import Link from "next/link";
 import { HandshakeOutlined, BusinessCenterOutlined } from "@mui/icons-material";
 import { fetchResources } from "@/api/contentful";
 import Spinner from "@/components/loading";
+import { trackEvent } from '@/lib/segment';
 
 const Home = () => {
 
@@ -47,6 +48,12 @@ const Home = () => {
     }
     fetchData();
   }, []);
+
+  const handleAnnualReportClick = () => {
+    trackEvent('Home Annual Report Clicked', {
+      documentUrl: annualReportLink
+    });
+  };
 
   return (
     <>
@@ -149,6 +156,7 @@ const Home = () => {
                   target="_blank"
                   href={annualReportLink}
                   className="btn btn-primary text-lg sm:text-xl lg:text-2xl font-bold w-fit mx-auto"
+                  onClick={handleAnnualReportClick}
                 >
                   {isLoading ? <Spinner /> : "Tailored Food Annual Report"}
                 </Link>

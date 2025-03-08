@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { trackEvent } from '@/lib/segment';
+
 const MediaPost = ({ post }) => {
   const { title, subtitle, link, image, contentType, date } = post;
   console.log(post);
@@ -20,6 +22,14 @@ const MediaPost = ({ post }) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
   }
+
+  const handleClick = () => {
+    trackEvent('Media Link Clicked', {
+      title,
+      contentType,
+      link
+    });
+  };
 
   return (
     <div className="w-full media-card-shadow rounded-[26px] flex flex-col items-stretch p-[24px]">
@@ -42,6 +52,7 @@ const MediaPost = ({ post }) => {
         target="_blank"
         rel="noopener noreferrer"
         className="btn btn-outline-primary gap-[8px] self-start mt-auto"
+        onClick={handleClick}
       >
         {getButtonText(contentType)}
         <img src="/images/icons/external-link.svg" alt="external link" />
