@@ -11,7 +11,7 @@ const About = () => {
             Where We Work
           </h2>
           <div className="w-full p-4 rounded-lg bg-[#fff] border border-primary-300 border-4 mt-8 shadow-md">
-            <img src="/images/tfmap-4-2-25.png" alt="map" className="w-full rounded-lg" />
+            <img src="/images/tfmap-svg.png" alt="map" className="w-full rounded-lg" />
           </div>
         </div>
       </div>
