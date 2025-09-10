@@ -59,7 +59,7 @@ const ProjectCard = ({ project }) => {
 
         <div className="flex items-center gap-[8px] mb-[30px]">
           <img src="/images/icons/map-pin-light-gray.svg" alt="map pin" />
-          <p className="p-body-lg text-lightGrey">
+          <p className="p-body-lg text-lightGrey font-bold">
             {project.longLocation}
           </p>
         </div>

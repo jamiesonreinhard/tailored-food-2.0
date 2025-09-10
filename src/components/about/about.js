@@ -4,18 +4,6 @@ const About = () => {
 
   return (
     <div className="flex flex-col w-full mx-auto justify-start">
-      {/* WHAT / HOW */}
-      <div className="w-full pb-16 sm:pb-24 bg-gradient-to-b from-white to-primary-50">
-        <div className="flex flex-col w-[90%] max-w-[1920px] mx-auto">
-          <h2 className="h2-bold text-[20px] md:text-[40px] mb-[20px] md:mb-[36px] text-primary-500">
-            Where We Work
-          </h2>
-          <div className="w-full p-4 rounded-lg bg-[#fff] border border-primary-300 border-4 mt-8 shadow-md">
-            <img src="/images/tf-high-res.png" alt="map" className="w-full rounded-lg" />
-          </div>
-        </div>
-      </div>
-
       {/* OUR STORY */}
       <div className="w-full py-16 sm:py-24 bg-primary-100">
         <div className="flex flex-col w-[90%] max-w-[1920px] mx-auto">
@@ -45,7 +33,7 @@ const About = () => {
               This sparked a multi-year journey dedicated to designing and bringing to market nutritious, delicious, low-cost food in Liberia. As we started diving further into the landscape of food and malnutrition globally, we realized what our team was learning each day in Liberia could have far broader implications.
             </p>
             <p className="p-body-lg text-[16px] md:text-[20px] text-gray-600">
-              Tailored Food was born to partner with ambitious local nutrition entrepreneurs in designing and selling food products to families hardest hit by malnutrition. The key to this, is access to affordable food products that are delicious, culturally-relevant, nutritious, and locally produced. Tailored is not a food company, but is a lean social enterprise consultancy that partners with local leaders in the markets we work. We have helped produce and sell over 6.8 million meals to the lowest-income families.
+              Tailored Food was born to partner with ambitious local nutrition entrepreneurs in designing and selling food products to families hardest hit by malnutrition. The key to this, is access to affordable food products that are delicious, culturally-relevant, nutritious, and locally produced. Tailored is not a food company, but is a lean social enterprise consultancy that partners with local leaders in the markets we work. We have helped produce and sell over 8 million meals to the lowest-income families.
             </p>
             <p className="p-body-lg text-[16px] md:text-[20px] text-gray-600">
               Interested in learning more? Please contact us.
@@ -57,6 +45,18 @@ const About = () => {
           >
             Contact Us
           </Link>
+        </div>
+      </div>
+
+      {/* WHERE WE WORK */}
+      <div className="w-full pb-16 sm:pb-24 bg-gradient-to-b from-white to-primary-50">
+        <div className="flex flex-col w-[90%] max-w-[1920px] mx-auto">
+          <h2 className="h2-bold text-[20px] md:text-[40px] mb-[20px] md:mb-[36px] text-primary-500">
+            Where We Work
+          </h2>
+          <div className="w-full p-4 rounded-lg bg-[#fff] border border-primary-300 border-4 mt-8 shadow-md">
+            <img src="/images/tf-high-res.png" alt="map" className="w-full rounded-lg" />
+          </div>
         </div>
       </div>
     </div>

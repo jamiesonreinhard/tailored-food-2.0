@@ -36,7 +36,7 @@ const FundingSupportSection = () => {
           Funding Support
         </h2>
         <p className="text-center text-base sm:text-lg lg:text-xl mb-12 max-w-[1000px] mx-auto">
-          Funding Support for Tailored Food has come from both competitions and grants from value-aligned organizations. Our funding partners include:
+          Funding Support for Tailored Food has come from both competitions and grants from value-aligned organizations. Our funding partners both past and present include:
         </p>
 
         <div className="flex items-center gap-8 sm:gap-12 w-full flex-wrap justify-center">

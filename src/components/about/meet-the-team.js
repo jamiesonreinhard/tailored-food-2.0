@@ -65,7 +65,7 @@ const MeetTheTeam = () => {
     <>
       <div className="flex flex-col w-full mx-auto justify-start">
         {/* TEAM MEMBERS */}
-        <div className="flex w-[90%] max-w-[1920px] mx-auto pb-[120px] flex-wrap gap-[16px] md:gap-[72px] justify-center">
+        <div className="w-[90%] max-w-[1920px] mx-auto pb-[120px] grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px] md:gap-[32px] justify-items-center">
           {sortedTeam?.map((member, index) => (
             <div
               key={`${index}-${member.firstName}`}
@@ -75,12 +75,12 @@ const MeetTheTeam = () => {
               <img
                 src={member.image}
                 alt={member.firstName}
-                className="w-[156px] md:w-[320px] h-[156px] md:h-[320px] object-cover rounded-[24px] group-hover:shadow-lg transition-shadow duration-200"
+                className="w-[140px] md:w-[200px] h-[140px] md:h-[200px] object-cover rounded-[24px] group-hover:shadow-lg transition-shadow duration-200"
               />
               <p className="subtitle-medium text-[12px] md:text-[24px]">
                 {member.firstName} {member.lastName}
               </p>
-              <p className="subtitle-medium text-[12px] md:text-[24px] leading-3 text-primary-300">
+              <p className="subtitle-medium text-[12px] md:text-[16px] leading-tight text-primary-300 text-center break-words">
                 {member.title}
               </p>
             </div>

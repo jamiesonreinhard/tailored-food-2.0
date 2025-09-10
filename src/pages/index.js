@@ -179,7 +179,7 @@ const Home = () => {
                   </div>
                   <div className="w-full md:w-3/5">
                     <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">Anthropological Deep Dives</h4>
-                    <p className="text-base sm:text-lg lg:text-xl">In communities impacted by malnutrition, we study what foods are available locally and what families enjoy eating. Immersing ourselves in rural agricultural communities, urban markets, and with families as they purchase, cook, and consume food - we gain an understanding of the full food systems landscape in a region.</p>
+                    <p className="text-base sm:text-lg lg:text-xl">In communities impacted by malnutrition, we study which foods are available locally and what families enjoy eating. Immersing ourselves in rural agricultural communities, urban markets, and with families as they purchase, cook, and consume food - we gain an understanding of the full food systems landscape in a region.</p>
                   </div>
                 </div>
 
@@ -203,7 +203,7 @@ const Home = () => {
                   </div>
                   <div className="w-full md:w-3/5">
                     <h4 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-primary-500">Sustainable Social Enterprises</h4>
-                    <p className="text-base sm:text-lg lg:text-xl">Local entrepreneur partners throughout the food value chain are supported by Tailored Food. We work together to build food transformation systems that are resilient to climate change and are financially sustainable.</p>
+                    <p className="text-base sm:text-lg lg:text-xl">Tailored Food supports local entrepreneur partners throughout the food value chain. We work together to transform food systems that are climate resilient and are financially sustainable.</p>
                   </div>
                 </div>
               </div>

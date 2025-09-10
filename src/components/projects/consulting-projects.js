@@ -39,7 +39,7 @@ const ConsultingProjects = ({ projects }) => {
                 className="w-full my-4 sm:my-0 sm:w-[240px] xl:hidden xl:w-0 rounded-lg shadow-md"
               />
               <p className="text-lg text-gray-700 mb-12">
-                We partner with national governments, UN agencies, leading private sector food companies, the nonprofit sector, and local food system stakeholders to support food system transformation. Tailored Food has a depth of experience working in complex environments and a broad advisory network ranging from food technology experts and Michelin-star chefs to non-profit funders and diplomacy experts.
+                We partner with national governments, UN agencies, leading private sector food companies, the nonprofit sector, and local food system stakeholders to support food system transformation.
               </p>
             </div>
           </div>
