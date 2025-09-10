@@ -49,7 +49,7 @@ const About = () => {
       </div>
 
       {/* WHERE WE WORK */}
-      <div className="w-full pb-16 sm:pb-24 bg-gradient-to-b from-white to-primary-50">
+      <div className="w-full py-16 sm:py-24 bg-gradient-to-b from-white to-primary-50">
         <div className="flex flex-col w-[90%] max-w-[1920px] mx-auto">
           <h2 className="h2-bold text-[20px] md:text-[40px] mb-[20px] md:mb-[36px] text-primary-500">
             Where We Work
