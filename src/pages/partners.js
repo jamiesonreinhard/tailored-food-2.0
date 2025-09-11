@@ -3,12 +3,15 @@ import Layout from '@/components/layout';
 import EntrepreneurPartners from "@/components/projects/entrepreneur-partners";
 import { fetchProjects } from "@/api/contentful";
 import Spinner from "@/components/loading";
+import { trackPageEntry, trackPageExit } from '@/lib/segment';
 
 const Partners = () => {
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        trackPageEntry('Partners');
+        
         async function fetchData() {
             try {
                 const projects = await fetchProjects();
@@ -20,6 +23,10 @@ const Partners = () => {
             }
         }
         fetchData();
+
+        return () => {
+            trackPageExit('Partners');
+        };
     }, []);
 
     if (isLoading) {

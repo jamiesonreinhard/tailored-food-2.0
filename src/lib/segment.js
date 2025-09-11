@@ -110,4 +110,58 @@ export const trackEvent = async (eventName, properties = {}) => {
   if (typeof window !== 'undefined' && window.analytics) {
     window.analytics.track(eventName, properties, getSegmentContext());
   }
+};
+
+let pageStartTime = null;
+let currentPageName = null;
+
+export const startPageTimer = (pageName) => {
+  if (typeof window !== 'undefined') {
+    pageStartTime = Date.now();
+    currentPageName = pageName;
+  }
+};
+
+export const stopPageTimer = async () => {
+  if (typeof window !== 'undefined' && pageStartTime && currentPageName) {
+    const timeSpent = Date.now() - pageStartTime;
+    
+    await trackEvent('Page Time Spent', {
+      page_name: currentPageName,
+      time_spent_seconds: Math.round(timeSpent / 1000),
+      time_spent_milliseconds: timeSpent,
+      url: window.location.href,
+      pathname: window.location.pathname
+    });
+    
+    pageStartTime = null;
+    currentPageName = null;
+  }
+};
+
+export const trackPageEntry = async (pageName, additionalProperties = {}) => {
+  await initSegment();
+  startPageTimer(pageName);
+  
+  if (typeof window !== 'undefined' && window.analytics) {
+    window.analytics.track('Page Entered', {
+      page_name: pageName,
+      timestamp: new Date().toISOString(),
+      ...additionalProperties,
+      ...getSegmentContext()
+    });
+  }
+};
+
+export const trackPageExit = async (pageName, additionalProperties = {}) => {
+  await stopPageTimer();
+  
+  if (typeof window !== 'undefined' && window.analytics) {
+    window.analytics.track('Page Exited', {
+      page_name: pageName,
+      timestamp: new Date().toISOString(),
+      ...additionalProperties,
+      ...getSegmentContext()
+    });
+  }
 }; 

@@ -6,6 +6,7 @@ import SubNavigation from "@/components/sub-navigation";
 import { motion, AnimatePresence } from 'framer-motion';
 import fs from 'fs';
 import path from 'path';
+import { trackPageEntry, trackPageExit, trackEvent } from '@/lib/segment';
 
 const About = ({images}) => {
 
@@ -20,6 +21,23 @@ const About = ({images}) => {
       "display": "Meet The Team"
     }
   ]
+
+  useEffect(() => {
+    trackPageEntry('About', { sub_page: activePage });
+    
+    return () => {
+      trackPageExit('About', { sub_page: activePage });
+    };
+  }, []);
+
+  useEffect(() => {
+    if (activePage) {
+      trackEvent('About Sub-Page Viewed', {
+        sub_page: activePage,
+        page_name: 'About'
+      });
+    }
+  }, [activePage]);
 
   return (
     <>

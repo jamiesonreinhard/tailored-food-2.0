@@ -7,7 +7,7 @@ import Link from "next/link";
 import { HandshakeOutlined, BusinessCenterOutlined } from "@mui/icons-material";
 import { fetchResources } from "@/api/contentful";
 import Spinner from "@/components/loading";
-import { trackEvent } from '@/lib/segment';
+import { trackEvent, trackPageEntry, trackPageExit } from '@/lib/segment';
 
 const Home = () => {
 
@@ -33,6 +33,14 @@ const Home = () => {
     const interval = setInterval(nextImage, 10000);
     return () => clearInterval(interval);
   }, [nextImage]);
+
+  useEffect(() => {
+    trackPageEntry('Home');
+    
+    return () => {
+      trackPageExit('Home');
+    };
+  }, []);
 
   useEffect(() => {
     async function fetchData() {

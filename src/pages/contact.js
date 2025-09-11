@@ -1,13 +1,22 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from '@/components/layout'
 import Link from "next/link";
 import emailjs from 'emailjs-com';
+import { trackPageEntry, trackPageExit, trackEvent } from '@/lib/segment';
 
 const Contact = () => {
   const [inquiry, setInquiry] = useState({});
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+
+  useEffect(() => {
+    trackPageEntry('Contact');
+    
+    return () => {
+      trackPageExit('Contact');
+    };
+  }, []);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -57,6 +66,10 @@ const Contact = () => {
 
     setInquiry({});
     if (emailjs.send('jamiesongmail', 'template_c1bv88l', templateParams, 'user_4zNk2mQBDz0bycg2XAfpw')) {
+      trackEvent('Contact Form Submitted', {
+        has_subject: !!subject,
+        message_length: message ? message.length : 0
+      });
       showSuccess("Inquiry sent!")
     }
   }

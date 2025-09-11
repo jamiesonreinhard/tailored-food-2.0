@@ -3,12 +3,15 @@ import Layout from '@/components/layout';
 import ConsultingProjects from "@/components/projects/consulting-projects";
 import { fetchProjects } from '@/api/contentful';
 import Spinner from "@/components/loading";
+import { trackPageEntry, trackPageExit } from '@/lib/segment';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    trackPageEntry('Projects');
+    
     async function fetchData() {
       try {
         const projects = await fetchProjects();
@@ -20,6 +23,10 @@ const Projects = () => {
       }
     }
     fetchData();
+
+    return () => {
+      trackPageExit('Projects');
+    };
   }, []);
 
   if (isLoading) {

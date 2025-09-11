@@ -3,6 +3,7 @@ import Layout from '@/components/layout';
 import Media from "@/components/media/media";
 import AnnualReports from "@/components/media/annual-reports/annual-reports";
 import SubNavigation from "@/components/sub-navigation";
+import { trackPageEntry, trackPageExit, trackEvent } from '@/lib/segment';
 
 const Content = () => {
 
@@ -17,6 +18,23 @@ const Content = () => {
       "display": "Annual Reports"
     },
   ]
+
+  useEffect(() => {
+    trackPageEntry('Media', { sub_page: activePage });
+    
+    return () => {
+      trackPageExit('Media', { sub_page: activePage });
+    };
+  }, []);
+
+  useEffect(() => {
+    if (activePage) {
+      trackEvent('Media Sub-Page Viewed', {
+        sub_page: activePage,
+        page_name: 'Media'
+      });
+    }
+  }, [activePage]);
 
   return (
     <>
