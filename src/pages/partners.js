@@ -33,13 +33,16 @@ const Partners = () => {
         return <Spinner />;
     }
 
-    // Filter and sort entrepreneur projects: active ones first, then past ones
+    // Filter and sort entrepreneur projects: active ones first, then past ones, then alphabetically by name
     const entrepreneurProjects = projects
         .filter((project) => project.type === "entrepreneur")
         .sort((a, b) => {
-            if (a.status === "active" && b.status !== "active") return -1;
-            if (a.status !== "active" && b.status === "active") return 1;
-            return 0;
+            const statusRank = (s) => (s === "active" ? 0 : 1);
+            const byStatus = statusRank(a.status) - statusRank(b.status);
+            if (byStatus !== 0) return byStatus;
+            return (a.name || "").localeCompare(b.name || "", undefined, {
+                sensitivity: "base",
+            });
         });
 
     return (
