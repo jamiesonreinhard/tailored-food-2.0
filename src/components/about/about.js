@@ -56,10 +56,10 @@ const About = () => {
           </h2>
           <div className="w-full p-2 sm:p-4 rounded-lg bg-[#fff] border border-primary-300 sm:border-4 mt-8 shadow-md">
             <div className="relative">
-              <img src="/images/tf-map-10-1-25.png" alt="Where we work world map" className="w-full rounded-lg" />
+              <img src="/images/tf-map-10-1-25-edited.png" alt="Where we work world map" className="w-full rounded-lg" />
               {/* Overlay panel: static below on small screens, overlaid on md+ */}
               <div
-                className="mt-4 md:mt-0 md:absolute md:top-4 md:right-4 md:h-[85%] md:max-w-[560px] lg:max-w-[600px] xl:max-w-[680px] bg-white/85 backdrop-blur rounded-2xl shadow-lg border border-primary-200"
+                className="mt-4 md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-4 md:h-[85%] md:max-w-[560px] lg:max-w-[600px] xl:max-w-[680px] bg-white/85 backdrop-blur rounded-2xl shadow-lg border border-primary-200"
               >
                 <div className="p-4 sm:p-6 h-full flex flex-col">
                   <div className="flex items-center justify-between gap-4 mb-3">
