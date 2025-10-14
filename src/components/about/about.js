@@ -82,7 +82,7 @@ const About = () => {
                         <li>Canada</li>
                         <li>Comoros</li>
                         <li>Eritrea</li>
-                        <li>Eswantini</li>
+                        <li>Eswatini</li>
                         <li>Ethiopia</li>
                         <li>Haiti</li>
                         <li>Kenya</li>
