@@ -56,7 +56,7 @@ const About = () => {
           </h2>
           <div className="w-full p-2 sm:p-4 rounded-lg bg-[#fff] border border-primary-300 sm:border-4 mt-8 shadow-md">
             <div className="relative">
-              <img src="/images/tf-map-10-1-25-edited.png" alt="Where we work world map" className="w-full rounded-lg" />
+              <img src="/images/tfmap-3-30-26.png" alt="Where we work world map" className="w-full rounded-lg" />
               {/* Overlay panel: static below on small screens, overlaid on md+ */}
               <div
                 className="mt-4 md:mt-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-4 md:h-[85%] md:max-w-[560px] lg:max-w-[600px] xl:max-w-[680px] bg-white/85 backdrop-blur rounded-2xl shadow-lg border border-primary-200"
@@ -64,7 +64,7 @@ const About = () => {
                 <div className="p-4 sm:p-6 h-full flex flex-col">
                   <div className="flex items-center justify-between gap-4 mb-3">
                     <h3 className="h3-bold text-[16px] sm:text-[20px] text-primary-600">Locations</h3>
-                    <span className="text-[12px] sm:text-[14px] text-gray-500">Updated Oct 2025</span>
+                    <span className="text-[12px] sm:text-[14px] text-gray-500">Updated Mar 2026</span>
                   </div>
 
                   <div className="grid grid-cols-2 gap-6 flex-1 overflow-y-auto">
@@ -74,35 +74,17 @@ const About = () => {
                         <h4 className="font-semibold text-gray-800 text-[14px] sm:text-[16px]">Active</h4>
                       </div>
                       <ul className="pr-1 text-gray-700 text-[13px] sm:text-[14px] leading-6">
-                        <li>Angola</li>
-                        <li>Botswana</li>
                         <li>Brazil</li>
                         <li>Burkina Faso</li>
-                        <li>Burundi</li>
                         <li>Canada</li>
-                        <li>Comoros</li>
-                        <li>Eritrea</li>
-                        <li>Eswatini</li>
                         <li>Ethiopia</li>
-                        <li>Haiti</li>
                         <li>Kenya</li>
-                        <li>Lesotho</li>
                         <li>Liberia</li>
-                        <li>Madagascar</li>
-                        <li>Malawi</li>
-                        <li>Mozambique</li>
-                        <li>Namibia</li>
                         <li>Nigeria</li>
                         <li>Rwanda</li>
-                        <li>Senegal</li>
-                        <li>Somalia</li>
-                        <li>South Africa</li>
-                        <li>South Sudan</li>
                         <li>Tanzania</li>
                         <li>Thailand</li>
                         <li>Uganda</li>
-                        <li>Zambia</li>
-                        <li>Zimbabwe</li>
                       </ul>
                     </div>
                     <div>
@@ -111,13 +93,31 @@ const About = () => {
                         <h4 className="font-semibold text-gray-800 text-[14px] sm:text-[16px]">Past</h4>
                       </div>
                       <ul className="pr-1 text-gray-700 text-[13px] sm:text-[14px] leading-6">
+                        <li>Angola</li>
                         <li>Bangladesh</li>
                         <li>Benin</li>
+                        <li>Botswana</li>
+                        <li>Burundi</li>
+                        <li>Comoros</li>
                         <li>DRC</li>
+                        <li>Eritrea</li>
+                        <li>Eswatini</li>
                         <li>Ghana</li>
+                        <li>Haiti</li>
                         <li>Ivory Coast</li>
+                        <li>Lesotho</li>
+                        <li>Madagascar</li>
+                        <li>Malawi</li>
+                        <li>Mozambique</li>
+                        <li>Namibia</li>
+                        <li>Senegal</li>
+                        <li>Somalia</li>
+                        <li>South Africa</li>
+                        <li>South Sudan</li>
                         <li>St Lucia</li>
                         <li>USA</li>
+                        <li>Zambia</li>
+                        <li>Zimbabwe</li>
                       </ul>
                     </div>
                   </div>
